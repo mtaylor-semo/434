@@ -32,11 +32,16 @@
 
 ## Folders
 _current_semester/
-handouts/
+# handouts/
 past_semesters/
 support_files/
 study_guides/**/
+EBM_pubs/
+SLOs/
 vids/
+conservation_plan_info/
+official_syllabus/
+readings/
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
