@@ -1,0 +1,227 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article}
+
+\usepackage[left=1in,right=0.5in,top=0.8in,bottom=0.9in]{geometry} 
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hanging}
+
+\newlength{\mylength}
+\settowidth{\mylength}{\small{7.}}
+
+\newcommand{\VSpace}{\vspace{\baselineskip}}
+\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+
+\begin{document}
+\begin{landscape}
+{\small%
+\begin{longtable}[l]{@{}L{5cm}L{3.5cm}L{3.5cm}L{3.5cm}L{3.5cm}L{1.9cm}@{}}
+\caption*{\textbf{Presentation grading rubric for Marine Evolutionary Ecology.}}\\
+\toprule
+Content Areas & Unsatisfactory (0 points) & Borderline (5 points) & Satisfactory (9 points) & Outstanding (12 points) & Score \\ 
+\midrule
+%\endfirsthead
+%\toprule
+%Content Areas & Unsatisfactory (0 points) & Borderline (5 points) & Satisfactory (9 points) & Outstanding (12 points) & Score\\ 
+%\midrule
+\endhead
+%% Row 1
+\textbf{Clarity, logic  and organization:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Explanation of issue.
+\item Background research.
+\item Highlighted recent studies that addressed the issue.
+\item Suggested future research.
+\end{enumerate}&%
+Covered $\leq$ 1 of the content areas in depth and the others either not at all or briefly. &%
+Covered 2 of the 4 content areas in depth and the others either not at all or briefly. Did not highlight any recent studies, or only 1 study superficially. &%
+Covered 3 of the 4 content areas in depth and the other either not at all or briefly.  Explained 1 study in depth or 2 or more studies superficially. &%
+Covered all 4 content  areas in depth. Explained 2 or more recent studies in depth.&%
+\\[-1em]
+\midrule
+%% Row 2
+\textbf{Quality of slides:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item $\leq$ 6 Sentences per slide and $\leq$ 6 words per sentence, not including citations, %
+\item Citations included, \par%
+\item No spelling or grammatical errors,\par%
+\item Figures and tables were legible.
+\end{enumerate}&%
+Met $\leq$ 1 of the content areas. &%
+Met 2 of the content areas. &%
+Met 3 of the content areas. &%
+Met all 4 of the content areas.&%
+\\[-1em]
+\midrule
+%% Row 3
+\textbf{Delivery pace and style:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Presentation lasted at least 10 minutes and no more than 12 minutes, \par%
+\item Student’s voice was clear, \par%
+\item Student had correct, precise pronunciation of terms,\par%
+\item Student used slides as a guide: added more information than on slides.
+\end{enumerate}&%
+Met $\leq$ 1 of the content areas. &%
+Met 2 of the content areas. &%
+Met 3 of the content areas. &%
+Met all 4 of the content areas.&%
+\\[-1em]
+\midrule
+%% Row 4
+\textbf{Response to questions:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Student was able to answer questions with depth and clarity.\end{enumerate}&%
+Did not answer any of the questions. &%
+Answered all questions but without any depth and clarity \emph{or} answered less than half with depth and clarity. &%
+Answered most questions with depth and clarity. &%
+Answered all questions with depth and clarity.&%
+\\
+\midrule
+%% Row 5
+\textbf{Miscellaneous:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Topic submitted by the due date. \par%
+\item Presentation \& citations turned in by due date. \par%
+\item Presentation not modified after submission.\par%
+\end{enumerate}&%
+Met none of the content areas \emph{or} modified slides after submission date. &%
+Met 1 of the content areas. &%
+Met 2 of the content areas. &%
+Met all 3 of the content areas. &%
+\\[-1em]
+\midrule
+& & & & \vspace{0.5in}\par\hfill\normalsize{Total Score\phantom{m}} & \\
+\bottomrule
+\end{longtable}
+}%End small font size
+
+\end{landscape}
+\newpage
+\newgeometry{right=1in}
+{\small
+\begin{longtable}[l]{@{}L{11cm}C{3cm}L{1cm}@{}}
+\caption*{\textbf{Literature cited grading rubric for Marine Evolutionary Ecology.}}\\
+\toprule
+Content	&	Possible Points	&	Score \\
+\midrule
+\textbf{Total Citations:} six citations @ 5 points each. A minimum of six citations, all from the primary literature, meaning journals and edited book chapters. In rare instances, you may be allowed to cite a full book. Check with me to see if the book is allowable. \emph{Extra credit}: Every citation after six, and from 2010 or later, is worth 2 extra credit points. &
+30 & \\
+\midrule
+\textbf{New Citations:} 3 citations @ 4 points. A minimum of three citations must be from 2010 or later. See extra credit above. &
+12 & \\
+\midrule
+\textbf{Submitted Pages:}  6 citations @ 2 points. Submit photocopies of the actual pages of source material you used to develop your presentation. Deduct 1 point per citation for abstract-only use, or for failure to highlight the relevant passages.  &
+12 & \\
+\midrule
+\textbf{Literature Cited Format:} six citations @ 6 points. Turn in a list of your citations on a sheet with your submitted pages, using a standard literature cited format.  See below for required format. You do not need to include a Literature Cited slide in your presentation. &
+6 & \\
+\bottomrule
+\end{longtable}
+}% end small
+
+\emph{Important}: Failure to turn in any citations will result in a score of zero for the entire Literature Cited component of your presentation.  Although your slides must be appropriately cited, if I see only author and year on the slides, with no other literature cited requirements met, you will receive a score of zero.\VSpace
+
+The literature that you cite for your presentation and proposal should be listed (1) alphabetically by authors’ last names (ignoring the word “and”) and then (2) chronologically, with items that are in press coming last.\VSpace
+
+\noindent Smith, R. C. 1992. Spawning patterns in\dots.
+
+\noindent Smith, R. C., J. B. Oldham, and W. F. Stone. 1998. Determinants of\dots.
+
+\noindent Smith, R. C., and H. Thompson. 1995. Observations on\dots.
+
+\noindent Smith, R. C., and H. Thompson. 1997. Additional observations on\dots.\VSpace
+
+\emph{Journals}:\vspace{0.5\baselineskip}
+
+\begin{hangparas}{1.5em}{1}
+Domeier, M. L. 1994. Speciation in the serranid fish \textit{Hypoplectrus}. Bulletin of Marine Science 54:103-141.
+
+Graves, J. E., and R. H. Rosenblatt. 1980. Genetic relationships of the color morphs of the serranid fish \textit{Hypoplectrus unicolor}. Evolution 34:240-245.
+
+Houston, A. I., C. W. Clark, J. M. McNamara, and M. Mangel. 1988. Dynamic models in behavioural and evolutionary ecology. Nature 332:29–34.\VSpace
+\end{hangparas}
+
+\emph{Edited Chapters in Books}:\vspace{0.5\baselineskip}
+
+\begin{hangparas}{1.5em}{1}
+Rieppel, O. 1986. Species are individuals: a review and critique of the argument. Pp. 283–317 in M. K. 
+
+Hecht, B. Wallace, and G. T. Prance, eds. Evolutionary biology. Plenum Press, New York.
+
+Whittaker, R. H., and G. M. Woodwell. 1972. Evolution of natural communities. Pp. 137–159 in J. A. Wiens, ed. Ecosystem structure and function. Proceedings of the 31st annual biology colloquium. Oregon State University Press, Corvalis.
+\end{hangparas}
+
+\newpage
+
+{\small
+\begin{longtable}[l]{@{}L{11cm}C{3cm}L{1cm}@{}}
+\caption*{\textbf{Proposal grading rubric for Marine Evolutionary Ecology.}}\\
+\toprule
+Content	&	Possible Points	&	Score \\
+\midrule
+\textbf{Name and title:}  The proposal should include your name as the principle investigator and a clear but succinct title that accurately represents the proposed research. &
+2 & \\
+\midrule%
+\textbf{Background and Current Research:}$^1$  You must provide a concise review of the history of the problem and highlight 2--3 current exemplar studies that attempt to address the problem.  The studies should build to a logical hypothesis that you will test.  Points are awarded for thoroughness (4 points), conciseness (3 points) and accuracy (3 points). &
+10 & \\
+\midrule%
+\textbf{Concise Objective:}$^1$  You must state a reasonable objective for your proposal.  Your objective is effectively the goal of your proposal.  Note that this is not the same as a predicted outcome, but instead a single statement of the work that you intend to do.  You may have more than one objective. &
+5 & \\
+\midrule%
+\textbf{Hypothesis:}$^1$ You must state a result that you would support your hypothesis. You must also predict an alternative result that would falsify your hypothesis.  Points are awarded for the predicted result (2 points), an alternative result (2 points), and clarity (1 point). &
+5 & \\
+\midrule%
+\textbf{Significance:}$^1$ You must provide context for your proposed research.  How will it contribute to the greater body of biological knowledge?  &
+5 & \\
+\midrule%
+\textbf{Methodology:} You must provide a succinct and reasonable plan of the methods you will use to obtain and analyze your results.  Points will be awarded for clarity (3 points) and suitability (2 points). &
+5 & \\
+\midrule%
+\textbf{Project location and Duration:}  Briefly state where your project will take place (field station, island, laboratory, etc.) (2 points) and the expected duration (3 points).  The duration should be a reasonable estimate of the time necessary to accomplish the proposed task.  Do not exceed three years. &
+5 & \\
+\midrule%
+\textbf{Literature Cited:} At least six citations that follow the abbreviated format used in the example proposal, which excludes the article name. See the Literature Cited rubric for other citation requirements. &
+3 & \\
+\midrule%
+\textbf{Budget and Justification:} You must provide a line-item budget (2 points) with reasonable costs (no limit to total costs) and a concise justification (3 points) of the need for each item.  &
+5 & \\
+\midrule%
+\textbf{Formatting, spelling and miscellaneous:} You must have a minimum of 2 full pages and no more than 3 pages (1 pt), and follow the proper formatting guidelines (1 pt).  The first spelling, grammar, or typographical error is free; each subsequent error is 1 pt (3 pts).   &
+5 & \\
+%
+\bottomrule
+\end{longtable}
+\vspace{-1\baselineskip}
+1. These categories all fall under the Project Description section required for the proposal.  The category headings are not required.  The order of the categories may be logically dictated by the flow of your narrative.}
+\end{document}
