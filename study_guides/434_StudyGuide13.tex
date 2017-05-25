@@ -1,0 +1,91 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 study guide 13}
+\author{Coral reef ecosystems}
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+%section*{Kelp forest ecosystems}
+
+We\marginnote{\textbf{Read:} Chapter 13.} covered coral reef ecosystems. We also completed a case study on anthropogenic effects and coral reef degradation.
+
+\section*{Vocabulary}
+\begin{multicols}{2}
+rugosity\\
+keystone species
+\end{multicols}
+\section*{Concepts}
+
+\begin{enumerate}
+
+\item
+  Coral reefs are biogenic ecosystems. What is a biogenic ecosystem? 
+  
+\item What is rugosity? Explain the relationship between reef rugosity and reef diversity.
+
+\item Review the case study on the Line Islands.\marginnote{The case study was drawn from a 2008 paper by Sandin et al. I've put the paper online for you to review.} Be able to discuss how temperature, bleaching events, and eutrophic conditions affected overall reef diversity, the distribution of biomass among top predators and herbivores, recruitment and size distribution of corals, and so on.
+
+\item I may require you to interpret a principal components graph so be sure you understand how to interpret one. Review the Scotch Whiskey and Line Island figures.
+
+\item Keystone species are often thought of predator species. Can herbivores act as keystone species? Explain why or why not. 
+
+\item Can cleaner species function as keystone species?\marginnote{Cleaner species are those that remove parasites and dead tissue from other species. Some fishes and shrimps are common cleaner species.} Explain why or why not.
+
+\item Explain how change in coral cover and grazing can change a reef between coral-dominated and algal-dominated alternate states.
+
+
+\end{enumerate}
+
+\end{document}

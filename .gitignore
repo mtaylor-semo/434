@@ -27,12 +27,10 @@
 *.jpg
 *.png
 *.mp4
-## Large print versions of the study guides.
 .DS_Store
 
 ## Folders
 _current_semester/
-# handouts/
 past_semesters/
 support_files/
 study_guides/**/

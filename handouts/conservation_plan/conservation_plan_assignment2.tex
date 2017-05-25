@@ -1,0 +1,148 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, hidelinks]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/Pictures/teach/434/handouts/}
+	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, left=1.5in, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+	\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
+\usepackage{microtype}
+
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+ %\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+% \newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+
+\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+%% Commands for Exam class
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+%Change \half command from 1/2 to .5
+\renewcommand*\half{.5}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi}\,434 MarEvoEco}{}{Conservation Plan Assignment 2}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+%\usepackage{mdframed}
+%\mdfsetup{%
+%	innerleftmargin=0pt,%
+%	innerrightmargin=0pt,
+%	innertopmargin=0pt,
+%	innerbottommargin=0pt,
+%	hidealllines=true
+%}%end mdfsetup
+
+%
+%\makeatletter
+%\def\SetTotalwidth{\advance\linewidth by \@totalleftmargin
+%\@totalleftmargin=0pt}
+%\makeatother
+
+
+%\printanswers
+
+
+\begin{document}
+
+\subsection*{Establish a framework for your conservation plan. 30 points.}
+
+Your team has been given six articles that are a combination of scientific literature, conservation plan summaries, and guidelines.  Each ecosystem listed below is covered by one of the articles.
+
+\begin{multicols}{2}
+
+Coral Reef\\ 
+Kelp Forest\\ 
+Mangrove Forest\\
+Salt Marsh\\
+Seagrasses
+
+\end{multicols}
+
+Skim-read each publication. You can divide the publications among your team members. Take notes on each article, identifying objectives, approaches, or other ideas that will help you develop a conservation plan. Your team must use information from \emph{each} article. Some of the information contained in the mangrove article will be useful to the non-mangrove teams, and so on. 
+
+\subsubsection*{Today's goal}
+
+Your goal is to develop a \emph{detailed} framework for your conservation plan, in outline form. Each student must contribute to writing part of the framework. Divide and conquer. To accomplish your goal, you must do the following today.
+
+\begin{enumerate}[leftmargin=*]
+
+	\item \emph{Identify human-induced problems.} You should explain each problem to help you understand how you can address the problem.
+	
+	\item \emph{Identify essential ecosystem services.} Explain each service. This will help you to establish a need for the combined management of each service.
+	
+	\item \emph{Identify key stakeholders.} What groups of people or organizations are affected or should be involved? Why?
+	
+	\item \emph{Identify potential tradeoffs among services.} Why should your management plan emphasize one set of services over another? 
+	
+	\item \emph{Identify target species,} if appropriate, for management.
+
+	\item \emph{Establish conservation objectives and priorities.} You should identify at least six objectives, in order of priority. Relate these objectives to your services, tradeoffs, stakeholders, and target species.
+	
+	\item \emph{Outline a public awareness plan.} Identify at least six ways in you intend to increase public awareness and involvement.
+	
+	\item You may include other items as you feel is necessary and appropriate.
+	
+\end{enumerate}
+
+You may use the internet for additional guidance, such as help identifying services from your ecosystem. More extensive plans are available on the course website in the Conservation Plans folder. You should also check out the Management 101 link in the Moodle page.
+
+Team leaders should ensure every student contributes thoroughly and equally to this assignment. After the framework, state which team member developed each part of the framework. 
+
+Turn your framework in to me (my office or mailbox) by 12:30 pm. If you have some one type the framework, you can e-mail it to me as an attachment (still by 12:30). I expect this will take at least one hour of time to go through the articles and develop a detailed plan. I will grade them based on thoroughness of each item identified above.
+
+\end{document}  

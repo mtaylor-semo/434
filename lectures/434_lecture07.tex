@@ -1,0 +1,495 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+%%% Creative Commons Licenses. Establish, then add to Beamer template.
+%\newcommand{\ccbysa}[1][4]{\textsc{cc by-sa #1.0}} % Use version 4.0 as default.
+\newcommand{\ccby}[1]{%
+	\ifx&#1&
+	{\textsc{cc by}}%
+\else
+	{\textsc{cc by #1.0}}
+\fi}
+
+
+\newcommand{\ccbysa}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-sa}}%
+\else
+	{\textsc{cc by-sa #1.0}} 
+\fi}
+
+\newcommand{\ccbyncsa}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-nc-sa}}%
+\else
+	{\textsc{cc by-nc-sa #1.0}}
+\fi}
+
+\newcommand{\ccbync}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-nc}}%
+\else
+	{\textsc{cc by-nc #1.0}}
+\fi}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1cm]
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_phytoplankton_intro}}
+\begin{frame}[b]
+
+	\hfill \tiny \textcolor{white}{\textsc{noaa mesa} project, public domain.}
+\end{frame}
+}
+%
+\begin{frame}[t]{All plankton can be categorized by size.}
+
+	\begin{center}
+	\begin{tabular}{@{}lll@{}}
+	
+	\toprule
+	Size Class & Size Range	& Example Taxa \\
+	\midrule
+	Megaplankton 	& 	\textgreater20 cm	& Jellyfish \\
+	Macroplankton 	&	2–20	cm		& Krill\\
+	Mesoplankton	&	0.2–20 mm	& Copepods \\
+	Microplankton	&	20–200 µm	& Diatoms \\
+	Nanoplankton	&	2–20 µm		& Cocolithophores \\
+	Picoplankton	&	0.2–2 µm		& Cyanobacteria \\
+	Femtoplankton	&	\textless0.2 µm	& Viruses \\
+	\bottomrule
+	\end{tabular}
+	\end{center}
+	
+	\hangpara Micro- to megaplankton are collectively called net plankton.
+	
+	\pause \hangpara \highlight{Trivia:} What is the largest planktonic organism?
+	
+\end{frame}
+%
+\lecture{instructor}{instructor}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_mola_plankton}}
+\begin{frame}[b]
+
+	\hfill \tiny \textcolor{white}{\textsc{noaa}, public domain.}
+\end{frame}
+}
+%
+\begin{frame}[t]{They often bask so that birds can remove parasites.}
+
+	\centering\includegraphics[height=0.8\textheight]{07_mola_albatross}
+
+	\vfilll
+	
+	\hfill \tiny Abe and Sekiguchi 2012. Communicative \& Integrative Biology 5: 395.
+\end{frame}
+
+%
+\lecture{student}{student}
+
+\begin{frame}[t]{What are the two major classes of \highlight{phytoplankton?} }
+	\vspace*{-\baselineskip}
+	
+	\begin{multicols}{2}
+		{\centering
+		\includegraphics[width=0.36\textwidth]{diatoms}
+		
+		\vspace*{0.5\baselineskip}
+		
+		\includegraphics[width=0.46\textwidth]{dinoflagellates}}
+		
+	\columnbreak
+		
+		\vspace*{0.5\baselineskip}
+		
+		\onslide<2->{
+		\hangpara\HiddenWord{\highlight{Diatoms:} Bacillariophyceae}
+
+		\vspace*{\baselineskip}
+
+		\hangpara\HiddenWord{\highlight{Dinoflagellates:} Dinophyceae}}
+		
+	\end{multicols}
+
+	\vfilll
+
+\tiny top: USGS Photos from Life; bottom: \textcopyright\,McGraw-Hill.
+\end{frame}
+%
+\begin{frame}[t]{Other phytoplankton are important in the tropics.}
+	\vspace*{-\baselineskip}
+	
+	\begin{multicols}{2}
+		
+		\begin{center}
+		\includegraphics[width=0.36\textwidth]{07_synechococcus}
+		
+		\vspace*{0.5\baselineskip}
+		
+		\includegraphics[width=0.36\textwidth]{07_coccolithophore}
+		\end{center}
+		
+	\columnbreak
+		
+		\vspace*{0.5\baselineskip}
+		
+		\hangpara \highlight{Picoplankton:} Cyanobacteria\\\textit{Prochlorococcus} \& \textit{Synechococcus}
+
+		\vspace*{\baselineskip}
+
+		\hangpara \highlight{Nanoplankton:} Coccolithophyceae
+		
+	\end{multicols}
+
+	\vfilll
+
+	\tiny top: Masur, Wikimedia, public domain; bottom: \textcopyright Sinauer Associates, Inc.
+\end{frame}
+%
+\begin{frame}[t]{Phytoplankton biology affects community structure.}
+
+\begin{multicols}{2}
+
+		\hangpara \highlight{Diatoms} and \highlight{dinoflagellates}
+
+		\hangpara Low surface:volume ratio.
+		
+		\hangpara Heavy.
+
+		\hangpara Better competitors in \\
+		\hspace*{1em}cold, turbulent, and \\
+		\hspace*{1em}high nutrient conditions.
+		
+\columnbreak
+
+		\hangpara \highlight{Picoplankton}
+
+		\hangpara High surface:volume ratio.
+
+		\hangpara Light.
+		
+		\hangpara Better competitors in \\
+		\hspace*{1em} warm, stratified, and \\
+		\hspace*{1em} low nutrient conditions.
+
+\end{multicols}
+
+\end{frame}
+%
+\begin{frame}[t]{Review: What is primary productivity?}
+
+\begin{center}
+	\ce{CO2 + 6H2O ->[energy] C6H12O6 + 6O2}
+	
+	\vspace*{0.5\baselineskip}
+	
+	\includegraphics[width=\textwidth]{global_primary_productivity}
+	
+	\vfilll
+	
+	\hfill \tiny \textsc{noaa}, public domain.
+\end{center}
+
+\end{frame}
+%
+\begin{frame}[t]{Pico- and nanoplankton are most abundant in \highlight{oligotrophic} water.}
+
+	\vspace*{-0.5\baselineskip}
+	\begin{center}
+		\includegraphics[height=0.78\textheight]{07_chlorophyll_fractionation}
+	\end{center}
+	\vfilll
+	
+\hfill \tiny Fig 16.2, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_pico_temperature}}
+\begin{frame}[b]
+
+	\tiny Mara\~non et al. 2012. Limnol. Oceanogr. 57: 1266.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{thermocline_halocline}}
+\begin{frame}[b]{Review: What is a thermocline?}
+
+	\hfill \tiny \textcopyright McGraw-Hill.
+\end{frame}
+}
+%
+\begin{frame}[t]{Review: What is the Redfield ratio?}
+	\hangpara C: \onslide<2>{106 atoms}
+	
+	\hangpara N: \onslide<2>{16 atoms}
+	
+	\hangpara P: \onslide<2>{1 atoms}
+	
+	\onslide<2>{\hangpara Which of these elements was thought to be most limiting?}
+	
+\end{frame}
+%
+\begin{frame}[t]{Review: Explain the \highlight{``classic model''} of GPP.}
+
+	\vspace*{-0.5\baselineskip}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{classic_model_gpp}
+	\end{center}
+	\vfilll
+	
+\hfill \tiny\textcopyright Oxford University Press
+\end{frame}
+%
+\lecture{instructor}{instructor}
+
+\begin{frame}[t]{\highlight{Quiz:} Identify one bottom-up and one top-down factor.}
+
+	\vspace*{-0.5\baselineskip}
+	\begin{center}
+		\includegraphics[height=0.8\textheight]{classic_model_gpp}
+	\end{center}
+	\vfilll
+	
+\hfill \tiny\textcopyright Oxford University Press
+\end{frame}
+%
+\lecture{student}{student}
+
+\begin{frame}[t]{The classic model does not work at tropical latitudes.}
+
+	\vspace*{-0.5\baselineskip}
+	\begin{center}
+		\includegraphics[width=\textwidth]{global_primary_productivity}
+	\end{center}
+	\vfilll
+	
+	\hfill \tiny \textsc{noaa}, public domain.
+\end{frame}
+
+%
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_community_structure_model1}}
+\begin{frame}[b]
+
+	\hfill \tiny Fig. 16.3, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_community_structure_model2}}
+\begin{frame}[b]
+
+	\hfill \tiny Fig. 16.3, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_community_structure_model3}}
+\begin{frame}[b]
+
+	\hfill \tiny Fig. 16.3, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_community_structure_model4}}
+\begin{frame}[b]
+
+	\hfill \tiny Fig. 16.3, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\begin{frame}[t]{Efficiency should select for smaller phytoplankton.}
+
+\hangpara Problem: N and P uptake decreases with larger cell size. Why aren't all phytoplankton communities dominated by picoplankton?
+
+\begin{multicols}{2}
+
+		\hangpara \highlight{Diatoms} and \highlight{dinoflagellates}
+
+		\hangpara Large.
+		
+		\hangpara Low surface:volume ratio.
+				
+\columnbreak
+
+		\hangpara \highlight{Picoplankton}
+
+		\hangpara Small.
+
+		\hangpara High surface:volume ratio.
+		
+\end{multicols}
+
+\pause
+
+\hangpara Solution: Smaller phytoplankton are grazed more quickly by their predators.
+
+\end{frame}
+%
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_size_structured_model1}}
+\begin{frame}[b]{Picoplankton abundance is limited initially by nutrients.}
+
+	\hfill \tiny Fig. 16.4, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_size_structured_model2}}
+\begin{frame}[b]{Picoplankton abundance becomes limited by predators.}
+
+	\hfill \tiny Fig. 16.4, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_size_structured_model3}}
+\begin{frame}[b]{Nanoplankton abundance is limited by nutrients.}
+
+	\hfill \tiny Fig. 16.4, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_size_structured_model4}}
+\begin{frame}[b]{Nanoplankton abundance becomes limted by predators.}
+
+	\hfill \tiny Fig. 16.4, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_size_structured_model5}}
+\begin{frame}[b]{Abundant nutrients supports the greatest diversity.}
+
+	\hfill \tiny Fig. 16.4, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{07_vertical_distribution}}
+\begin{frame}[b]
+
+	\begin{tikzpicture}
+	
+		\node at (3.5,7) {low nutrients};
+	
+		\draw [dashed, blue, ultra thick] (1,4.3) -- (5,4.3) node[above, align=center] {{\footnotesize thermocline}};
+		
+		\node at (4.1,1.5) {low light};
+
+	\end{tikzpicture}
+
+
+	\hfill \tiny Fig. 16.5, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\begin{frame}[t]{Patchy distribution of nutrients creates patchy distribution of phytoplankton.}
+
+	\vspace*{-0.5\baselineskip}
+	\begin{center}
+		\includegraphics[height=0.78\textheight]{07_colimitation}
+	\end{center}
+	\vfilll
+	
+	\hfill \tiny Fig. 16.6, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+
+%
+\begin{frame}[t]{Predators and specialized ``enemies'' exert a top-down effect on community structure.}
+
+	\vspace*{-0.5\baselineskip}
+	\begin{center}
+		\includegraphics[width=\textwidth]{07_kill_the_winner}
+	\end{center}
+	\vfilll
+	
+	\hfill \tiny Fig. 16.9, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+
+%
+\end{document}
+

@@ -1,0 +1,351 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+%\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}, ItalicFont={* Italic}, Ligatures={Common, TeX}]{\mainfont} 
+\newfontface\liningnums[Numbers=Lining, Scale=MatchLowercase]{\mainfont}
+
+%\usepackage{microtype}
+
+
+%\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+%	{/Users/goby/Pictures/teach/434/handouts/}%
+%	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{xcolor}
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\mhchemoptions{textfontcommand=\liningnums}
+
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+	\usetikzlibrary{arrows,calc}
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[default]
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1em]
+
+
+\begin{document}
+
+\lecture{instructor}{instructor}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{14_climate_change_impacts}}
+\begin{frame}[b]{Climate change affects many oceanic processes.}
+
+	\tiny Fig.~19.1 \copyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\lecture{student}{student}
+
+\begin{frame}{Global temperatures have always changed, often dramatically.}
+
+	{\centering
+		\includegraphics[width=\textwidth]{15_climate_palaeotemps}\par
+	}
+	
+	\bigskip
+	
+	Note that past temperatures have been much warmer than current temperatures.
+	
+	\vfilll
+	
+	\hfill \tiny Glen Fergus, Wikimedia, \ccbysa{2}.  
+
+\end{frame}
+
+\begin{frame}[t]{Global temperatures were relatively steady until recently.}
+
+	{\centering
+		\includegraphics[height=0.82\textheight]{15_historic_temperatures}\par
+	}
+	
+	\vfilll
+	
+	\hfill \tiny Mann et al. 2008. PNAS 105: 13252.  
+	
+\end{frame}
+%
+\begin{frame}[t]{Global temperatures are increasing rapidly.}
+
+	\includegraphics[width=\textwidth]{15_historic_temperature_change_rate}
+
+	\invisible<2->{%
+	\begin{tikzpicture}
+	
+		\draw [white, fill=white] (7,0.5) rectangle (12.1,4.5);
+		
+	\end{tikzpicture}
+	}
+	\vfilll
+	
+	\hfill \tiny Tamino 2013, modified Shakun et al. 2012, Marcott et al. 2013
+
+\end{frame}
+%
+\lecture{instructor}{instructor}
+
+\begin{frame}{About 25\% of \ce{CO2} released since the Industrial Revolution is sequestered in the oceans.}
+
+	\includegraphics[width=\textwidth]{14_industrial_revolution}
+	
+	\vfilll 
+	
+	\hfill \tiny D.\,W.\,F.~Hardie, Wikimedia, public domain
+	
+\end{frame}
+%
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_ocean_heat_sink}}
+\begin{frame}[b]{The oceans are also absorbing much of the excess heat.}
+
+	\hfill \tiny Fig.~19.2\textsc{a} \copyright\,Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_ocean_heat_distribution}}
+\begin{frame}[b]{The temperature increase is not uniform.}
+
+	\hfill \tiny Fig.~19.2\textsc{b} \copyright\,Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_heat_distribution_current}}
+\begin{frame}[b]
+
+	\hfill \tiny \href{http://cci-reanalyzer.org/DailySummary/\#SST_anom}{Link to ClimateReanalyzer.org}
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_phenology_distribution}}
+\begin{frame}[b]
+
+	\hfill \tiny Fig.~19.10 \copyright\,Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+\begin{frame}[t]{Thermal stress reduces primary productivity of seagrasses.}
+	
+	\includegraphics[width=\textwidth]{15_seagrass_thermal_stress}\par
+	
+	\vfilll
+	
+	\hfill \tiny Short et al. 2016. Aquatic Botany 135: 3.
+
+\end{frame}
+%
+\begin{frame}[t]{Warming reduces kelp coverage.}
+
+	\includegraphics[width=\textwidth]{15_kelp_warming}
+	
+	\vfilll
+	
+	\hfill \tiny Wernberg et al. 2013. Nature Climate Change 3: 78.
+	
+\end{frame}
+%
+\begin{frame}[t]{Phytoplankton community structure may change.}
+
+	\includegraphics[width=\textwidth]{15_plankton_replacement}
+	
+	\vfilll
+	
+	\hfill \tiny Hoegh-Guldberg and Bruno 2010. Science 328: 1523.
+	
+\end{frame}
+%
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_plankton_community}}
+%\begin{frame}[b]{The entire plankton community structure may change.}
+%
+%	\hfill \tiny \rotatebox{90}{Hoegh-Guldberg and Bruno 2010. Science 328: 1523.}
+%
+%\end{frame}
+%}
+%
+\begin{frame}[t]{Larval duration and survivorship may change.}
+
+	\includegraphics[width=\textwidth]{15_larval_duration}
+	
+	\vfilll
+	
+	\hfill \tiny Hoegh-Guldberg and Bruno 2010. Science 328: 1523.
+	
+\end{frame}
+%
+\begin{frame}[t]{The extent of Arctic sea has decreased steadily.}
+
+	{\centering \includegraphics[height=0.82\textheight]{15_arctic_sea_ice_extent}\par
+	}
+
+	\vfilll
+	
+	\hfill \tiny Box.~19.1\textsc{b} \copyright\,Sinauer Associates, Inc.
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_arctic_sea_ice_extent_current}}
+\begin{frame}[b]
+
+	\tiny \href{http://nsidc.org/arcticseaicenews/charctic-interactive-sea-ice-graph/}{Interactive Graph}
+
+%	\tiny Fig.~19.1 \copyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_sea_level_change}}
+\begin{frame}[b]{Loss of sea ice and glaciers is causing sea level rise.}
+
+	\hfill \tiny Box.~19.1\textsc{a} \copyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\begin{frame}[t]{Sea levels may rise 2.4–13.1 mm year\textsuperscript{-1} between now and 2100.}
+	\includegraphics[width=\textwidth]{15_sea_level_rise_forecast}
+	
+	\hangpara Some models predict even higher rates. The current rate of increase is about 3.4 mm year\textsuperscript{-1} (\href{http://climate.nasa.gov/vital-signs/sea-level/}{\textsc{nasa}).}
+	
+	\vfilll
+	
+	\hfill \tiny Kopp et al. 2016. \textsc{pnas} 113: E1434.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_marsh_accretion_rate}}
+\begin{frame}[b]{Sea level may rise faster than salt marsh accretion rate.}
+
+	\hfill \tiny FitzGerald et al. 2008. Annu. Rev. Earth Planet. Sci. 36: 601.
+\end{frame}
+}
+%
+\begin{frame}[t]{A similar fate may be in store for mangrove forests.}
+
+	\includegraphics[width=\textwidth]{15_mangroves_sea_level_rise}
+
+	\vfilll
+	
+	\hfill \tiny McIvore et al. 2013. Natural Coastal Protection Series: Report 3.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{thermohaline_circulation}}
+\begin{frame}[t]{\hfill The great ocean conveyor is slowing.}
+
+	\vspace*{11\baselineskip}
+	
+	\hangpara \parbox{45mm}{\raggedright Warming and increased freshwater input stops the north Atlantic water from sinking.}
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_coral_fish_diversity}}
+\begin{frame}[b]
+
+	\hfill \tiny Holbrook et al. 2015. \textsc{pl}o\textsc{s one} 10: e0124054.
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{15_hotspot_diversity}}
+\begin{frame}[b]
+
+	\hfill \tiny Holbrook et al. 2015. \textsc{pl}o\textsc{s one} 10: e0124054.
+
+\end{frame}
+}
+%
+\begin{frame}[t]{Decreased coral diversity caused \emph{significant} differences of fish assemblages among sites.}
+
+	\includegraphics[width=\textwidth]{15_hotspot_diversity_CAP}
+	
+	\vfilll
+	
+	\hfill \tiny Holbrook et al. 2015. \textsc{pl}o\textsc{s one} 10: e0124054.
+
+\end{frame}
+%
+\begin{frame}[t]{Acidification and warming interactions affect ecosystem functions.}
+
+	\includegraphics[width=\textwidth]{15_acidification_warming_effects}
+	
+	\vfilll
+	
+	\hfill \tiny Nagelkerken and Connell 2015. \textsc{pnas} 112: 13272.
+
+\end{frame}
+%
+\end{document}
+

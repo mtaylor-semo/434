@@ -1,0 +1,107 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 Study Guide 08}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Rocky intertidal ecosystems}
+
+We\marginnote{\textbf{Read:} Chapter 9. The figures and tables from the text that I use for lecture are given in the slides. You should at least read the text associated with those figures and tables.} covered community structure and function in the rocky intertidal zone.
+
+\section*{Vocabulary}
+
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+bottom-up process \\
+top-down process \\
+intermittent upwelling \\
+thermal stress \\
+alternate stable states \\
+consumptive predator effect \\
+non-consumptive predator effect \\
+induced defense \\
+trait-mediated indirect\\ \hspace*{0.5em} interaction \\
+trait-mediated cascade \\
+trophic heat 
+\end{multicols}
+
+\section*{Concepts}
+
+\begin{enumerate}
+	
+	\item Explain the difference between top-down and bottom-up processes.  Is the intermittent upwelling hypothesis a bottom-up process, a top-down process, or both? Explain.
+	
+	\item While you are at it, explain\marginnote{The \textsc{y}-axis of Figure 9.3, page 207, refers to ecological processes, which is the same as ecosystem functions. You should be able to interpret both panels of Fig. 9.3.} the intermittent upwelling hypothesis. Why does it increase ecosystem function?
+	
+	\item Scientists long predicted that intertidal species at lower latitudes would be subjected to greater thermal stress\marginnote{Figure 9.5} (rapidity and degree of temperature change) than intertidal species living at higher latitudes. Studies suggest this hypothesis is false. Why? 
+	
+	\item Explain alternative stable states. Is there evidence that alternate stable states exist in the Gulf of Maine? At what scale? Explain.
+	
+	\item Explain the difference between consumptive and non-consumptive predator effects.
+	
+	\item Explain what is an inducible defense. Explain \marginnote{Figure 9.9 and pages 211--212.} each of the two ways that inducible defenses can appear in organisms.
+	
+	\item Explain what is a trait-mediated cascade?\marginnote{Figure 9.11, page 213.} Diagram a trait-mediated cascade. Explain the relationship between inducible defenses and trait-mediated cascades.
+
+	\item Explain trophic heat.\marginnote{Figure 9.13, page 214.} Explain why do rocky intertidal food chains/webs tend to be short, in relation to trophic heat?
+
+	\item Turbulence can affect the ability of mobile organisms to find prey. It may also explain the amount of trophic heat in a population. Explain whether increased turbulence is likely to increase or decrease the amount of trophic heat in the rocky intertidal ecosystem and why.
+	
+	\item Describe how feeding rate in \textit{Pisaster} sea stars might be affected by climate change. 
+	
+\end{enumerate}
+
+\end{document}

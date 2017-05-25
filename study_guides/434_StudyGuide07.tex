@@ -1,0 +1,113 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 Study Guide 07}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Phytoplankton communities.}
+
+We\marginnote{\textbf{Read:} Chapter 16. The figures and tables from the text that I use for lecture are given in the slides. You should at least read the text associated with those figures and tables.} covered how differences among phytoplankton groups affects the distribution of global marine primary productivity. We covered the biology of the phytoplankton, and how the biology and their predators affects phytoplankton community structure.
+
+\section*{Vocabulary}
+
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+phytoplankton \\
+primary productivity \\
+oligotrophic \\
+mesotrophic \\
+eutrophic \\
+Redfield ratio \\
+thermocline \\
+``classic model'' of \textsc{gpp}\\
+alternative stable states\\
+\end{multicols}
+
+\section*{Concepts}
+
+\begin{enumerate}
+
+	\item Name the size classes and give the size ranges for planktonic organisms. Collectively, which group is known as the net plankton? Why are they called this?
+	
+	\item Name the major groups of phytoplankton that make up the following size classes: microplankton, nanoplankton, and picoplankton.
+	
+	\item Explain primary productivity?\marginnote{\ce{CO2 + 6 H2O ->[energy] C6H12O6 + 6 O2}} Explain the difference between gross primary productivity (\textsc{gpp}) net primary productivity (\textsc{npp}).
+	
+	\item Compare and contrast the phytoplankton biology of microplankton and picoplankton. Explain how the differences affects the distribution of primary production across the oceans.
+	
+	\item Know the Redfield ratio \marginnote{Use a reliable interwebs source.} and be able to explain how it relates to our understanding of nutrient limitation on phytoplankton community structure.
+	
+	\item Explain the differences in relative abundance\marginnote{e.g., Figure 16.2, page 368} of micro- and picoplankton for oligotrophic and eutrophic waters, and for a latitudinal gradient from low to high latitudes.
+
+	\item Explain the ``classic model''of \textsc{gpp} for late spring\marginnote{Do not worry about fall. The overall process is similar.} in the Gulf of Maine or other high latitudes. Consider bottom-up effects of seasonal mixing of nutrients and light availability on microphytoplankton abundance, and the top-down effects of copepods.
+	
+	\item Explain why the ``classic model'' does not work at equatorial latitudes. Be sure to address thermoclines and nutrient availability and how this affects the relative abundance of the different groups phytoplankton present, based on their competitive abilities for limited nutrients.
+	
+	\item Relate nutrient availability and amount of turbulence\marginnote{Figure 16.3, page 369.} to community structure of phytoplankton communities.
+	
+	\item Why should competition for nutrients favor the evolution of smaller size for phytoplankton?\marginnote{Pages 368--370.}
+	
+	\item Explain how nutrient availability\marginnote{Figure 16.4, page 370.} (from oligotrophic to eutrophic conditions) and predators affects community structure of phytoplankton communities. Relate this to maintenance of larger phytoplankton in the community.
+	
+	\item Explain alternative stable states \marginnote{Figure 16.5, page 371. The states switch based on whether the water is stratified or mixed.} based on nutrient and light availability in phytoplankton communities.
+	
+	\item Explain how patchy distribution of nutrients\marginnote{Figure 16.6\textsc{a}, page 373.} maintains a patchy community structure for phytoplankton.
+	
+	\item Explain how the top-down effects\marginnote{Figure 16.9, page 376.} of specialist enemies (predators and especially pathogens) affects the relative abundance of different phytoplankton in the community. Why is this called ``kill the winner''?
+	
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,101 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 Study Guide 06}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Larval dispersal and population connectivity}
+
+We\marginnote{\textbf{Read:} Chapter 4. The figures and tables from the text that I use for lecture are given in the slides. You should at least read the text associated with those figures and tables.} covered how dispersal of planktonic larvae can affect connectivity among marine populations.
+
+\section*{Vocabulary}
+
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+planktonic larvae \\
+non-planktonic larvae\\
+lecithotrophic larvae\\
+planktotrophic larvae\\
+population connectivity \\
+panmictic populations (panmixis) \\
+\end{multicols}
+
+\section*{Concepts}
+
+\begin{enumerate}
+
+	\item Explain \marginnote{These terms are not covered in your text. Review your Marine Biology notes or use reliable sources from the interwebs.} the differences between planktonic and non-planktonic larvae, and between lecithotrophic and planktotrophic larvae.
+	\item What is population connectivity? Explain how planktonic larvae relate to population connectivity.
+	
+	\item What is panmixis? Explain how planktonic larvae, at least conceivably, relates to panmixis of populations.
+	
+	\item Marine planktonic larvae can have larval durations that range from 14–180 days. Is larval duration a good measure of how far larvae can \emph{potentially} disperse? \emph{Actually} disperse? Explain.
+	
+	\item What do $F_\mathrm{ST}$ \marginnote[-3\baselineskip]{$F_\mathrm{ST} = \frac{H_\mathrm{T}-H_\mathrm{S}}{H_\mathrm{T}}$, where $H_\mathrm{S}$ is the mean heterozygosity among subpopulations and $H_\mathrm{T}$ is the total heterozygosity across all populations. Also, $F_\mathrm{ST} = \frac{1}{4Nm + 1}$ where \textit{N} is population size and \textit{m} is the migration rate.} and similar measures like $\Phi_{\mathrm{ST}}$ measure? 
+	
+	\item Describe the three types\marginnote{Table 4.1, page 74.} of population connectivity in terms of demography, evolution, $F_{\mathrm{ST}}$ and population structure. Do not just memorize the table.  Be able to explain each item. For example, what does it mean for a population to be ecologically isolated and genetically connected? How does this relate to \emph{frequency} of larval dispersal among different populations?
+	
+	\item If I provide you with a diagram that relates genetic differentiation\marginnote{Fig. 4.8, page 68.} (e.g., $F_\mathrm{ST}$) to larval duration, be able to reasonably identify the three types covered in Table 4.1. You should also be able to recognize the types based on written descriptions, or be able to create a similar plot.
+
+	\item Study pages 68–72. Be able to explain each of the ``key determinants'' discussed and relate them to the diagram in Figure 4.11.\marginnote{Page 78.} I did not discuss these in depth in lecture but I expect you to know them.
+	
+	\item If I provide you with a diagram that relates genetic differentiation (e.g., $F_\mathrm{ST}$) to larval duration, be able to reasonably identify the three types covered in Table 4.1.
+	
+	\item I discussed five ways that knowledge\marginnote{See pages 75–78. See also pages 58–61.} of larval dispersal should inform management decisions. You should be able to explain each of them. Ideally, you will take the time to think of these in terms of your own conservation plan.
+	
+\end{enumerate}
+
+\end{document}

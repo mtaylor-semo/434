@@ -1,0 +1,331 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+%\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{xcolor}
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{siunitx}
+%\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{chemfig}
+%\usepackage[version=4]{mhchem}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[default]
+}
+
+%\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1em]
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{coral_reef_intro}}
+\begin{frame}[b]{\hfill\textcolor{white}{What are coral reefs?}}
+
+\hfill \tiny \textcolor{white}{James Watt, \textsc{noaa}}
+\end{frame}
+}
+
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_reef_rugosity}}
+\begin{frame}[b]{\highlight{Rugosity} creates structural diversity, which supports high species diversity.}
+
+\hfill \tiny \textcolor{white}{National Ocean Service, public domain}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_reef_diversity}}
+\begin{frame}[b]
+
+\hfill \tiny \textcolor{white}{\textsc{noaa} National Ocean Service, Flickr, public domain}
+\end{frame}
+}
+
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_rugosity_decline}}
+\begin{frame}[b]{Coral rugosity has been declining.}
+
+	\hfill \tiny Fig.~13.9~\copyright\,Sinauer Associates, Inc.
+
+\end{frame}
+}
+
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_caribbean_cover_decline}}
+\begin{frame}[b]{Coral cover has been declining. How will this affect diversity on coral reefs?}
+
+	\hfill \tiny Fig.~13.7~\copyright\,Sinauer Associates, Inc.
+
+\end{frame}
+}
+%%%%%%%%%%%%%%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_line_islands_global}}
+\begin{frame}[b]
+
+	\begin{tikzpicture}
+
+		\node at (13.8em,16em) {\textcolor{white}{\footnotesize Hawaii}};
+
+		\node [left] at (27em, 20.5em) {\textcolor{white}{\footnotesize Los Angeles}};
+
+		\node [right] at (10em, 8.5em) {\textcolor{yellow}{\small Line Islands}};
+	
+%		\node at (2.7em, 7.4em) {\textcolor{white}{\footnotesize Howland/Baker}};
+
+		\draw[thick, rotate around={42:(9.6em,7.2em)}, yellow] (9.6em,7.2em) ellipse (8pt and 25pt);
+
+%		\draw[thick, white] (2.7 em,6.4em) circle [radius = 5pt];
+	
+%		\draw[thick, white, ->]  (8em,3.7em) node [left] {\footnotesize Jarvis} -- (9.3em, 4.7em);
+
+	\end{tikzpicture}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_line_islands_zoom}}
+%\setbeamertemplate{background}[grid][step=1em]
+\begin{frame}[b]{\hfill\textcolor{yellow}{Time to answer some questions.}}
+
+	\begin{tikzpicture}
+
+		\node [right] at (5.5em,20.5em) {\textcolor{yellow}{\footnotesize Kingman}};
+
+		\node [right] at (7.3em, 18.5em) {\textcolor{yellow}{\footnotesize Palmyra}};
+
+		\node [right] at (18.8em, 10.5em) {\textcolor{yellow}{\footnotesize Tabuaeran}};
+
+		\node [right] at (27em, 2.5em) {\textcolor{yellow}{\footnotesize Kiritimati}};
+
+%		\draw[thick, white, ->]  (24em,2em) node [left] {\scriptsize Jarvis} -- (24em, 0em);
+
+%		\draw[thick, white, ->]  (2em,12em) node [right] {\scriptsize Howl./Baker}-- (0em, 12em);
+		
+	\end{tikzpicture}
+
+\end{frame}
+}
+%
+\lecture{instructor}{instructor}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_line_reef_conditions}}
+%\setbeamertemplate{background}[grid][step=1em]
+\begin{frame}[b]{Which island goes with each pair of images?}
+
+	\begin{tikzpicture}
+
+		\onslide<1>{\node at (7.6em,18.3em) {\Large A};
+		\node at (23.8em,18.3em) {\Large B};
+
+		\node at (7.6em, 4.5em) {\Large C};
+		\node at (23.8em, 4.5em) {\Large D};}
+
+		\onslide<2>{\node at (7.6em,18.3em) {\Large Kiritimati};
+		\node at (23.8em,18.3em) {\Large Kingman};
+
+		\node at (7.6em, 4.5em) {\Large Palmyra};
+		\node at (23.8em, 4.5em) {\Large Tabuaeran};}
+
+	\end{tikzpicture}
+
+	\tiny \onslide<2>\href{http://coralreefwatch.noaa.gov/satellite/baa.php}{Coral bleaching animation} \hfill \onslide<1->\tiny Sandin et al. 2008. \textsc{pl}o\textsc{s one} 3(2): e1548.
+
+\end{frame}
+}
+%
+\begin{frame}[t]{Which island(s) have the greatest abundance and biomass of top predator and herbivorous fishes?}
+
+	\includegraphics[width=\textwidth]{13_sandin_fig3}
+
+	\vfilll
+	
+	\hfill \tiny Sandin et al. 2008. \textsc{pl}o\textsc{s one} 3(2): e1548.
+
+\end{frame}
+%
+\begin{frame}[t]
+	\frametitle<1>{Which island has the greatest size diversity for corals? (upper panel)}
+	\frametitle<2>{Which island has the greatest coral recruitment? Coral disease? (lower panel)}
+
+	\centering \includegraphics[height=0.78\textheight]{13_sandin_fig4}
+
+	\vfilll
+	
+	\hfill \tiny Sandin et al. 2008. \textsc{pl}o\textsc{s one} 3(2): e1548.
+
+\end{frame}
+%
+
+% Scotch Diversion
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_scotch_whiskey_profile}}
+\begin{frame}[b]
+
+	\hfill \tiny \textcolor{white}{Wishart 2009. Significance, March.}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_whiskey_profile}}
+\begin{frame}[b]
+
+	\hfill \tiny Wishart 2009. Significance, March.
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_scotch_whiskey_pca}}
+\begin{frame}[b]
+
+	\hfill \tiny Wishart 2009. Significance, March.
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_sandin_fig5}}
+\begin{frame}[b]
+
+	\hfill \tiny Sandin et al. 2008. \textsc{pl}o\textsc{s one} 3(2): e1548.
+
+\end{frame}
+}
+%
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_herbivore_effects}}
+\begin{frame}[b]{Herbivores maintain diversity through keystone actions.}
+
+	\hfill \tiny Fig.~13.4~\copyright\,Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+\begin{frame}[t]{The decline of long-spine sea urchins caused a phase shift in Jamaican reefs.}
+
+	\includegraphics[height=0.78\textheight]{13_urchin_grazing}
+	
+	\vfilll
+	
+	\hfill \tiny Precht and Precht 2015. PeerJ Preprints.
+
+\end{frame}
+
+%
+\begin{frame}[t]{Urchin recovery is facilitating reef recovery.}
+
+	\includegraphics[width=\textwidth]{13_urchin_recovery}
+	
+	\vfilll
+	
+	\hfill \tiny Edmunds and Carpenter 2001. \textsc{pnas} 98: 5067.
+
+\end{frame}
+%
+\begin{frame}[t]{Coral recruits are present only where urchins are present.}
+
+	{\centering \includegraphics[height=0.82\textheight]{13_urchin_coral_association}
+	
+	}
+	
+	\vfilll
+	
+	\hfill \tiny Edmunds and Carpenter 2001. \textsc{pnas} 98: 5067.
+	
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_alternate_stable_states}}
+\begin{frame}[b]
+
+\hfill \tiny \rotatebox{90}{Hoegh-Guldberg et al. 2007. Science 318: 1737}
+\end{frame}
+}
+%
+\begin{frame}[t]{Cleaning species may also increase reef diversity.}
+
+	\includegraphics[width=\textwidth]{13_keystone_cleaners}
+	
+	\vfilll
+	
+	\hfill \tiny Fig.~13.5~\copyright\,Sinauer Associates, Inc.
+	
+
+\end{frame}
+%
+
+\end{document}
+

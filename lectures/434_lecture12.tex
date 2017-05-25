@@ -1,0 +1,244 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+%\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{xcolor}
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{siunitx}
+%\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1em]
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{hydrothermal_vent_black_smoker}}
+\begin{frame}[t]
+
+	\vspace*{3\baselineskip}
+
+	\hspace*{65mm}\hangpara\parbox{49mm}{\raggedright \large\textcolor{white}{%
+	What are hydrothermal vent ecosystems?\\[\baselineskip]
+How are they unique compared to the rest of the deep sea habitat?}%
+}
+
+	\vfilll
+
+	\hfill \tiny \textcolor{white}{Ocean Networks Canada, Flickr Creative Commons.}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_hydrothermal_vent_distribution}}
+\begin{frame}[b]{Hydrothermal vents have a patchy distribution along oceanic ridges.}
+
+ \tiny \hfill Fig.~17.2~\copyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{vent_community}}
+\begin{frame}[b]{\textcolor{white}{Super-heated water has reduced compounds like \ce{H2S}.}}
+
+\tiny\hfill\textcolor{white}{Ocean Networks Canada, Flickr Creative Commons.}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{chemosynthesis}}
+\begin{frame}[b]{Bacterial chemosynthesis oxidizes reduced compounds to release energy.}
+
+\hfill \tiny \copyright\,Pearson Education.
+\end{frame}
+}
+%
+\begin{frame}[t]{Bacteria are primary producers for vent ecosystems.}
+
+\vspace*{-\baselineskip}
+
+	\begin{multicols}{2}
+		{\centering
+		\includegraphics[height=0.82\textheight]{vent_community_mosaic}\par}
+
+	\columnbreak
+
+		\hangpara Free-living bacteria
+
+		\hangpara \highlight{Symbiotic bacteria}
+
+	\end{multicols}
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_temperature_gradient}}
+\begin{frame}[b]{The vent community is zoned by a water temperature gradient.}
+
+\hfill \tiny Fig.~17.4~\copyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_foundation_species}}
+\begin{frame}[b]
+
+\hfill \tiny \textcolor{white}{Fig.~17.1~\copyright\,Sinauer Associates, Inc.}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_foundation_biogeography}}
+\begin{frame}[b]{Different vent regions have different foundation species.}
+
+\hfill \tiny Fig.~17.7~\copyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+%\lecture{instructor}{instructor}
+%
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_foundation_biogeography_scotia}}
+%\begin{frame}[b]{The Scotia Ridge in the southern ocean is dominated by Yeti Crabs.}
+%
+%\hfill \tiny Fig.~17.8~\copyright\,Sinauer Associates, Inc.
+%\end{frame}
+%}
+%
+%\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{vent_community_dead}}
+\begin{frame}[b]{\textcolor{white}{Vent communities last only a few hundred years.}}
+
+\tiny\textcolor{white}{Ocean Networks Canada, Flickr Creative Commons.}
+\end{frame}
+}
+%
+\lecture{instructor}{instructor}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_foundation_biogeography}}
+\begin{frame}[b]{Does this pattern suggest panmixis within regions?}
+
+\hfill \tiny Fig.~17.7~\copyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_genetic_study_area}}
+\begin{frame}[b]
+
+	\vspace*{3\baselineskip}
+
+	\hspace*{65mm}\hangpara\parbox{49mm}{\raggedright \large %
+	How are vent communities maintained?\\[\baselineskip]
+	How are new vents colonized?\\[\baselineskip]
+	Connectivity was tested genetically across vent systems in the East Pacific Rise.}
+
+
+	\vfilll
+
+	\hfill \tiny Vrijenhoek 2010. Molecular Ecology 19: 4391.
+\end{frame}
+}
+%
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_genetic_results}}
+\begin{frame}[b]{Gene flow occurred within regions but not among them.}
+
+\hfill \tiny Vrijenhoek 2010. Molecular Ecology 19: 4391.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_ridge_currents}}
+\begin{frame}[b]{Currents transport larvae along ridges, not across.}
+
+\hfill \tiny Fig.~17.6~\copyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{12_vent_genetic_biogeography}}
+\begin{frame}[b]{Larval dispersal occurs along ridges but not across large gaps on those ridges.}
+
+\hfill \tiny Vrijenhoek 2010. Molecular Ecology 19: 4391.
+\end{frame}
+}
+%
+
+\end{document}
+

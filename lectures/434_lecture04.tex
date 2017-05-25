@@ -1,0 +1,338 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+\begin{frame}[t]{What is marine \highlight{restoration ecology?}}
+\end{frame}
+%
+
+\lecture{instructor}{instructor}
+
+\begin{frame}[t]{Several ideas but all involve \highlight{human intervention.}}
+
+	\hangpara Narrow: Recreate the structure and function of the ecosystem to approximate natural conditions before the system was disturbed (Natural Research Council 1992).
+	
+	\pause
+	
+	\hangpara Broad: Strategies to conserve ecosystem diversity and integrity (Jordan 1988, Carrns and Heckman 1996).
+
+	\pause
+	
+	\hangpara \highlight{Restoration ecology} emphasizes an ecological perspective rather than economic, logistic, or other perspective.
+\end{frame}
+
+%
+\lecture{student}{student}
+
+\begin{frame}[t]{Restoration can take one or combination of approaches.}
+
+	\onslide<1->\hangpara \highlight{Population:} \onslide<2->May emphasize management more than true restoration.
+	
+	\onslide<1->\hangpara \highlight{Habitat:} \onslide<3->Emphasizes foundation / ecosystem engineer species.
+	
+	\onslide<1->\hangpara \highlight{Landscape:} \onslide<4->Emphasizes connectivity between adjacent habitats.
+	
+	\onslide<1->\hangpara \highlight{Ecosystem:} \onslide<5->Like landscape but emphasizes much larger scale. Has greater economic cost but potentially greater reward.
+	
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_positive_effects_diagram}}
+\begin{frame}[b]
+
+\tiny\textcopyright Sinauer Associates, Inc. 
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_restoration_flowchart}}
+\begin{frame}[b]
+
+\hfill\tiny\textcopyright Sinauer Associates, Inc. 
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_oysters}}
+\begin{frame}[t]{\textcolor{white}{Oysters: a case study in restoration ecology.}}
+
+\vskip0pt plus 1filll
+
+\hfill\tiny\textcopyright jsbaw7160, Pixabay, \textsc{cc0}. 
+\end{frame}
+}
+%
+\begin{frame}[t]{Oyster restoration: document historical resources.}
+
+	\includegraphics[width=0.75\textwidth]{04a_flowchart_historical}
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Fig. 22.1 \textcopyright Sinauer Associates, Inc. 
+\end{frame}
+%
+\begin{frame}[t]{Oysters, in the family Ostreidae,}
+
+	\hangpara are bivalve mollusks with calcium carbonate shells,
+	
+	\hangpara are filter feeders that “clear” phytoplankton from the water,
+	
+	\hangpara have planktotrophic larve (10--18 days),
+
+	\hangpara have a global distribution in temperate and tropical estuaries,
+	
+	\hangpara are a foundation species that forms large reefs, and
+	
+	\hangpara are commercially harvested for food and other uses.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_natural_oysterbed}}
+\begin{frame}[b]
+
+\hfill\tiny\colorbox{gray!50!white}{Doug DuCap, Flickr \textsc{cc by-nc-sa 2.0}}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_oyster_farm}}
+\begin{frame}[b]
+
+\tiny\textcolor{white}{Mike Peel, Wikimedia \textsc{cc by-sa 4.0}}
+\end{frame}
+}
+%
+\begin{frame}[t]{Oyster restoration: assess current status.}
+
+	\includegraphics[width=0.75\textwidth]{04b_flowchart_assess}
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Fig. 22.1 \textcopyright Sinauer Associates, Inc. 
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_oyster_bed_distribution_condition}}
+\begin{frame}[t]{Natural oyster beds are in global decline.}
+
+\vskip0pt plus 1filll
+
+\hfill\tiny Beck et al. 2011. BioScience 61: 107.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_oyster_harvest}}
+\begin{frame}[b]
+
+\tiny Beck et al. 2011. BioScience 61: 107.
+\end{frame}
+}
+%
+%
+\begin{frame}[t]{Oyster restoration: identify current bottlenecks.}
+
+	\includegraphics[width=0.75\textwidth]{04c_flowchart_bottlenecks}
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Fig. 22.1 \textcopyright Sinauer Associates, Inc. 
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_netherlands_oyster_bed}}
+\begin{frame}[b]{Oyster beds are subject to overexploitation, pollution, and climate change.}
+
+\hfill\tiny\textcolor{white}{Sonty567, Wikimedia, \textsc{cc0}}
+\end{frame}
+}
+
+%
+\begin{frame}[t]{Oyster restoration: analyze results from experiments.}
+
+	\includegraphics[width=0.75\textwidth]{04d_flowchart_experiment}
+	
+	\hspace{2.5cm}Here is where you come in.
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Fig. 22.1 \textcopyright Sinauer Associates, Inc. 
+\end{frame}
+%
+\begin{frame}[t]{Shoreline armoring has increased dramatically.}
+
+	\centering
+		\includegraphics[width=0.85\textwidth]{04_shoreline_armoring}
+	
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Scyphers et al. 2011. \textsc{pl}o\textsc{s} one 6(8): e22396.
+\end{frame}
+%
+%
+\begin{frame}[t]{They constructed oyster reefs by holding shells in place with mesh.}
+
+	\centering
+		\includegraphics[width=0.75\textwidth]{04_breakwater_dimensions}
+	
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Scyphers et al. 2011. \textsc{pl}o\textsc{s} one 6(8): e22396.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{04_breakwater_bathymetry}}
+\begin{frame}[b]
+
+\hfill\tiny Scyphers et al. 2011. \textsc{pl}o\textsc{s} one 6(8): e22396.
+\end{frame}
+}
+
+%
+\lecture{instructor}{instructor}
+{
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}
+\end{frame}
+}
+
+%
+\begin{frame}[t]{Can restoration depend on larval transport?}
+
+	\centering
+		\includegraphics[width=0.85\textwidth]{oyster_larval_transport}
+	
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Kim et al. 2013. Restoration Ecology 21: 353.
+\end{frame}
+%
+
+%
+\begin{frame}[t]{Do other foundation species in oyster reefs matter?}
+
+	\centering
+		\includegraphics[width=\textwidth]{oyster_mussel_biomass}
+	
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Gedan et al. 2014. Restoration Ecology 22: 517.
+\end{frame}
+%
+%
+\begin{frame}[t]{Does oyster distribution change due to predators?}
+
+	\centering
+		\includegraphics[width=\textwidth]{oyster_density_predators}
+	
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Fodrie et al. 2014. J. Applied Ecology 51: 1314.
+\end{frame}
+%
+%
+\begin{frame}[t]{Does type of substrate affect density or other organisms?}
+
+	\centering
+		\includegraphics[width=\textwidth]{oyster_nekton_macroinverts}
+	
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Brown et al. 2014. Restoration Ecology 22: 214.
+\end{frame}
+%
+
+%
+\begin{frame}[t]{Does fish catch around oyster reefs change?}
+
+	\centering
+		\includegraphics[width=0.6\textwidth]{oyster_fish_catch}
+	
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny Scyphers et al. 2011. \textsc{pl}o\textsc{s} one 6(8): e22396.
+\end{frame}
+%
+\begin{frame}[t]{How might oyster reef restoration be affected by climate change?}
+
+\vspace*{2\baselineskip}
+
+\hangpara “This spiral of engineering and reengineering can be avoided if the first priority becomes conservation and if sustainability is a key element defining success of any restoration initiatives.” — Bertness et al. 2014, \textit{Marine Community Ecology and Conservation}, pg. 511.
+\end{frame}
+\end{document}

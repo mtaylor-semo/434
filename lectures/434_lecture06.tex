@@ -1,0 +1,395 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+%%% Creative Commons Licenses. Establish, then add to Beamer template.
+%\newcommand{\ccbysa}[1][4]{\textsc{cc by-sa #1.0}} % Use version 4.0 as default.
+\newcommand{\ccby}[1]{%
+	\ifx&#1&
+	{\textsc{cc by}}%
+\else
+	{\textsc{cc by #1.0}}
+\fi}
+
+
+\newcommand{\ccbysa}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-sa}}%
+\else
+	{\textsc{cc by-sa #1.0}} 
+\fi}
+
+\newcommand{\ccbyncsa}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-nc-sa}}%
+\else
+	{\textsc{cc by-nc-sa #1.0}}
+\fi}
+
+\newcommand{\ccbync}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-nc}}%
+\else
+	{\textsc{cc by-nc #1.0}}
+\fi}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1cm]
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_coral_spawning}}
+\begin{frame}[b]{Larval dispersal and population connectivity.}
+
+	\hfill \tiny \textcolor{white}{Jamie Craggs, Horniman Museum and Gardens.}
+\end{frame}
+}
+%
+\begin{frame}[t]{What are the three types of \highlight{planktonic larvae?}}
+	\begin{multicols}{2}
+
+	\begin{center}
+		\includegraphics[width=95px]{larvae_nonpelagic}
+		
+		\includegraphics[width=95px]{larvae_lecithotrophic}
+
+		\includegraphics[width=95px]{larvae_planktotrophic}
+	\end{center}	
+	\columnbreak
+
+		\onslide<2->{Non-pelagic
+		
+		Lecithotrophic
+		
+		Planktotrophic
+		
+		\vspace*{\baselineskip}
+		
+		Which has the potential to disperse the farthest? Why?}
+	
+	\end{multicols}
+	
+	\vfilll
+	
+	\tiny T-B: \textcopyright\,M. Hellberg; M. Perkins, Flickr CC; NOAA
+\end{frame}
+%
+\begin{frame}[t]{Larval type may correlate with species range size.}
+
+\includegraphics[width=\textwidth]{larval_dispersal}
+
+\vfilll
+
+\tiny \textcopyright\,Levinton, Oxford Univ. Press.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_connectivity_extremes}}
+\begin{frame}[b]{Population \highlight{connectivity} falls between two extremes.}
+
+	\hfill \tiny Fig. 4.2, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\begin{frame}{$F_\mathrm{ST}$ and variants are measures of connectivity.}
+
+	\hangpara Larval dispersal cannot be observed practically.
+
+	\hangpara Comparison of shared alleles is most common.
+
+	\hangpara $F_{\mathrm{ST}}$ (and related measures) and $\Phi_{\mathrm{ST}}$ compare proportions of shared and private alleles.
+
+	\hangpara $F_{\mathrm{ST}}$ and $\Phi_{\mathrm{ST}}$ range from 0 (no private alleles) to 1 (all private alleles).
+
+	\hangpara $F_{\mathrm{ST}} = \frac{H_\mathrm{T} - H_\mathrm{S}}{H_\mathrm{T}}.$
+	
+
+\end{frame}
+%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_caribbean_epb_prediction}}
+\begin{frame}[b]{Which do you predict will have the highest $F_\mathrm{ST}$? Why?}
+
+\end{frame}
+}
+% PORITES example
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_epb_porites}}
+\begin{frame}[b]{\textit{Porites} is widely distributed across the Pacific Ocean.}
+
+\hfill \tiny\textcolor{white}{Baums Lab, Penn State Univ.}
+\end{frame}
+}
+%
+%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_porites_structure_results}}
+\begin{frame}[b]{\textit{P. lobates} shows strong genetic population structure.}
+
+\tiny Baums et al. 2012.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_porites_pca_results}}
+\begin{frame}[b]
+
+\hfill \tiny Baums et al. 2012. Molecular Ecology 21: 5418.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_porites_simulation_east}}
+\begin{frame}[b]{\textit{P. lobata} cannot disperse across the EPB from the west\dots}
+
+\tiny Wood et al. 2016. Nature Communications 7: 12571.
+\end{frame}
+}
+%
+\begin{frame}[t]{\dots but it can disperse across the EPB from the east.}
+\centering
+\includegraphics[height=0.80\textheight]{06_porites_simulation_west}
+
+	\vfilll
+\hfill \tiny Wood et al. 2016. Nature Communications 7: 12571.
+
+\end{frame}
+
+% ELACATINUS EXAMPLE
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_caribbean_model1}}
+\begin{frame}[b]
+
+\hfill \tiny Roberts et al. 1997. Science 278: 5342.
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_caribbean_model2}}
+\begin{frame}[b]
+
+\tiny Cowen et al. 2000. Science 287: 5454.
+
+\end{frame}
+}
+%
+\begin{frame}[t]{The models were tested with the sharknose goby, \textit{Elacatinus evelynae.}}
+	\centering
+	\includegraphics[width=\textwidth]{06_evelynae}
+	
+	\vfilll
+	
+	\hfill \tiny \textcopyright Paul Humann. Used with permission.
+\end{frame}
+%
+\begin{frame}[t]{\textit{Elacatinus evelynae} removes parasites from other fishes.}
+	\centering
+	\includegraphics[width=\textwidth]{06_genie_cleaner}
+	
+	\vfilll
+	
+	\hfill \tiny \textcopyright Paul Humann. Used with permission.
+\end{frame}
+%
+\begin{frame}[t]{The adults and eggs are non-dispersing. The larval duration is about 3 weeks.}
+		
+	\includegraphics[width=0.49\textwidth]{06_oceanops_pair}\hfill
+	\includegraphics[width=0.49\textwidth]{06_elacatinus_egg}
+	
+	\vfilll
+	
+	\tiny Michael S. Taylor \hfill Colin 1975. \textit{Neon Gobies.}
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_evelynae_range}}
+\begin{frame}[b]
+
+\tiny \textcolor{white}{Colin 1975 and unpublished.}
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_evelynae_results}}
+\begin{frame}[b]{\textcolor{white}{\textit{E. evelynae} shows strong genetic population structure.}}
+
+\hfill \tiny \textcolor{white}{Taylor and Hellberg 2002. Science }
+
+\end{frame}
+}
+%% END EXAMPLES
+\begin{frame}[t]{Connectivity can be described by one of three types.}
+\centering
+\includegraphics[width=\textwidth]{06_population_type_table}
+
+	\vfilll
+
+	\hfill \tiny Table 4.1, \textcopyright Sinauer Associates, Inc.
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_larval_duration_differentiation}}
+\begin{frame}[b]{Larval duration \emph{may} affect population connectivity.}
+
+\hfill \tiny Fig.~4.8 \textcopyright Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_larval_duration_type1}}
+\begin{frame}[b]{Type 1 has the greatest population connectivity.}
+
+\hfill \tiny Fig.~4.8 \textcopyright Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_larval_duration_type2}}
+\begin{frame}[b]{Type 2 has the low population connectivity.}
+
+\hfill \tiny Fig.~4.8 \textcopyright Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_larval_duration_type3}}
+\begin{frame}[b]{Type 3 has has little or no population connectivity.}
+
+\hfill \tiny Fig.~4.8 \textcopyright Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_dispersal_interactions}}
+\begin{frame}[b]{Abiotic and biotic interactions affect connectivity.}
+
+	\tiny Fig. 4.11, \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+
+%% CONSERVATION
+
+\begin{frame}[t]{Larval dispersal informs management decisions by:}
+
+	\hangpara identifying the scale of dispersal,
+	
+	\hangpara identifying the potential for local adaptation,
+
+	\hangpara aiding design of marine protected areas,
+	
+	\hangpara aiding ecosystem-based management decisions, and
+	
+	\hangpara identifying local and regional fisheries stocks.
+		
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_california_mpa_network}}
+\begin{frame}[b]
+
+	\tiny ca.gov
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_predator_prey_dispersal}}
+\begin{frame}[b]{Management must account for larval dispersal of predator and prey.}
+
+	\hfill \tiny Stier et al. 2014. Nature Communications 5: 6575.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{06_fisheries_stocks}}
+\begin{frame}[b]{Identify local and regional fisheries stocks.}
+
+	\hfill \tiny Araujo et al. 2014. Trans. Am. Fish. Soc. 143: 479.
+\end{frame}
+}
+%
+
+\end{document}
+

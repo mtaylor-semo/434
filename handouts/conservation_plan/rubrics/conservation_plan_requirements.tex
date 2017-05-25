@@ -1,0 +1,173 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, hidelinks, addpoints]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/Pictures/teach/434/handouts/}
+	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, left=1.5in, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+	\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
+\usepackage{microtype}
+
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+ %\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+% \newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+
+\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+%% Commands for Exam class
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+%Change \half command from 1/2 to .5
+\renewcommand*\half{.5}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi}\,434 MarEvoEco}{}{Conservation Plan Assignment}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+%\usepackage{mdframed}
+%\mdfsetup{%
+%	innerleftmargin=0pt,%
+%	innerrightmargin=0pt,
+%	innertopmargin=0pt,
+%	innerbottommargin=0pt,
+%	hidealllines=true
+%}%end mdfsetup
+
+%
+%\makeatletter
+%\def\SetTotalwidth{\advance\linewidth by \@totalleftmargin
+%\@totalleftmargin=0pt}
+%\makeatother
+
+
+%\printanswers
+
+
+\begin{document}
+
+\subsection*{Conservation plan requirements (\numpoints~points)}
+
+The requirements for your conservation plan are outlined. The required number of pages for each section are estimates. Breakdown of scoring is in a separate rubric.
+
+\begin{questions}
+
+\question[5]
+Title page: 1 page.
+
+The title page must include a project title that includes ecosystem and approach, the name of the primary investigator, and supporting investigators. Each investigator should assume a title (e.g., Chief Biologist, Public Outreach Coordinator) to indicate each team member's role. 
+
+\question[15]
+Introduction: 2--3 pages.
+
+	The introduction should introduce the overall conservation plan, including a summary of the habitat, landscape,  or ecosystem, depending on the approach your team is taking.  You should clearly state whether the goal is to conserve or protect existing resources or to restore the ecosystem to ``original'' conditions. Include a summary of the specific region where your plan will be implemented, such as Florida Keys, North Carolina coastal marshes, Florida Bay seagrass beds, California kelp forests, or Florida mangrove forests. I list these only as ideas. You are not restricted to these places or even the United States. You should also describe the anthropogenic effects that have been imposed on the system. Use this to justify the need for the conservation plan. This section should be well supported by the scientific literature (scientific publications,  and technical reports from government agencies and non-governmental organizations). 
+
+
+\question[20]
+Ecosystem services, public sectors, and trade-offs: 2--3 pages.
+
+	Identify the ecosystem services and provide a detailed explanation of how the ecosystem provides each service. Include a reasonable estimate of value provided by each service. Identify the public sectors that will have a direct or indirect interest in the conservation plan. Identify potential trade-offs among sectors. Justify which sectors may be negatively affected (or at least not benefit) to the benefit of other sectors. This section should be well supported by the scientific literature.
+
+\question[50]
+Objectives: 5 pages minimum.
+
+	You must have a \emph{minimum} of five objectives independent of the public outreach objective (see below). Begin this section with a 1--2 paragraph summary of the objectives that establishes their priority. Then, state each objective, the  goal of the objective, and provide a detailed explanation and justification for each objective. Your objectives may be organized by team member roles or integrated (each team member contributing partially to each objective). Objectives must paint a cohesive picture detailing how the conservation plan will be implemented and expected outcomes of each objective.
+
+Each objective should clearly demonstrate how it will conserve or protect exemplar species, the habitat (foundation or engineer species), or other pertinent biological entities. As appropriate, address abiotic factors such as pollution, erosion control, climate change, etc. Relate your objectives back to the ecosystem services listed earlier. Each objective must be fully supported by the scientific literature. Each objective should detail the expected impact if it cannot be implemented to tie back the priority order in the opening summary for this section.
+
+
+\question[20]
+Public outreach: 2 pages.
+
+	This is a separate objective from those above. You should provide detailed descriptions of public outreach goals. Describe several types of outreach activities to help you achieve the goals. May include activities for elementary and secondary schools as well as for adults of all educational levels. Should include outreach to sectors negatively affected, not just those that benefit. 
+	
+\question[20]
+Long-term monitoring: 2 pages.
+
+	Describe how implementation and success of the plan will be monitored. Describe how success will be measured. A good plan will identify ways that it can adapt to unforeseen circumstances.
+
+\question[10]
+Budget and time frame: 2 pages.
+
+The budget should be justified with reasonable cost estimates. The time frame should be a 5–10 years, in most cases. More of your budget is likely to be spent early in the plan for implementation and public awareness. Less will be spent on monitoring and continuing outreach.
+
+\question[10]
+Literature cited: 40 citations minimum.
+
+Must be consistently formatted following a standard scientific literature cited format. You may follow the format from \emph{one} of your cited articles. Establish your format early so that team members use the same format. 
+
+\end{questions}
+
+\subsection*{Other requirements}
+
+\begin{enumerate}[label=\textsc{\alph*}.]
+
+	\item Include a final page that details the contribution of each team member. Failure to include this page will result in a 10\% deduction from the total possible points.
+
+	\item Use proper spelling, grammar, and mechanics. Excessive mistakes will result in a 5\% deduction from the total possible points.
+	
+	\item The contributions from each team member must be fully integrated into a cohesive plan. Do not take each member's contribution and place them one after the other (although the objectives may be arranged this way). 
+	
+	\item Your plan must be typed, single-spaced, and uploaded to the drop box.
+	
+	\item Ask me questions for anything you unsure about.
+	
+\end{enumerate}
+
+\end{document}  

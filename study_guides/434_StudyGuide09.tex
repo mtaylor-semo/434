@@ -1,0 +1,123 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+%\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 Study Guide 09}
+\author{Kelp forest ecosystems}
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+%section*{Kelp forest ecosystems}
+
+We\marginnote{\textbf{Read:} Chapter 14. The figures and tables from the text that I use for lecture are given in the slides. You should at least read the text associated with those figures and tables.} covered kelp forest ecosystems, emphasizing alternate stable states that shift between kelp forests and urchin barrens.
+
+\section*{Vocabulary}
+
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+subtidal \\
+sublittoral \\
+infralittoral \\
+circalittoral \\
+trophic cascade \\
+alternate stable states\\
+discontinuous phase shift \\
+continuous phase shift \\
+hysteresis \\
+resilience
+\end{multicols}
+
+\section*{Concepts}
+
+\begin{enumerate}
+
+	\item What is a kelp forest?\marginnote{Read page 316.} From a conservation perspective, why are they important?
+
+	\item What abiotic factor\marginnote{Remember the role of the current gyres in each ocean.} is the primary driver for the global distribution of kelp? Use this to explain why kelp are widely distributed along the west coasts of North and South America but only at high latitudes along the east coast of these same continents,
+
+\item
+  What is the infralittoral zone?\marginnote{Review the rocky intertidal ecosystems lecture.} What is another name for the infralittoral zone? What is the circalittoral zone? Does
+  the bottom of the infralittoral zone always coincide with photosynthetically active radiation (\textsc{par})?
+  Why or why not?\marginnote{Read page 321.} What species besides kelp also contribute to the boundary between the infralittoral and circalittoral? How?
+
+\item
+  Describe the long-term interactions\marginnote{Fig. 14.6, page 323 is a different way of viewing the information I showed in a different slide.} between kelp and sea urchins and 
+  associated alternate stable states off Nova Scotia.
+
+\item
+  Are the phase shifts between kelp forests and urchin barrens in Nova Scotia and Tasmania discontinuous or continuous? Explain. 
+  
+\item Explain hysteresis.\marginnote{See page 326 and especially Box 14.1.} Why is hysteresis important from a conservation perspective?
+
+\item Explain how commercial harvesting\marginnote{Fig. 14.5, page 322.} of sea urchins has affected stable states off the coast of Maine?
+
+\item\label{tasmania_states} Explain how commercial harvesting\marginnote{Figs. 14.10 and 14.11, pages 328--329.} of lobsters off the east coast of Tasmania as affected stable states there.
+
+\item Explain how climate change has contributed to the state changes you identified in question~\ref{tasmania_states}. Be specific.
+
+\item
+  What is a trophic cascade?\marginnote{Fig. 14.7, page 325.} Explain the phase shift caused when killer whales started to feed on sea otters off the coast of Alaska. 
+    
+\item Use the trophic cascade\marginnote{Carefully read pages 323--325.} as way of explaining how top-down effects may influence the presence or absence of kelp forests or urchin barrens.
+
+\item Explain how greater diversity of top-level predators can stabilize a trophic cascade. Include both consumptive and non-consumptive effects.
+
+\item Explain how greater diversity of top-level predators enhances resilience\marginnote{Resilience is the amount of disturbance an ecosystem can withstand before shifting to an alternate state. Hollings, C.F. 1973. Resilience and stability of ecosystems. Ann. Rev. Ecol. Syst. 4:1–23.} of the kelp forest ecosystem.
+
+\item Compare figures 14.6 and 14.8? Which more likely demonstrates a discontinuous phase shift? Which more likely demonstrates a continuous phase shift? Which shows greater resilience? Justify your answer.
+
+\item Like Alaska, Sea otters\marginnote{If you read everything assigned above, you should know this.} also disappeared off the coast of central California. Why was a cascade not observed there?
+
+\end{enumerate}
+
+\end{document}

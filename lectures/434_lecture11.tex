@@ -1,0 +1,252 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+%\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{xcolor}
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{siunitx}
+%\usepackage{booktabs}
+%\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{chemfig}
+%\usepackage[version=4]{mhchem}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1em]
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{marsh_zonation_intro}}
+\begin{frame}[b]{Salt Marsh Ecosystems.}
+\hfill\tiny\textcolor{green4}{Source unknown.}
+\end{frame}
+}
+%
+\begin{frame}[t]{Review: Biotic and abiotic interactions create zones.}
+
+	\includegraphics[width=\textwidth]{11_marsh_zonation_plants}
+
+	\begin{tikzpicture}
+		\draw [|-|] (1em,0) -- node [below] {High marsh} (9.1,0) ;
+
+		\draw [|-|] (9.2,0) -- node [below] {Low marsh} (11.9,0) ;
+	\end{tikzpicture}
+
+	\vfilll
+	
+	\hfill \tiny Fig. 11.2 \textcopyright\,Sinauer Associates, Inc.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{11_marsh_interactions}}
+\begin{frame}[b]{Review: Positive and negative interactions maintain ecosystem structure and function.}
+
+	\hfill \tiny Fi.g 11.3 \textcopyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{marsh_zonation_abiotic}}
+%\begin{frame}[b]{Review}
+%\tiny Pennings and Bertness 2001. 
+%\end{frame}
+%}
+%%
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{marsh_patch_dynamics}}
+%\begin{frame}[b]{Review: \highlight{Patch dynamics} are regulated by biotic and abiotic processes.}
+%\tiny Pennings and Bertness 2001. 
+%\end{frame}
+%}
+%%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{marsh_predator_prey}}
+\begin{frame}[b]{Review: predators affect the distribution of prey.}
+\tiny\textcopyright\,Benjamin Pearson.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{11_trophic_cascade}}
+\begin{frame}[b]
+
+	\hfill \tiny Fi.g 11.7 \textcopyright\,Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{11_snail_damage}}
+\begin{frame}[b]{Snails can destroy a marsh if not controlled by crabs.}
+
+	\hfill \tiny\textcolor{white}{Fig. 11.8 \textcopyright\,Sinauer Associates, Inc.}
+\end{frame}
+}
+%
+\begin{frame}[t]{Alligators are top consumers in some salt marshes.}
+
+	\includegraphics[width=\textwidth]{11_alligator_diet}
+	
+	Blue crabs are the most common organism in the alligator's diet.
+
+	\vfilll
+	
+	\hfill \tiny Nifong and Silliman 2013. J. Exp. Mar. Biol. Ecol. 440: 185.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{11_alligator_consumptive_effects}}
+\begin{frame}[b]{Alligators can cause consumptive and non-consumptive effects.}
+
+	\tiny Nifong and Silliman 2013. J. Exp. Mar. Biol. Ecol. 440: 185.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{11_two_crabs}}
+\begin{frame}[b]{How might temperature affect the activity of these two predatory crab species?}
+
+
+	\tiny \textsc{usgs}, Wikimedia, public domain.\hfill Domicke, Wikimedia, \ccbysa{4}
+\end{frame}
+}
+%
+
+\begin{frame}[t]{How does predation activity vary with temperature, individually and both together?}
+
+	\includegraphics[width=\textwidth]{11_marsh_insurance_hypothesis}
+	
+	What ecosystem function hypothesis does this support? \\
+	\textcolor{gray!50!white}{Hint: redundancy}
+
+	\begin{tikzpicture}
+	
+	\tikzset{
+	mydot/.style={
+	  fill,
+	  circle,
+	  inner sep=1.5pt
+	  }
+	}
+	\tikzset{
+	mysquare/.style={
+	  fill,
+	  rectangle,
+	  inner sep=2pt
+	  }
+	}
+		% Left panel
+		\draw [thick, dashed, gray] (1.75,2.5) -- node [above] {temp} (2.75,2.5);
+
+		\node [mydot] at (3.1,2.5){};	\node [mydot] at (4.1,2.5){};
+		
+		\draw [thick] (3.1,2.5) -- node [above] {\textit{Pano.}} (4.1,2.5);
+
+		\node [mysquare, black!50!gray] at (4.45,2.5){};	\node [mysquare, black!50!gray] at (5.45,2.5){};
+
+		\draw [black!50!gray,thick] (4.45,2.5) -- node [above] {\textit{Eury.}} (5.45,2.5);
+
+		% Right panel
+		\draw [thick, dashed, gray] (6.75,2.5) -- node [above] {temp} (7.75,2.5);
+	
+		\node [mydot] at (8,2.5){};	\node [mydot] at (9,2.5){};
+		
+		\draw [thick] (8,2.5) -- node [above] {both} (9,2.5);
+
+
+	\end{tikzpicture}
+
+	\vfilll
+	
+	\hfill \tiny Griffin and Silliman 2011. Biology Letters 7: 79.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{11_crabs_tmii}}
+\begin{frame}[b]{Crabs can have negative trait-mediated indirect interactions \textsc{tmii}s with plants.}
+
+	\hfill \tiny Griffin et al. 2011. Biology Letters 7: 710.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{11_anthropogenic_cascade_modification}}
+\begin{frame}[b]{Anthropogenic effects can alter the trophic cascade.}
+
+	\hspace*{120mm} \tiny \rotatebox{90}{Fig. 11.9 \textcopyright\,Sinauer Associates, Inc.}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{11_multifunctionality}}
+\begin{frame}[b]{Higher functional diversity increased ecosystem function.}
+
+	\tiny Snail (orange); crab (green); fungus (black) \hfill Hensel and Silliman 2013. \textsc{pnas} 110: 20621.
+\end{frame}
+}
+%
+\end{document}
+

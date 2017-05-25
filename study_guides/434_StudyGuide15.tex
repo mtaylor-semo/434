@@ -1,0 +1,95 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 study guide 15}
+\author{Ocean warming}
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+%section*{Kelp forest ecosystems}
+
+We\marginnote{\textbf{Read:} Chapter 19.} covered ocean warming and effects on biology of marine organisms.
+
+\section*{Vocabulary}
+\begin{multicols}{2}
+climate change \\
+phenology \\
+thermohaline circulation \\
+biodiversity hotspot
+\end{multicols}
+\section*{Concepts}
+
+\begin{enumerate}
+
+\item\label{uneven_warming} Ocean warming does not occur uniformly across oceans.\marginnote{Think broadly about the consequences.} Where is warming occurring most rapidly? What are the consequences of this?
+
+\item How does warming affect phenology\marginnote{See Fig.~19.10, and read pages 437--438.} and the distribution of marine species?
+
+\item How does warming affect phytoplankton community structure?\marginnote{This would be a good time to review your notes and study guide for phytoplankton communities (Lecture 07).} How could this affect primary production in the Gulf of Maine/ Explain.
+
+\item How might warming affect <insert ecosystem>? We covered an example of warming for each ecosystem that is being covered by a management plan. You should think of specific ways in which warming (and acidification) for the ecosystem that was the subject of your specific management plan.
+
+\item How might larval duration and survivorship be affected by warming? Explain.\marginnote{Hint: See question~\ref{uneven_warming}.} Could this increase the \emph{potential} for connectivity between the north Atlantic and north Pacific oceans?
+
+\item Explain how warming might affect sea levels. Explain how this could affect ecosystem services for different ecosystems?
+
+\item Explain how warming might affect thermohaline circulation (the great ocean conveyor).
+
+\item If warming causes loss of coral diversity\marginnote{See also Fig.~19.12.} , will other organisms (or at least fishes) on all coral reef ecosystems all be affected equally? That is, does current non-coral diversity alter how warming might affect non-coral diversity on coral reefs?
+
+\item Are ecosystem functions affected equally by acidification and warming? That is, do acidification and warming each contribute equally to change of ecosystem function? Explain.
+
+\end{enumerate}
+
+\end{document}

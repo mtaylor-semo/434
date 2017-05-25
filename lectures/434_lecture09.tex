@@ -1,0 +1,265 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{xcolor}
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1cm]
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_kelp_forest_ecosystems}}
+\begin{frame}[b]
+
+	\tiny\textcolor{white}{Peter Southwood, Wikimedia, \ccbysa{3}}
+\end{frame}
+}
+%
+\begin{frame}[t]{Review: How do ocean gyres affect the distribution of surface temperatures?}
+
+	\includegraphics[width=\textwidth]{09_ocean_gyres_surface_temperatures}
+
+	\vfilll
+	
+	\hfill \tiny \textcopyright McGraw-Hill, Inc.
+
+\end{frame}
+%
+%
+\begin{frame}[t]{Describe the distribution of kelp relative to surface water temperature.}
+
+	\includegraphics[width=\textwidth]{09_kelp_distribution}
+
+	\vfilll
+
+	\hfill \tiny \textcopyright Sinauer Associates, Inc.
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_sublittoral_divisions}}
+\begin{frame}[b]{Review: Light penetration divides sublittoral into \highlight{infralittoral} and \highlight{circalittoral} zones.}
+
+	\hfill \tiny \textcopyright Oxford University Press.
+\end{frame}
+}
+%
+\lecture{instructor}{instructor}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_sublittoral_divisions}}
+\begin{frame}[b]{Review: Does light fully explain this pattern?}
+
+	\hfill \tiny \textcopyright Oxford University Press.
+\end{frame}
+}
+%
+\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_subtidal_urchins_seastars}}
+\begin{frame}[b]%{Keystone species also determine the zonation.}
+
+%	\hfill \tiny \textcopyright Oxford University Press.
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_subtidal_alternate_stable_states}}
+\begin{frame}[t]{Review: Kelp-urchin interactions result in \highlight{alternate stable states.}}
+
+	\vfilll
+	
+	\hfill \tiny \textcopyright McGraw-Hill, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_discontinuous_phase_shifts}}
+\begin{frame}[b]
+
+	\vfilll
+	
+	\hfill \tiny Box 14.1 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_discontinuous_perturbations}}
+\begin{frame}[b]{\highlight{Hysteresis} is the difference in conditions required to shift between stable states.}
+
+	\vfilll
+	
+	\tiny Box 14.1 \textcopyright Sinauer Associates, Inc. \hfill Scheffer and Carpenter. 2003. \textsc{tree} 18: 648.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_kelp_temporal_trends}}
+\begin{frame}[t]{How would these alternate states change due to commercial harvesting of urchins?}
+
+	\vfilll
+	
+	\hfill \tiny Fig. 14.6 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_urchin_harvest}}
+\begin{frame}[t]{Kelp abundance and associated diversity increased rapidly after urchin harvest.}
+
+	\vfilll
+	
+	\hfill \tiny Fig. 14.5 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_alaska_trophic_cascade}}
+\begin{frame}
+
+	\vfilll
+	
+	\hfill \tiny Fig. 14.7 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_diversity_predator_cascade}}
+\begin{frame}[t]{A diverse predator assemblage can stabilize a cascade through consumptive and non-consumptive effects.}
+
+	\vfilll
+	
+	\hfill \tiny Byrnes et al. 2006. Ecology Letters 9: 61.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_kelp_cascade_el_nino}}
+\begin{frame}[t]{Predator diversity enhances \highlight{resilience.}}
+
+	\vfilll
+	
+	\tiny Fig. 14.8 \\ \textcopyright Sinauer
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_centrostephanus}}
+\begin{frame}[t]{\textit{Centrostephanus} is creating barrens along eastern Tasmania.}
+
+	\definecolor{shadecolor}{RGB}{242,253,252}
+	\vfilll
+	\hfill \tiny \colorbox{shadecolor}{\textcopyright Scott Ling, University of Tasmania.}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_tasmania}}
+\begin{frame}[b]
+
+	\vfilll
+	\tiny tas.gov.au (left). Fig. 14.11 \textcopyright Sinauer Associates, Inc. (right).
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_tasmania_water_temperature}}
+\begin{frame}[b]{Water temperature has increased past a critical threshold for survival of urchin larvae.}
+
+	\vfilll
+	\hfill \tiny Fig. 14.10 \\ \hfill \textcopyright Sinauer
+\end{frame}
+}
+%
+\begin{frame}[t]{Lobster harvesting has removed the urchin's primary predator.}
+
+	\includegraphics[width=\textwidth]{09_tasmania_lobster_catch}
+	
+	\vfilll
+	
+	\hfill \tiny Fig. 14.10 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{09_tasmania_resilience_loss}}
+\begin{frame}[b]{Overfishing (and climate change) reduced resilience for an ecosystem with high hysteresis.}
+
+%	\vfilll
+	\tiny Ling et al. 2009. \textsc{pnas} 106: 22341. \hfill Selkoe et al. 2015. Ecosystem Health and Sustainability 1: 17.
+\end{frame}
+}
+%
+
+\end{document}
+

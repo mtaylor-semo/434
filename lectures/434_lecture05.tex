@@ -1,0 +1,349 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+%%% Creative Commons Licenses. Establish, then add to Beamer template.
+%\newcommand{\ccbysa}[1][4]{\textsc{cc by-sa #1.0}} % Use version 4.0 as default.
+\newcommand{\ccby}[1]{%
+	\ifx&#1&
+	{\textsc{cc by}}%
+\else
+	{\textsc{cc by #1.0}}
+\fi}
+
+
+\newcommand{\ccbysa}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-sa}}%
+\else
+	{\textsc{cc by-sa #1.0}} 
+\fi}
+
+\newcommand{\ccbyncsa}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-nc-sa}}%
+\else
+	{\textsc{cc by-nc-sa #1.0}}
+\fi}
+
+\newcommand{\ccbync}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-nc}}%
+\else
+	{\textsc{cc by-nc #1.0}}
+\fi}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1cm]
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{05_biodiversity_ecosystem_function}}
+\begin{frame}[b]
+
+	\hfill\tiny \textcolor{white}{wan\_hong, Flickr, \ccbyncsa{2}}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{05_ecosystem_functions}}
+\begin{frame}[b]{Ecosystem functions affect ecosystem services.}
+
+	\hfill\tiny Strong et al. 2015. Estuarine, Coastal, and Shelf Science 161: 46.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{05_what_is_biodiversity}}
+\begin{frame}[b]
+
+\hfill\tiny\textcolor{white}{Ocean Networks Canada, Flickr, \ccbyncsa{2}}
+\end{frame}
+}
+%
+\begin{frame}[t]{Biodiversity can be assessed by measuring richness and evenness.}
+
+	\hangpara \highlight{Richness:} \onslide<2->{\HiddenWord{the number of species present.}}
+	
+	\vspace*{1\baselineskip}
+	
+	\hangpara \highlight{Evenness:} \onslide<3->{\HiddenWord{the relative abundance of each species.}}
+	
+	\vspace*{1\baselineskip}
+
+	\onslide<4->
+	
+	\hangpara	The Shannon-Weiner diversity index is a common measure of species diversity: $H' = -\sum{p_i \ln p_i}.$
+	
+\end{frame}
+%
+\begin{frame}[t]{Here are two rocky intertidal communities.}
+	
+	Just by looking, which community do you think is more diverse?
+		
+	\noindent\includegraphics[width=\textwidth]{05_functional_diversity_communities}
+	
+	
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny \href{https://jonlefcheck.net/2014/10/20/what-is-functional-diversity-and-why-do-we-care-2/}{\textcopyright Jon Lefcheck}
+\end{frame}
+%
+\begin{frame}[t]{Community 1 has four species:}
+
+	\hspace*{1.5em}Three species of barnacles and a mussel. {\small $H' = 1.39.$}
+
+	\centering\includegraphics[width=0.9\textwidth]{05_functional_diversity_community1}
+
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny \href{https://jonlefcheck.net/2014/10/20/what-is-functional-diversity-and-why-do-we-care-2/}{\textcopyright Jon Lefcheck}
+
+\end{frame}
+%
+\begin{frame}[t]{Community 2 has four species:}
+
+	\hspace*{1.5em}A mussel, a seastar, an anemone, and a seagrass.  {\small $H' = 1.39.$}
+
+	\centering\includegraphics[width=0.9\textwidth]{05_functional_diversity_community2}
+
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny \href{https://jonlefcheck.net/2014/10/20/what-is-functional-diversity-and-why-do-we-care-2/}{\textcopyright Jon Lefcheck}
+
+\end{frame}
+%
+\begin{frame}[t]{Species diversity treats each species as equally distinct.}
+
+	{\centering\includegraphics[width=0.8\textwidth]{05_equally_distinct}\par}
+	
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny \href{https://jonlefcheck.net/2014/10/20/what-is-functional-diversity-and-why-do-we-care-2/}{\textcopyright Jon Lefcheck}
+	
+\end{frame}
+%
+\begin{frame}[t]{What if the \highlight{functional diversity} of the species is considered instead?}
+
+	\begin{multicols}{2}
+	
+	Community 2 has greater functional diversity compared to
+	community 1.
+	
+	\columnbreak
+	
+	\includegraphics[width=0.45\textwidth]{05_unequally_distinct}
+	
+	\end{multicols}
+	
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny \href{https://jonlefcheck.net/2014/10/20/what-is-functional-diversity-and-why-do-we-care-2/}{\textcopyright Jon Lefcheck}
+	
+\end{frame}
+%
+\begin{frame}[t]{Fishes have the greatest species diversity in the Indo-West Pacific.}
+
+	\includegraphics[width=\textwidth]{05_fish_species_diversity}
+	
+	\vskip0pt plus 1filll 
+	
+	\hfill\tiny Stuart-Smith et. al. 2013. Nature 501: 539.
+	
+\end{frame}
+%
+\begin{frame}[t]{Fishes have the greatest \emph{functional} diversity in East Pacific and Caribbean Sea.}
+
+	\includegraphics[width=\textwidth]{05_fish_functional_diversity}
+	
+	\vspace*{-0.5\baselineskip}
+	
+	\hangpara Functional diversity may be more important to \\ecosystem function than species diversity.
+	
+	\vskip0pt plus 1filll 
+	
+	\hfill\tiny Stuart-Smith et. al. 2013. Nature 501: 539.
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{05_bef_forms}}
+\begin{frame}[b]{The relationship between diversity and function can take many forms.}
+
+
+	\hfill\tiny Strong et al. 2015. Estuarine, Coastal, and Shelf Science 161: 46.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{05_bef_complementary}}
+\begin{frame}[b]{\highlight{Complementarity} of species can increase ecosystem function.}
+
+\hfill\tiny Fig. 6.3a\,\textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{05_insurance_hypothesis}}
+\begin{frame}[b]{The \highlight{insurance hypothesis} proposes that ecosystem function is maintained in variable environments.}
+
+\hfill\tiny Fig. 6.4\,\textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\begin{frame}[b]{The \highlight{portfolio effect} proposes that function is maintained by most species if any one species declines.}
+
+\centering
+\includegraphics[height=0.8\textheight]{05_portfolio_effect}
+
+\hfill\tiny \href{http://www.nature.com/scitable/knowledge/library/biodiversity-and-ecosystem-services-is-it-the-96677163}{\textcopyright Nature Scitable, with permission.}
+\end{frame}
+%
+\begin{frame}[t]{Trophic interactions influence extinction effects.}
+	\centering
+	\includegraphics[height=0.85\textheight]{05_trophic_level_effects}
+	
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny \href{http://www.nature.com/scitable/knowledge/library/biodiversity-and-ecosystem-services-is-it-the-96677163}{\textcopyright Nature Scitable, with permission.}
+\end{frame}
+%
+%
+\begin{frame}[t]{Greater diversity may increase resistance to invasive species.}
+
+	\centering\includegraphics[height=0.75\textheight]{05_invasive_species}
+	
+	\vskip0pt plus 1filll
+	
+	\hfill \tiny Stachowicz et al. 2002. Ecology 83: 2575.
+\end{frame}
+%
+\begin{frame}[t]{Prediction 1: Biodiversity should increase ecosystem function }
+	\begin{multicols}{2}
+		where niche partitioning influences coexistence, and
+		
+		\vspace*{2\baselineskip}
+		
+		when competitively dominant species make the strongest contribution to ecosystem function.
+		
+	\columnbreak
+		\includegraphics[width=0.45\textwidth]{05_niche_predictionA}
+		
+	\end{multicols}
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny Duffy and Stachowicz 2006. Mar. Ecol. Prog. Ser. 311: 179.
+\end{frame}
+%
+\begin{frame}[t]{Prediction 2: Ecosystem function should increase over space and time when species vary in response to environmental variation.}
+	
+	\centering	
+	
+	\includegraphics[width=0.85\textwidth]{05_time_predictionB}
+	
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny Duffy and Stachowicz 2006. Mar. Ecol. Prog. Ser. 311: 179.
+
+\end{frame}
+%
+\begin{frame}[t]{Diversity affects services through ecosystem functions.}
+
+		\includegraphics[width=\textwidth]{05_diversity_to_service}
+		
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny Worm et al. 2006. Science 314: 787.
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{05_function_supports_service}}
+\begin{frame}[b]{Increased biodiversity can increase ecosystem services.}
+
+
+\hfill\tiny Fig. 6.12\,\textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+\begin{frame}[t]{Diverse processes increase carbon sequestration and resulting services.}
+
+		\includegraphics[width=\textwidth]{05_carbon_sequestration}
+		
+	\vskip0pt plus 1filll
+	
+	\hfill\tiny Snelgrove et al. 2014. Trends Ecol. Evol.  29: 398.
+
+\end{frame}
+
+\end{document}
+

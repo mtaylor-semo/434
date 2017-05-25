@@ -1,0 +1,97 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+%\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 Study Guide 11}
+\author{Hydrothermal vent ecosystems}
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+%section*{Kelp forest ecosystems}
+
+We\marginnote{\textbf{Read:} Chapter 17. The figures and tables from the text that I use for lecture are given in the slides. I may give pop quizzes based on the assigned reading.} covered hydrothermal vent ecosystems, emphasizing connectivity among vent systems.
+
+\section*{Vocabulary}
+\begin{multicols}{2}
+hydrothermal vents\\
+oceanic ridges\\
+chemosynthesis\\
+symbiosis\\
+foundation species \\
+population connectivity\\
+\end{multicols}
+\section*{Concepts}
+
+\begin{enumerate}
+
+\item What are hydrothermal vents?\marginnote{Vent systems are very dynamic. They form sporadically along ocean ridges but may last for only 200--300 years.} What is the source of energy for this ecosystem?  How does this energy enter into the organisms living in this ecosystem?
+
+\item Do vent systems on different ocean ridge systems have the same or different foundation species? What about vent systems within the same ridge system?
+
+\item Is zonation present in a hydrothermal vent ecosystem? If so, explain the pattern and the cause of the zonation gradient. If not, explain the processes that prevent the formation of zonation.
+
+\item How does larval transport explain maintenance of vent systems within ridges?
+
+\item Does larval transport occur among different ocean ridges? Explain how water currents facilitate or prohibit transport among ocean ridge systems. 
+
+\item Does larval transport occur among all vent systems along entire ocean ridge systems? Explain how water currents facilitate or prohibit transport within ocean ridge systems. 
+
+\item Do hydrothermal vents display evidence of panmixis? Explain why or why not.
+
+\item Describe the pattern of genetic differentiation among three vent systems across the East Pacific Rise ridge system. How does larval transport explain this pattern?
+
+\item Why are vent systems considered metapulations? How does metapopulation dynamics relate to larval transport among vent systems?\marginnote{Carefully study pages 393--396. I may not cover all of this in lecture.}
+
+\end{enumerate}
+
+\end{document}

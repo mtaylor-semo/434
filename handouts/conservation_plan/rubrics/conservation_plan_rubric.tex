@@ -1,0 +1,180 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, twoside]{article}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage[left=0.75in,right=0.7in,top=0.8in,bottom=0.9in]{geometry} 
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multicol}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{itemsep=-0.25\baselineskip,align=left}
+
+\begin{document}
+\begin{landscape}
+{\small%
+\begin{longtable}[l]{@{}L{5cm}L{4cm}L{4cm}L{4cm}L{4cm}@{}}
+\caption*{\textsc{bi} 434/634: Grading rubric for the conservation plan. Categories (rows) are listed in increasing order of points, not order they should appear in the plan. See the Conservation Plan Requirements for overall arrangement. Note that points drop rapidly from Outstanding to Satisfactory, especially for the Objectives. Be sure to read and follow the requirements and this rubric carefully.}\\
+\toprule
+Content & Unsatisfactory (0 points) & Borderline (1 point) & Satisfactory (3 points) & Outstanding (5 points) \\ 
+\midrule
+\endfirsthead
+%\toprule
+%Content & Unsatisfactory (0 points) & Borderline (10 points) & Satisfactory (15 points) & Outstanding (20 points) \\ 
+%\midrule
+%\endhead
+% Row 1: Title page
+\textbf{Title page}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}
+\item Project title identifies ecosystem and approach,
+\item Lists all team members,
+\item Lists title of each team member.
+\end{enumerate}&%
+Did not include a title page	&%
+Includes only one of the three required items \emph{\textsc{or}} more than one required item but none complete. &%
+Includes all three required items but none are complete. &%
+All required items included and complete.\\[-1em]
+\midrule
+%%Row 2 Budget and Time Frame
+ & Unsatisfactory (0 points) & Borderline (3 points) & Satisfactory (7 points) & Outstanding (10 points) \\ 
+ \midrule
+\textbf{Budget and time frame}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}
+\item Budget is justified,
+\item Budget includes reasonable cost estimates,
+\item Time frame is reasonably demonstrated to need 5–10 years.
+\end{enumerate}&%
+Missing budget \emph{\textsc{and}} time frame.	&%
+Missing budget \emph{\textsc{or}} time frame. Budget is not justified or does not include reasonable cost estimates, or time frame is outside the required time frame. &%
+Budget and time frame included but budget is not justified or does not include reasonable cost estimates, or time frame is unreasonable.  &%
+All required items included and complete. \\[-1em]
+\midrule
+%% Row 3: Literature Cited
+\textbf{Literature cited}\par
+\vspace{-0.5\baselineskip}
+\begin{enumerate}
+\item Includes a minimum of 40 citations,
+\item Citations in alphabetical and then chronological order,
+\item Citations consistently follow a standard format.
+\end{enumerate}&%
+Did not include a Literature Cited section or had 20 or fewer citations.&%
+Provided 21–34 references organized in alphabetical then chronological order and proper format by deadline date \textit{\textsc{or}} had 35–39 or more were not organized or formatted properly &%
+Provided 35–39 references organized in alphabetical then chronological order and formatted properly and consistently \textit{\textsc{or}} had 40 or more were not organized or formatted properly &%
+Provided at least 40 or more references organized in alphabetical then chronological order and fornatted properly and consistently. \\
+\midrule
+%% Row 4: Introduction
+ & Unsatisfactory (0 points) & Borderline (5 points) & Satisfactory (10 points) & Outstanding (15 points) \\ 
+ \midrule
+\textbf{Introduction}\par
+\vspace{-0.5\baselineskip}
+\begin{enumerate}
+\item Summarizes type of approach used,
+\item Decribes the goal as conservation, protection, or restoration,
+\item Summarizes the region where the plan will be implemented, 
+\item Describes anthropogenic effects on the system,
+\item Justifies the need for the conservation plan,
+\item Is well supported by scientific publications.
+\end{enumerate}&%
+Only 0–1 required items included \textit{\textsc{or}} more items included but all items not complete or well sourced. &%
+2–3 required items included and complete but 3–4 items not complete or well sourced. &%
+4–5 required items included and complete but 1–2 items not complete or well sourced. &%
+All required items included, complete, and well sourced.\\[-1em]
+\midrule
+\newpage
+\midrule
+%% Row 5: Ecosystem services
+ & Unsatisfactory (0 points) & Borderline (10 points) & Satisfactory (15 points) & Outstanding (20 points) \\ 
+\midrule
+\textbf{Ecosystem services}\par
+\vspace{-0.5\baselineskip}
+\begin{enumerate}
+\item Identifies many ecosystem services,
+\item Estimates value provided by each service,
+\item Identifies direct and indirect public sectors,
+\item Identifies trade-offs among sectors.
+\item Is well supported by scientific publications.
+\end{enumerate} &%
+Only 0–1 required items included \textit{\textsc{or}} more items included but all items not complete or well sourced. &%
+2 required items included and complete but 3 items not complete or well sourced.   &%
+3–4 required items included and complete but 1–2 items not complete or well sourced.  &%
+All required items included, complete, and well sourced.\\[-1em]
+\midrule
+%% Row 6: Public outreach
+\textbf{Public outreach}\par
+\vspace{-0.5\baselineskip}
+\begin{enumerate}
+\item Describes public outreach goals,
+\item Describes outreach activities and how they will be implemented,
+\item Includes outreach goals for negatively affected sectors,
+\item Is reasonably well sourced.
+\end{enumerate} &%
+No required items included \textit{\textsc{or}} more items included but all items not complete or reasonably well sourced. &%
+1 required item included and complete but other items not complete \emph{\textsc{or}} only 1–2 sources used. &%
+2–3 required items included and completed but 1–2 items not complete or well sourced. &%
+All required items included, complete, and reasonably well sourced.\\[-1em]
+\midrule
+%% Row 7: Long-term monitoring
+\textbf{Long-term monitoring}\par
+\vspace{-0.5\baselineskip}
+\begin{enumerate}
+\item Describes how implementation and success will be monitored,
+\item Identifies how success will be measured,
+\item Attempts to account for unforeseen circumstances.
+\end{enumerate} &%
+No required items included \textit{\textsc{or}} more items included but all items not complete. &%
+1 required item included and complete but 3 items not complete. &%
+2 required items included and complete but 1 item not complete. &%
+All required items included and complete.\\[-1em]
+\midrule
+%% Row 8: Objectrives
+ & Unsatisfactory (0 points) & Borderline (15 points) & Satisfactory (35 points) & Outstanding (50 points) \\ 
+ \midrule
+\textbf{Objectives}\par
+\vspace{-0.5\baselineskip}
+\begin{enumerate}
+\item Includes at least five objectives,
+\item Includes an introductory summary that gives priorities,
+\item Includes detailed explanation and explanation of each objective,
+\item Demonstrates how each objective serves the overall goal of the plan,
+\item Objectives are related back to ecosystem services,
+\item Includes impacts if objective cannot be implemented as part of plan,
+\item Is well supported by scientific publications. 
+\end{enumerate} &%
+0–2 required items included and complete but 5 or more items not complete or well sourced \textit{\textsc{or}} all items included but all not complete \emph{\textsc{or}} missing 3 or more objectives. &%
+3–4 required items included and complete but 3–4 items not complete or well sourced \emph{\textsc{or}} missing 1–2 objectives. &%
+5–6 required items included and completed but 1–2 items not complete or well sourced. &%
+All required items included, complete, and well sourced.\\[-1em]
+\midrule
+%% Total Row
+\textbf{Final page and \newline grammatical deductions (\%)} & & & & \textbf{Total Points: 150} \\
+\bottomrule
+\end{longtable}
+}%End small font size
+
+\end{landscape}
+\end{document}

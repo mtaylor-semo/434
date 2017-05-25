@@ -1,0 +1,344 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+%%% Creative Commons Licenses. Establish, then add to Beamer template.
+%\newcommand{\ccbysa}[1][4]{\textsc{cc by-sa #1.0}} % Use version 4.0 as default.
+\newcommand{\ccby}[1]{%
+	\ifx&#1&
+	{\textsc{cc by}}%
+\else
+	{\textsc{cc by #1.0}}
+\fi}
+
+
+\newcommand{\ccbysa}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-sa}}%
+\else
+	{\textsc{cc by-sa #1.0}} 
+\fi}
+
+\newcommand{\ccbyncsa}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-nc-sa}}%
+\else
+	{\textsc{cc by-nc-sa #1.0}}
+\fi}
+
+\newcommand{\ccbync}[1]{%
+	\ifx&#1&
+	{\textsc{cc by-nc}}%
+\else
+	{\textsc{cc by-nc #1.0}}
+\fi}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1cm]
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_rocky_intertidal_intro}}
+\begin{frame}[b]{Rocky Intertidal Ecosystems}
+\tiny\textcolor{white}{\textcopyright Oxford University Press}
+\end{frame}
+}
+
+
+\begin{frame}[t]{Review: the rocky intertidal has three zones.}
+
+\vspace*{-\baselineskip}
+
+\begin{multicols}{2}
+
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{08_rocky_intertidal_zones}
+	\end{center}
+
+\columnbreak
+
+	\hangpara\highlight{Supralittoral fringe}\\
+	\hspace*{0.5em}splash zone\\
+	\hspace*{0.5em}periwinkles, lichens, and\\
+	\hspace*{0.5em}encrusting algae dominate.
+	
+
+	\hangpara\highlight{Midlittoral zone}\\
+	\hspace*{0.5em}greatest diversity overall\\
+	\hspace*{0.5em}barnacles and mussels dominate.
+
+	\hangpara\highlight{Infralittoral zone}\\
+	\hspace*{0.5em}aka \highlight{sublittoral fringe}\\
+	\hspace*{0.5em}brown macroalgae dominate.
+
+\end{multicols}
+
+	\vfilll
+
+	\tiny\textcopyright\,McGraw-Hill
+
+\end{frame}
+%
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_rocky_zones_identified}}
+\begin{frame}[t]{\textcolor{white}{Review}}
+
+%	\vspace*{\baselineskip}
+	\hspace*{60mm}\hangpara Which zone is dominated by\\
+	\hspace*{65mm} biological process?\\
+	\hspace*{65mm} physical process?
+
+	\vfilll
+	\hfill\tiny Bcasterline, Wikimedia, Public Domain.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_scale_dependent_processes}}
+\begin{frame}[b]{Pattern and process is related to scale.}
+
+	\tiny Fig. 9.4 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_intermittant_upwelling_model}}
+\begin{frame}[b]{\highlight{Intermittent upwelling} determines community structure from the bottom up.}
+
+	\tiny Menge and Menge 2013. Ecological Monographs 83: 283.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_intermittant_upwelling}}
+\begin{frame}[b]{Intermittent upwelling should maximize ecosystem function.}
+
+	\alt<handout>{}{\begin{tikzpicture}
+	
+		\onslide<1-2>\draw [fill=white, color=white] (6,2) -- (12.3,2) -- (12.3,7) -- (6,7) -- cycle;
+		\onslide<2>\node [align=left, text width=1.5in] at (9.5,6.5) {{\small Look familiar?}};
+		
+		\onslide<3>\node [align=left, text width=1.5in] at (9.5,6.5) {{\small Intermediate disturbance}};
+
+	\end{tikzpicture}}%\pause
+
+	\hfill \tiny Fig. 9.3 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_intermittent_results}}
+\begin{frame}[b]
+
+	\hfill \tiny \rotatebox{90}{Menge and Menge 2013. Ecological Monographs 83: 283.} 
+
+	\begin{tikzpicture}
+	
+		\alt<handout>{}{\onslide<1>\draw [fill=white, color=white] (6,-0.5) -- (11.7,-0.5) -- (11.7,9.6) -- (6,9.6) -- cycle;}
+		
+	\end{tikzpicture} \pause
+
+\end{frame}
+}
+%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_latitude_thermal_stress_prediction}}
+\begin{frame}[b]{Thermal stress should depend on latitudes.}
+
+	\hfill \tiny Fig. 9.5 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_latitude_thermal_stress_result}}
+\begin{frame}[b]{Instead, large scale variability affects thermal stress.}
+
+	\hfill \tiny Fig. 9.5 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_alternative_stable_states}}
+\begin{frame}[b]{Do alternate stable states exist in the Gulf of Maine?}
+
+	\hfill \tiny \textcolor{white}{Fig. 9.7 \textcopyright Sinauer Associates, Inc.}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_ass_model}}
+\begin{frame}[b]{Alternative stable states can shift between algal and mussel states after disturbance.}
+
+	\hfill \tiny Petraitis and Dudgeon 2004.\\ \hfill J. Exp. Mar. Bio. Ecol. 300: 343.
+\end{frame}
+}
+%
+\begin{frame}[t]{Alternate stable states occurred in patches larger than about 10 m\textsuperscript{2}.}
+
+
+	\begin{center}
+		\includegraphics[width=\textwidth]{08_rocky_alternate_stable_states} 
+	\end{center}
+
+
+	\vfilll
+
+	\hfill \tiny \textcopyright Oxford University Press.
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_alternate_states_gulf_maine}}
+\begin{frame}[b]{Does the pattern hold at larger scales in the Gulf?}
+
+	\tiny Bryson et al. 2014. Ecological Monographs 84: 579.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_alternate_states_gulf_maine_nmds}}
+\begin{frame}[b]{Northern Gulf of Maine is consistently algal-dominated.}
+
+	\tiny Bryson et al. 2014. Ecological Monographs 84: 579.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_subtidal_trophic_cascade}}
+\begin{frame}[b]
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_non_consumptive_effects}}
+\begin{frame}[b]{\highlight{Non-consumptive effects} induce changes in prey traits.}
+
+	\hfill \tiny Matassa and Trussell 2014. Proc. R. Soc. B 281: 20141952.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_tmii_cascade}}
+\begin{frame}[b]{\textsc{Nce}s can cause trophic cascades through \highlight{trait-mediated indirect interactions.}}
+
+	\onslide<1->\tiny Fig. 9.14 \textcopyright Sinauer Associates, Inc. \hfill \textcopyright McGraw-Hill
+
+	\begin{tikzpicture}
+	
+		\alt<handout>{}{\onslide<1>\draw [fill=white, color=white] (6,2) -- (12.3,2) -- (12.3,7) -- (6,7) -- cycle;}
+		
+	\end{tikzpicture} \pause
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_trophic_heat}}
+\begin{frame}[t]{\textsc{Tmii}s can decrease the efficiency of energy transfer to higher trophic levels.}
+
+	\vspace*{2\baselineskip}
+
+	\hspace*{75mm}\parbox{45mm}{\raggedright This would increase the amount of \rule{1.5cm}{0.4pt} lost from the system.}
+
+	\vspace*{2\baselineskip}
+	
+	\hspace*{75mm}\parbox{45mm}{\raggedright Why would this shorten food chains in the rocky intertidal?}
+
+	\vfilll
+	
+	\hfill \tiny Fig. 9.13 \textcopyright Sinauer Associates, Inc.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_pisaster_feeding_design}}
+\begin{frame}[b]{Will increasing climate variability affect feeding rates of \textit{Pisaster} sea stars?}
+
+\hfill \tiny Fig. 9.19\\\hfill\textcopyright Sinauer
+%	\hfill \tiny \rotatebox{90}{Fig. 9.19 \textcopyright Sinauer Associates, Inc.}
+\end{frame}
+}
+
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_pisaster_feeding_results}}
+\begin{frame}[b]{Greater temperature discordance decreased \textit{Pisaster} feeding rate.}
+
+\tiny Pincebourde et al. 2012.\\
+\tiny Ecology Letters 15: 680.
+%	\hfill \tiny \rotatebox{90}{Pincebourde et al. 2012. Ecology Letters 15:680.}
+\end{frame}
+}
+
+%
+\end{document}
+

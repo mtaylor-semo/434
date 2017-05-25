@@ -1,0 +1,104 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+%\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 Study Guide 10}
+\author{Seagrass ecosystems}
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+%section*{Kelp forest ecosystems}
+
+We\marginnote{\textbf{Read:} Chapter 12. The figures and tables from the text that I use for lecture are given in the slides. You should at least read the text associated with those figures and tables.} covered seagrass ecosystems, emphasizing the mutualistic mesograzer model.
+
+\section*{Vocabulary}
+
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+seagrass \\
+epiphytes \\
+mesograzers \\
+direct effects \\
+indirect effects \\
+mutualistic mesograzer \\ \hspace*{1em}hypothesis \\
+alternate stable states
+\end{multicols}
+
+\section*{Concepts}
+
+\begin{enumerate}
+
+\item What are seagrasses?\marginnote{Read page 271.} From a conservation perspective, why are they important? From a biological perspective (ecosystem function, etc.), why are they important?
+
+\item About how much gross primary productivity\marginnote{Your text does not cover this directly but I did.} comes from seagrass beds? What are the major groups of primary producers in seagrass beds?
+	
+\item Explain the interactions between seagrasses and other epiphytes. Is it good to have both in the ecosystem? Explain.	
+
+\item
+  What are mesograzers? How do they regulate seagrass ecosystem function? 
+  
+\item Explain the mutualistic mesograzer hypothesis.\marginnote{See pages 280--284.} What does ``mutualisitic'' mean with regard to this hypothesis? Where are direct interactions important in this hypothesis? Where are indirect interactions important?
+
+\item
+  Compare and contrast the type of cascade associated with the mutualistic mesograzer hypothesis to a regular trophic cascade (density-mediated indirect interactions; e.g., sea otters and urchins) and to a \textsc{tmii} cascade. How are they similar? How are they different? For all three cascade types, identify the direct and indirect interactions. Explain why they are considered direct or indirect.
+
+\item
+  Is the mutualistic mesograzer hypothesis a bottom-up or top-down hypotheses?\marginnote{Fig. 12.5 and page 280.} Explain. Is the other type of process (the one you did not choose) also present in seagrass ecosystems? Explain.
+  
+\item Describe the many types of interactions illustrated by Fig. 12.6\marginnote{See pages 280--282.} Describe how seagrass abundance increases or decrease depending on whether the high level shown (not grayed out) increases or decreases. State whether the changes happen through direct or indirect interactions.
+
+\item Do alternate stable states exist in seagrass ecosystems?  If so, describe the differences and explain what causes the change between states.
+
+\end{enumerate}
+
+\end{document}

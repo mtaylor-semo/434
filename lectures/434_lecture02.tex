@@ -1,0 +1,202 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+
+
+\begin{document}
+
+\lecture{instructor}{instructor}
+
+\begin{frame}[c]{Is there method to my madness?}
+
+\begin{center}
+	\href{https://www.youtube.com/watch?v=qybUFnY7Y8w}{\includegraphics[width=2cm]{ok_go_logo}}
+
+\end{center}
+
+\end{frame}
+
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{deepwater_horizon}}
+\begin{frame}[b]
+
+\hfill\tiny\textcolor{white}{Public domain, Wikimedia Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{spray_fertilizer}}
+\begin{frame}[b]%{Fertilizer in the midwest may do more long-term damage to the Gulf of Mexico.}
+
+\tiny\textcolor{white}{ Bill Meier, Flickr Creative Commons.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{gulf_mexico_hypoxia}}
+\begin{frame}[b]
+
+
+\hspace*{122mm}\rotatebox{90}{\tiny Rabotyagov et al. 2014.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{global_hypoxia_areas_2010}}
+\begin{frame}[b]{Eutrophic and hypoxic areas are a global problem.}
+\hfill\tiny\textcopyright\,World Resources Institute.
+\end{frame}
+}
+
+\begin{frame}[t]{The size of the GoM dead zone varies annually.}
+
+	\includegraphics[width=\textwidth]{dead_zone_size_graph_2014}
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny U.S. EPA.
+\end{frame}
+
+\begin{frame}[t]{In 2015, the dead zone was 16,760 km\textsuperscript{2} (6,474 mi\textsuperscript{2}).}
+
+	\includegraphics[width=\textwidth]{dead_zone_2015}
+	
+	{\large What marine ecosystem services are affected by the processes that cause the Gulf of Mexico dead zone? How are they affected?}
+	
+	\vskip0pt plus 1filll
+
+\hfill\tiny U.S. EPA.
+\end{frame}
+
+
+\lecture{instructor}{instructor}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{louisiana_coastal_loss}}
+\begin{frame}[b]
+\hfill\tiny NOAA.
+\end{frame}
+}
+
+\lecture{student}{student}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{quantify_tradeoffs}}
+\begin{frame}[t]{\highlight{Assess trade-offs} among different objectives.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{quantify_compatibility}}
+\begin{frame}[t]{\highlight{Evaluate cumulative impacts} on ecosystem health.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{quantify_impacts}}
+\begin{frame}[b]{Mapping impacts can reveal vulnerable areas.}
+
+\tiny\hfill Kappel et al. 2012
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{quantify_health_index}}
+\begin{frame}[b]{\highlight{Measure management effectiveness} to identify trends and set goals.}
+
+\tiny\hfill Halpern et al. 2012. Nature 488: 615.
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{quantify_trends}}
+\begin{frame}[b]{Negative trends may need to be addressed quickly.}
+
+\tiny\hfill Halpern et al. 2012. Nature 488: 615.
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{quantify_overall_health}}
+\begin{frame}[b]{Coastal ocean health varies widely.}
+
+\tiny\hfill Halpern et al. 2012. Nature 488: 615.
+\end{frame}
+}
+
+
+\begin{frame}[t]{More challenges remain for quantifying ecosystem services.}
+
+\hangpara What is the role of biodiversity in supporting ecosystem services?
+
+\hangpara How can we assess ecosystem resilience?
+
+\hangpara How can we link public action with scientific evidence?
+
+\end{frame}
+
+\end{document}

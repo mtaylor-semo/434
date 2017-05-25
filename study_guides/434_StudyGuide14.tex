@@ -1,0 +1,98 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 Study Guide 14}
+\author{Ocean acidification}
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+%section*{Kelp forest ecosystems}
+
+We\marginnote{\textbf{Read:} Chapter 19, pages 428--430.} covered ocean acidification in greater depth than your text because I think this topic is important.
+
+\section*{Vocabulary}
+\begin{multicols}{2}
+ocean acidification \\
+pH \\
+bicarbonate buffering system \\
+\ce{HCO3^{-}} (bicarbonate) \\
+\ce{CO3^{2-}} (carbonate) \\
+aragonite \\
+$\Omega$ \\
+\end{multicols}
+\section*{Concepts}
+
+\begin{enumerate}
+
+\item Recognize and write equilibrium equation for the bicarbonate buffering system. Explain how it works to buffer pH.
+
+\item Explain how addition of \ce{CO2} to the atmosphere increases ocean acidity.
+
+\item In the bicarbonate buffering equation, identify the course of {H+} ions (protons) most responsible for ocean acidification.
+ 
+\item What value of $\Omega$ indicates the water is saturated with aragonite? What is the optimum value of $\Omega$ for marine organisms that produce calcium carbonate structures?
+
+\item Identify the source of carbonate for the carbonate buffering equation.
+
+\item How have aragonite levels changed in the ocean since the 1700s. Explain how this change relates to pH change in the oceans.
+
+\item Tie together all of the above questions.\marginnote{See also Fig.~19.3B, page 431 for a diagrammatic representation of the process.} Explain how addition of atmospheric \ce{CO2} is causing the loss of aragonite in the oceans.
+
+\item Explain how ocean acidification may cause a phase shift for coral reefs.
+
+
+
+\end{enumerate}
+
+\end{document}

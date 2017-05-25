@@ -1,0 +1,137 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{exam}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/434/}
+%	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb, amsmath}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana Math}
+
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{hanging}
+
+%\usepackage{booktabs}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\setlist[enumerate]{label=\textsc{\alph*}.}
+\setlist[itemize]{label=\color{gray}\textbullet}
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-60pt}
+%\posttitle{\par\end{center}}
+%\predate{}\postdate{}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi 434: Marine Evolutionary Ecology}}{}{\ifprintanswers\textbf{KEY}\else \textsc{Chapter 9 homework}\fi}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\newcommand{\hidepoints}{%
+	\pointsinmargin\pointformat{}
+}
+
+%\printanswers
+
+\hidepoints
+
+\begin{document}
+
+Read carefully and thoroughly Chapter 9 of \textit{Marine Community Ecology and Conservation}  and then type your answers to the following questions.
+Type the question number and then your answer. You do not need to retype the question. Hand-written
+assignments will not be accepted. Bring your completed answers
+with you to class or your assignment will be considered late. \emph{Do not email your answers to me.}
+
+Type answers in your own words. Do not copy or quote directly from the textbook.
+
+\begin{questions}
+
+\question[5]
+Explain what is an inducible defense. How does this relate to trait-mediated cascade?
+
+\AnswerBox{4\baselineskip}{%
+answer here.
+}
+%
+\question[5]
+Explain the difference between top-down and bottom-up processes.  How do you think this relates to the results that support the intermittent upwelling hypothesis.
+
+\AnswerBox{4\baselineskip}{%
+Answer here.
+}
+%
+\question[5]
+Scientists long predicted that intertidal species at lower latitudes would be subjected to greater thermal stress (rapidity and degree of temperature change) than intertidal species living at higher latitudes. Studies suggest this hypothesis is false. Why? 
+
+\AnswerBox{4\baselineskip}{%
+Answer here.
+}
+%
+
+\question[3]
+How does turbulence affect the ability of mobile organisms to find food? Why?
+
+\AnswerBox{4\baselineskip}{%
+Answer here
+}
+
+\question[2]
+Recent studies suggest that trophic heat causes intertidal food chains to be short. Why?
+
+\AnswerBox{\baselineskip}{%
+Answer here
+}
+
+\end{questions}
+
+\end{document}  

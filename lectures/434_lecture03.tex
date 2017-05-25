@@ -1,0 +1,222 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc}
+\usepackage{hyperref}
+
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+
+
+\begin{document}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{rapture_reef}}
+\begin{frame}[b]{\textcolor{white}{Papah\={a}naumoku\={a}kea National Marine Monument was just made the largest \textsc{mpa} in the world.}}
+
+\hfill\tiny\textcolor{white}{Greg McFall, National Ocean Service, Flickr  \textsc{cc by} 2.0.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{papahanaumokuakea_size}}
+\begin{frame}[b]{}
+
+
+\hfill\tiny\textcolor{white}{National Ocean Service / Pew Charitable Trusts (inset).}
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{papahanaumokuakea_plastic}}
+\begin{frame}[b]{The \textsc{mpa} suffers from the negative effects from humans.}
+
+
+\hfill\tiny\textcolor{white}{Kris Krüg, Flickr \textsc{cc by-sa} 2.0.}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{papahanaumokuakea_albatross}}
+\begin{frame}[b]{Restoration requires an \textcolor{orange7}{ecosystem-based approach.}}
+
+
+\hfill\tiny\textcolor{white}{NOAA National Ocean Service, Flickr \textsc{cc by} 2.0.}
+\end{frame}
+}
+
+\begin{frame}[t]{Ecosystem-based management requires that }
+
+\hangpara goals encompass all ecosystem services,
+
+\hangpara the spatial scale is based on natural boundaries across multiple ecosystems,
+
+\hangpara all sectors of human use are integrated,
+
+\hangpara cumulative effects across sectors are estimated, and
+
+\hangpara strategies adapt over time to account for uncertainty.
+
+\vskip0pt plus 1filll
+
+\hfill\tiny Rosenberg and Sandifer (2009), in \textit{Ecosystem-Based Management for Oceans.}
+\end{frame}
+
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ebm_valuing_ecosystem_services}}
+\begin{frame}[b]{Management goals should encompass all ecosystem services.}
+
+
+\tiny UNEP 2013.
+\end{frame}
+}
+
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ebm_recognizing_connections}}
+\begin{frame}[b]{The spatial scale uses natural boundaries across multiple ecosystems.}
+
+
+\hfill\tiny UNEP 2013.
+\end{frame}
+}
+
+%
+\begin{frame}[t]{All sectors used by humans must be integrated into a cohesive plan.}
+
+\includegraphics[width=\textwidth]{ebm_sector_coordination}
+
+\vskip0pt plus 1filll
+
+\hfill\tiny UNEP 2013.
+\end{frame}
+
+%
+\begin{frame}[t]{The plan should account for the objectives of each sector.}
+
+\includegraphics[width=\textwidth]{ebm_multiple_objectives}
+
+\vskip0pt plus 1filll
+
+\hfill\tiny UNEP 2013.
+\end{frame}
+
+%
+\begin{frame}[t]{Predict and account for the accumulative effects of each sector.}
+
+\includegraphics[width=\textwidth]{ebm_cumulative_effects}
+
+\vskip0pt plus 1filll
+
+\hfill\tiny UNEP 2013.
+\end{frame}
+
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ebm_phoenix_island_global_location}}
+\begin{frame}[b]{The Phoenix Islands Protected Area is the second largest \textsc{mpa} in the world.}
+
+\end{frame}
+}
+
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{ebm_phoenix_islands_3d}}
+\begin{frame}[b]{P\textsc{ipa} is a complex of atolls and sea mounts. What uncertainties might they face?}
+
+\end{frame}
+}
+
+%
+\lecture{instructor}{instructor}
+
+{
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[b,plain]{}
+\end{frame}
+}
+%
+\begin{frame}[t]{Uncertainties include, but are not limited to,}
+
+	\hangpara coral bleaching due to warming waters,
+	\pause
+	
+	\hangpara sea level rise,
+	\pause
+	
+	\hangpara terrestrial vegetation and sea bird colonies vulnerable to salinization of ground water, 
+	\pause
+
+	\hangpara ocean acidification, and
+	\pause
+	
+	\hangpara invasive species.
+	
+\vskip0pt plus 1filll
+
+\hfill\tiny Phoenix Island Protected Area Management Plan 2010--2014.
+
+\end{frame}
+%
+
+\end{document}

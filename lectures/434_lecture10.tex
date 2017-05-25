@@ -1,0 +1,292 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+%\includeonlylecture{student}
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/lectures/}%
+	{/Users/goby/Pictures/teach/348/lectures/}%
+	{/Users/goby/Pictures/teach/434/handouts/}%
+	{/Users/goby/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{xcolor}
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+\usepackage{siunitx}
+%\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{chemfig}
+%\usepackage[version=4]{mhchem}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[default]
+  \setbeamercolor{enumerate item}{fg=black}
+%\setbeamertemplate{enumerate items}[circle]
+
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1em]
+
+
+
+\begin{document}
+
+\lecture{student}{student}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_ecosystem}}
+\begin{frame}[b]{\textcolor{white}{Seagrass ecosystems}}
+
+	\hfill \tiny\textcolor{white}{\textsc{noaa} photo library, Flickr, \ccby{2}}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_foundation}}
+\begin{frame}[b]{\textcolor{white}{Seagrasses are foundation species.}}
+
+	\hfill \tiny\textcolor{white}{\textsc{usda}, Flickr, \ccby{2}}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_forage_nursery}}
+\begin{frame}[b]{Seagrasses function as home and forage base for some vertebrates\dots}
+
+	\hfill \tiny Orth et al. 2006. \\ \hfill Bioscience 56: 987.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_invertebrate_diversity}}
+\begin{frame}[b]{\dots but invertebrates have the greatest diversity.}
+
+	\tiny \textcolor{white}{\textcopyright\,Chronicles of Zostera}  \hfill \textcolor{white}{\textcopyright\,Galice Hoarau, Univ. Nordland}
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_substrate}}
+\begin{frame}[b]{Seagrasses provide a stable substrate for many organisms.}
+
+	\hfill \tiny\textcopyright\,McGraw-Hill
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_productivity}}
+\begin{frame}[t]{}
+
+	\vspace*{2\baselineskip}
+	
+	\hspace{55mm}\parbox{65mm}{\raggedright \Large Seagrass productivity ranges from 800–10\,000 \si{g.C.m^{-2}.yr^{-1}}.\vspace*{\baselineskip} Epiphytes are major producers.}
+	
+	\vfilll
+	
+	\tiny Naumann et al. 2013. \textsc{pl}o\textsc{s one} 8(12): e82923 \hfill Moncreiff et al. 1992. Mar. Ecol. Prog. Ser. 87: 161.
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_mesograzers}}
+\begin{frame}[b]{Mesograzers regulate seagrass ecosystem function.}
+
+	\begin{tikzpicture}
+	
+		\node [right] at (11,6.6) {\scriptsize direct};
+		\node [right] at (11,4.1) {\scriptsize direct};
+		\node [right] at (11,1.6) {\scriptsize direct};
+		
+		\node [rotate=35] at (9.4,1.7){\scriptsize indirect};
+		
+		\node at (9.5,0.6) {\scriptsize indirect} ;
+		\draw [thick,draw=orange6,->] (8,2.5) -- node [above] {{\small \highlight{mesograzers}}} (10,2.5);
+
+		\node [right] at (0,0) {\tiny Figs. 12.5, 12.3\textsc{a} \textcopyright\,Sinauer Associates, Inc.};
+	\end{tikzpicture}
+
+\end{frame}
+}
+%
+\begin{frame}[t]{Nutrient addition did not affect seagrass abundance.}
+	\includegraphics[width=\textwidth]{10_seagrass_indirect_cascade}
+	
+	\vspace*{\baselineskip}
+	
+	This suggests that seagrass ecosystems are driven more by \highlight{mesograzer mutualism.}
+	
+	\vfilll
+	
+	\hfill \tiny Fig. 12.5 \textcopyright\,Sinauer Associates, Inc.
+
+\end{frame}
+%
+{
+\begin{frame}[t]{The \highlight{mutualistic mesograzer model} says that mesograzer abundance cascades to affect seagrass abundance.}
+
+	\begin{multicols}{2}
+	
+	\onslide<2->{%
+		\hangpara Algae are competitively dominant to seagrasses. 
+	}
+	
+	\onslide<3->{%
+		\hangpara Mesograzers preferentially consume algae.
+	}
+	
+	\onslide<4->{%
+		\hangpara Mesograzer abundance \emph{indirectly} determines seagrass dominance.
+	}
+	
+	\columnbreak
+	
+	\onslide<1->{%
+		\includegraphics[height=0.7\textheight]{10_seagrass_simple_web}
+	}
+	
+	\end{multicols}
+	
+	\vfilll 
+	
+	\hfill \tiny Fig. 12.3\textsc{a} \textcopyright\,Sinauer Associates, Inc.
+
+	\begin{tikzpicture}
+	
+		\onslide<3->{%
+			\draw [thick,draw=orange6,->] (7.4,3) -- node [above] {{\small \highlight{mesograzers}}} (9.4,3);
+		}
+
+		\onslide<4->{%
+			\node [rotate=35] at (8.9,2.3){\scriptsize indirect};
+			\node at (8.9,0.9) {\scriptsize indirect};
+		}
+
+	\end{tikzpicture}
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_complex_web}}
+\begin{frame}[b]
+
+	\begin{tikzpicture}
+	
+		\draw [ultra thick, orange6,->] (2.1,0.6) -- node [above] {mesograzer} node [below] {mutualism}(4.7,0.6);
+		
+
+		\node at (1.1,0) {\tiny Fig. 12.3\textsc{b} \textcopyright\,Sinauer};
+	\end{tikzpicture}
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_mutual_model_complex}}
+\begin{frame}[b]
+
+	\hfill \tiny Fig. 12.6\textsc{a} \textcopyright\,Sinauer Associates, Inc.
+
+\end{frame}
+}
+%
+\begin{frame}[t]{Ecosystem function can be modified by other interactions.}
+
+	\includegraphics[width=\textwidth]{10_seagrass_complex_interactions}
+
+	\vfilll
+
+	\hfill \tiny Fig. 12.6 \textcopyright\,Sinauer Associates, Inc.
+
+\end{frame}
+%
+\lecture{instructor}{instructor}
+
+\begin{frame}{Put away your notebooks for a moment.}
+
+	\pause
+	
+	\begin{enumerate}
+	\item Name the two alternate stable states that can occur in seagrass ecosystems.
+			
+	\item List three anthropogenic effects that can induce alternate stable states in seagrass beds.
+	
+	\end{enumerate}
+	
+\end{frame}
+
+\lecture{student}{student}
+%
+\begin{frame}[t]{Commercial fishing can alter the cascading effects.}
+
+	\includegraphics[width=\textwidth]{10_seagrass_commercial_fishing_effects}
+	
+	\vspace*{0.5\baselineskip}
+	
+	Why were omnivores unaffected?
+
+	\vfilll
+
+	\hfill \tiny Fig. 12.7 \textcopyright\,Sinauer Associates, Inc.
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{10_seagrass_alternate_stable_states}}
+\begin{frame}[b]{Anthropogenic effects can induce alternate stable states.}
+
+	\hspace*{121mm} \tiny \rotatebox{90}{Fig. 12.10 \textcopyright\,Sinauer Associates, Inc.}
+
+\end{frame}
+}
+%
+\end{document}
+
