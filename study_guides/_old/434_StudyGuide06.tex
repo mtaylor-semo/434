@@ -1,0 +1,110 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+\title{Study Guide 06}
+\author{Nekton (and some plankton)}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}
+\marginnote{\textbf{Study:} pgs. 109--117, 258--261. The text does not have much on adaptations to the epipelagic so study your notes carefully.}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+nekton \\
+epipelagic \\
+holoepipelagic \\
+meroepipelagic
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+\item
+  Which groups of organisms are nektonic?
+\item
+  Marine birds such as gulls, puffins, petrels and albatrosses are
+  considered terrestrial organisms but they are an important component
+  of the trophic ecology of the epipelagic environment. Explain the
+  trophic role of marine birds in the epipelagic zone.
+\item
+  Compare and contrast the adaptations of planktonic and nektonic
+  organisms that allow them to feed and survive in the epipelagic zone.
+  You should consider water density, water clarity, light availability,
+  the large area, low diversity, and the lack of structure.
+\item
+  Compare and contrast the epipelagic food webs for polar, cold
+  temperate and tropical waters. Include what you know about planktonic
+  trophic ecology, especially for the tropical epipelagic food webs.
+\item
+  Describe the different ways in which nektonic organisms are
+  camouflaged.
+\item
+  Describe how the keel on many nektonic fishes increases their
+  camouflage.
+\item
+  Describe the many ways in which plankton and nekton maintain neutral
+  buoyancy.
+\item
+  The dense water medium often selects naturally for streamlined body
+  shapes. Yet, not all nektonic organisms are efficiently streamlined.
+  Why are small filter-feeding fishes such as sardines and herrings, as
+  well as large nekton like whale sharks and baleen whales, not
+  particularly streamlined?
+\item
+  How does a streamlined body shape in fast-swimming fishes increase
+  foraging efficiency?
+\item
+  Why is body coloration as a form of camouflage so important in the
+  epipelagic environment?
+ \end{enumerate}
+
+
+\end{document}

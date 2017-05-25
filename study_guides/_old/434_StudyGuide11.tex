@@ -1,0 +1,124 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[nofonts, letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{img/}} % set of paths to search for images
+  
+\usepackage{fontspec}
+  \setmainfont[Ligatures={Common,TeX},Numbers={Proportional}]{Linux Libertine O}
+  \setsansfont{Linux Biolinum O}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{hyperref}
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Change the header to shift the title to the left side of the page. 
+% Replaced \quad with \hfill.  See \plaintitle in tufte-common.def
+{\fancyhead[RE,RO]{\scshape{\newlinetospace{\plaintitle}}\hfill\thepage}}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+
+\makeatother
+
+\title{Study Guide 11}
+\author{Estuaries and Productivity}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+
+\section{Vocabulary}
+\marginnote{\textbf{Study:} pgs. 375--408.}
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+estuary \\
+coastal plain estuary \\
+bar-built estuary \\
+tectonic estuary \\
+fjord \\
+euryhaline \\
+stenohaline \\
+detritus \\
+outwelling hypothesis
+\end{multicols}
+
+\section{Concepts}
+
+\begin{enumerate}
+\item
+  Compare and contrast the four major types of estuaries. Consider how
+  morphology and formation of the estuary determines the relative
+  importance of the different environmental factors that affect
+  community structure (e.g., salinity, water flow, substrate, etc.).
+\item
+  Diagram the salinity gradient in a ``typical'' estuary during high
+  tide and low riverine input, and low tide and high riverine input.
+  Indicate the region in which organisms must have the greatest
+  tolerance for salinity variation.
+\item
+  Does temperature show a similar or different gradient compared to what
+  you diagrammed for the previous question? Explain why.
+\item
+  Explain the relationship between wind and GPP in a bar-built estuary.
+  Would you expect the relationship to differ in a coastal-plain
+  estuary? Explain why or why not.
+\item
+  Explain how sediments are size-distributed in an estuary. Do the same
+  for POM.
+\item
+  Diagram the distribution of freshwater, brackish, euryhaline and
+  stenohaline species in an estuary. Explain why these four groups of
+  organisms show this distributional pattern.
+\item
+  What are the sources of primary productivity in a salt marsh estuary?
+  How is NPP exported out of the estuary?
+\item
+  Explain the outwelling hypothesis. What types of estuaries best fit
+  this hypothesis? What types of estuaries don't fit the outwelling
+  hypothesis? (Hint: think of American vs European estuaries, but don't
+  use those terms.)
+\item
+  Be familiar with the meaning of detritus that we are using for this
+  class.
+\item
+  Explain the role of aerobic bacteria in estuarine food webs.
+\item
+  What is the single physical process that most influences community
+  structure in a bar-built estuary? A coastal plain estuary? A fjord? A
+  tectonic estuary? Explain why for each.
+\item
+  Explain phytoplankton blooms in an estuary. How are they similar to
+  and different from coastal spring phytoplankton blooms?
+\item
+  In what ways can light intensity limit GPP in a shallow estuary (e.g.,
+  bar-built).
+\end{enumerate}
+
+\end{document}
