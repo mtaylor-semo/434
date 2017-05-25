@@ -1,0 +1,125 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/Pictures/teach/300/}
+	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+	\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana Math}
+
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{booktabs}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+
+\usepackage{hanging}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%\usepackage{enumitem}
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-60pt}
+%\posttitle{\par\end{center}}
+%\predate{}\postdate{}
+
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\pagestyle{headandfoot}
+\firstpageheader{BI 434: Marine Evolutionary Ecology}{}{Critical Analysis 2}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+%\printanswers
+
+\begin{document}
+
+\subsection*{Trophic Cascades (\numpoints\ points)}
+
+Read the following two papers carefully, and then answer the following questions. Type the question number and then your answer. You do not need to retype the question. All questions must be answered in your own words. Do not copy and quote from the papers. The first several questions emphasize Bruno et al. because we discussed many of the important findings from Estes et al. in class.\vspace{\baselineskip}
+
+\begin{hangparas}{1.5em}{1}
+Bruno, J.F. and M.I. O’Conner. 2005. Cascading effects of predator diversity and omnivore in a marine food web. Ecology Letters 8: 1048--1056.\vspace{\baselineskip}
+
+Estes, J.A., M.T. Tinker, T.M. Williams and D.F. Doak. 1998. Killer whale predation on sea otters linking ocean and nearshore ecosystem. Science 282: 473--476.
+\end{hangparas}
+
+\begin{questions}
+
+\question[6]
+Interpret Figure 1 of Bruno et al. Do not tell me what the figure legend says. Explain what are positive and negative effects, and direct and indirect interactions. Provide specific examples of each to demonstrate your understanding. 
+
+\begin{solution}
+A positive effect is the abundance of one organism increases the abundance of another organism.  A negative effect is when the abundance of one organism decreases the abundance of another organism. A direct interaction is between two organisms on adjacent trophic levels. An indirect interaction is between organisms on non-adjacent trophic levels. Several examples are possible.
+\end{solution}
+
+
+\question[4]
+The pinfish is an omnivore. Explain the types of effects and interactions the pinfish has with plants (positive and negative, direct and indirect). 
+
+\begin{solution}
+Pinfishes have an indirect, positive effect on plants by preying on herbivores. This increases the abundance of plants. The pinfish also has a direct, negative effect on plants by grazing directly on the plants.
+
+\end{solution}
+
+\question[4]
+Figure 4 of Bruno et al. shows that that mesocosms with the individual generalist carnivores had the greatest macroalgal diversity. Explain why, in terms of direct and indirect positive and negative effects. 
+\begin{solution}
+Classic trophic cascade. The carnivores ate the herbivores, reducing their number thus limiting grazing pressure (direct, negative). This increased the abundance of macroalgae (indirect, positive).  See 2nd full paragraph, first column, page 1053.
+\end{solution}
+
+\question[5]
+Figure 3b of Bruno et al. showed that 3 predator species had high abundance of \textit{Enteromorpha} remaining in the mesocosm but 5 predator species had no \textit{Enteromorpha} remaining in the mesocosm. Explain why. What result, also shown in Figure 3b supports your answer?
+
+\begin{solution}
+The omnivorous pinfish has a preference for \textit{Enteromorpha}. It was included in the 5-predator mesocosm but not the 3-predator mesocosm. The pinfish-only mesocosm, shown in the same figure, is the only other mesocosm with a complete absence of \textit{Enteromorpha}.
+\end{solution}
+
+\question[5]
+The results of Estes et al. suggest that human overfishing may have greatly decreased overall diversity of most other invertebrates in the kelp forest ecosystem, despite the increased abundance of sea urchins. Explain why. (Hint: remember how you answered question 7 on page 459 of your text.)
+\begin{solution}
+The primary reason is habitat lost. Many invertebrates organisms depend on the kelp forest as a source of food or structural habitat. Other answers may be acceptable if well reasoned.
+\end{solution}
+
+\question[8]
+Estes et al. argued that abundance of pinnipeds declined, causing orca to begin feeding on otters. Assume that pinniped abundance makes a partial recovery such that orca begin to feed on pinnipeds and otters in roughly equal numbers. Predict how kelp abundance and diversity would change.  Bruno et al. specifically discusses 4th level carnivores.  Use that part of their discussion to support your answer. 
+
+\begin{solution}
+Bruno et al. state that the extinction of fourth level predators could lead to an increase in plant biomass.  (See bottom of second full paragraph, first column, page 1054.) This is opposite of Estes et al. The presence of the 4th level predator decreases the algal biomass. Therefore, if some of the orca switch back to pinnipeds, then the otter abundance will increases somewhat, causing a decrease in urchin abundance and grazing pressure, thereby increasing kelp diversity to some extent.
+\end{solution}
+
+\question[8]
+Estes et al. showed a strong trophic cascade in a near-Arctic ecosystem off the coast of Alaska.  Bruno et al. demonstrated that the trophic cascade was often weaker in a temperate ecosystem (North Carolina estuary). Do you think a trophic cascade will be present in a tropical marine ecosystem? If so, do you think it will be weak or strong? Paraphrase relevant passages from Bruno et al. (include page number in your citations) to support your answer.
+
+\begin{solution}
+At the top of the first column on page 1054, Bruno et al. states that trophic cascades are uncommon in more complex food webs. Tropical food webs are very complex because of the very high diversity. Thus, trophic cascades should be very weak or even absent. 
+\end{solution}
+
+\end{questions}
+
+\end{document}  

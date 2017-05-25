@@ -1,0 +1,127 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/Pictures/teach/300/}
+	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+	\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana Math}
+
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+%\usepackage{booktabs}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+
+\usepackage{hanging}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%\usepackage{enumitem}
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-60pt}
+%\posttitle{\par\end{center}}
+%\predate{}\postdate{}
+
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\pagestyle{headandfoot}
+\firstpageheader{BI 434: Marine Evolutionary Ecology}{}{Critical Analysis 3}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+%\printanswers
+
+\usepackage{hyper ref} % Load last of all packages
+
+\begin{document}
+
+\subsection*{Shifting Baselines (\numpoints\ points)}
+
+Read the following two papers carefully, and then answer the following questions. Type the question number and then your answer. You do not need to retype the question. All questions must be answered in your own words. Do not copy and quote from the papers. \vspace{\baselineskip}
+
+\begin{hangparas}{1.5em}{1}
+Sandin, S. A., et al. 2008. Baselines and degradation of coral reefs in the northern Line Islands. PLoS ONE 3(2): e1548. \href{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0001548}{doi:10.1371/journal.pone.0001548}\vspace{\baselineskip}
+
+\end{hangparas}
+
+\begin{questions}
+
+\question[5]
+Which three islands, including islands that were not part of the main study, have the highest frequency of Level 2 bleaching events? Which three islands have the highest percentage of coral cover? If the high frequency of coral bleaching events is sustained for many years, how will coral cover likely be affected. 
+
+\begin{solution}
+
+Jarvis, Howland and Baker all have the highest frequency of Level 2 bleaching events and the highest percentage of coral cover.  If the bleaching is sustained, the coral cover is likely to decrease significantly in coming years.
+
+\end{solution}
+
+\question[5]
+According to Figure 3, fish biomass is highest on Kingman and lowest on Kiritimati. However, fish abundance is lowest on Kingman and highest in Kiritimati? Do these results conflict with each other?  Explain.
+
+\begin{solution}
+No the results are not in conflict. The biomass of Kingman is dominated by large predatory fishes like sharks, which will necessarily be fewer in number.  In contrast, Kiritimati has large numbers of planktivorous fishes which are much smaller. They can have very high abundance but still have low total biomass.
+\end{solution}
+
+\question[10]
+What are the two dominant types of benthic cover on Kingman? What is the dominant type of benthic cover on Kiritimati?  For Kiritimati, explain why the dominant benthic cover is so high in the relative abundance of the different types of fishes (top predators, carnivores, etc.) on the island. (Hint: think trophic cascade.
+
+\begin{solution}
+Kingman is dominated by corals and crustose coraline algae. Kiritimati is dominated by turf algae.  The turf algae is so high because the most abundant fishes are planktivorous fishes. There are very herbivorous fishes to keep the turf algae in check.
+\end{solution}
+
+\question[5]
+According to Figure 4, what is the relationship between coral recruitment and coral disease across the four northern Line Islands?
+
+\begin{solution}
+The islands with the highest incidence of coral disease (Tabuaeran and Kiritimati) have the lowest coral recruitment. The reverse is true for Kingman and Palmyra. They have the highest recruitment and lowest disease.
+\end{solution}
+
+\question[5]
+Figure 5 shows the results of a principal components analysis (PCA). PCA finds combinations of variables that explain the greatest amount of differences among items of interest. Here, the items of interest are the four Line Islands. The variables include benthic cover (precent cover by coral, crustose coralline algae, macroalgae, and turf algae) and the biomass of different types of fishes (carnivores, herbivores, planktivores, and top predators). The figure shows associations between the islands and the benthic cover and types of fishes at each island. Using this knowledge along with a careful reading of the text and figure legend, interpret Figure 5.  
+
+\begin{solution}
+Kingman and Palmyra are strongly associated with an abundance of top predators plus high cover of coral and crustose coralline algae. Kiritimattis and Tabuaeran are associated more with turf algae).
+\end{solution}
+
+
+\question[5]
+According to the authors, what are the two primary causes of the differences between Kingman/Palmyra (the two islands with a healthy coral reef ecosystem) compared to Tabuaeran/Kiritimati (the two islands with an unhealthy reef ecosystem). 
+\begin{solution}
+Human overfishing and pollution.  
+\end{solution}
+
+
+\question[5]
+Both Tabuaeran and Kiritimati are populated but neither island has a functioning waste disposal system. Why is this important to the author's conclusions. Explain in terms of eutrophication. (Look up eutrophication if you don't know what it is. We've talked about it in class.)
+\begin{solution}
+The waste directly enters the ocean. The waste adds nutrients, creating algal blooms. This decreases sunlight available to the corals, decreasing their abundance.
+\end{solution}
+\end{questions}
+
+\end{document}  

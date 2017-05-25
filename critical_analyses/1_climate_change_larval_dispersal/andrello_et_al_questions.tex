@@ -1,0 +1,192 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/434/}
+%	{img/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb, amsmath}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana Math}
+
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{hanging}
+
+%\usepackage{booktabs}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\setlist[enumerate]{label=\textsc{\alph*}.}
+\setlist[itemize]{label=\color{gray}\textbullet}
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-60pt}
+%\posttitle{\par\end{center}}
+%\predate{}\postdate{}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi} 434: Marine Evolutionary Ecology}{}{\ifprintanswers\textbf{KEY}\else Critical Analysis 1.\fi\ \numpoints\ points }
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\printanswers
+
+\begin{document}
+
+Read carefully the paper listed below and then type your answers to the following questions.
+Type the question number and then your answer. You do not need to retype the question. Hand-written
+assignments will not be accepted. You must have your completed answers
+with you in class or your assignment will be considered late. Assignments e-mailed to me after the \emph{start} of class will be
+considered late. Be prepared to discuss your answers in small groups and as a class. Failure
+to discuss these questions may result in a pop quiz with a point value
+equal to this assignment.
+
+\emph{Interpret} what you read. Do not copy answers directly from the text (that would
+be plagiarism). Show me you understand the paper.
+
+\textbf{Failure to attend} \textbf{class} \textbf{on the due date} will
+result in an automatic 50\% deduction.
+
+\begin{hangparas}{1.5em}{1}
+Andrello, M., D. Mouillot, S. Somot, W. Thuiller, and S. Manel. 2014. Additive effects of climate change on connectivity between marine protected areas and larval supply to fished areas. Diversity and Distributions 2014: 1--12.
+
+\end{hangparas}
+
+
+\begin{questions}
+
+\question[5]
+Describe the purpose of Andrello et al.'s research. Why do they feel it is important?
+
+
+\AnswerBox{4\baselineskip}{%
+Climate change can affect larval dispersal and growth rates due to biology or altered oceanic conditions. They wanted to whether climate change would affect the timing of reproduction, the growth rates of larvae, and change in current velocities.
+}
+\question[5]
+
+In lecture 4, we covered four types of approaches that can be used for restoration ecology. Although their study was not restoration-oriented, what kind of management approach would this study fit under? Explain.
+
+\AnswerBox{4\baselineskip}{%
+Landscape based approach. Ecosystem OK.
+}
+
+\question[5]
+Briefly summarize the four variables that Andrello et al. included in their simulation. Which turned out to be most important?
+ 
+\begin{AnswerPage}{6\baselineskip}
+\begin{enumerate}
+	\item Larval dispersal distance. How does temperature change affect the distance that larvae can disperse.
+	
+	\item Connectance: Do larvae reach other \textsc{mpa}s? If larvae are not connecting, then the \textsc{mpa}s are not acting like a network.
+	
+	\item Seeded area. Areas outside of the \textsc{mpa} network that are receiving larvae. Can benefit fisheries that are not allowed inside the \textsc{mpa}s.
+	
+	\item Retention. How many larvae are lost to unsuitable habitat versus suitable habitat. Presumes all areas on the continental shelf are suitable.
+\end{enumerate}
+\end{AnswerPage}
+
+
+\question[3]
+Identify at least one oceanographic variable related to climate change that you feel they should have included in their simulation. Justify your answer.
+
+\AnswerBox{4\baselineskip}{%
+Did the simulation look at changes in current \textit{patterns?} On page 3, they say they used three dimensional current velocities simulated through 2099 but it was not clear whether current patterns would change. I also wonder whether stratification would be an issue.
+}
+
+\question[2]
+About how long did their total simulation take?
+
+\AnswerBox{\baselineskip}{%
+3.5 years. 
+}
+
+\question[5]
+Based on your study of Figure 3, would the population of \textit{Epinephelus marginatus} act as a single panmictic population across the Mediterranean? If so, tell why you think so. If not, identify the number of populations and tell why you think so.
+
+\AnswerBox{4\baselineskip}{%
+2--3 populations, perhaps 4. Results suggest no gene flow from western Med (Aegean and Levantine Seas) to central (Adriatic Sea) and eastern Med. Barely any connectivity between Aegean and Levantine seas.
+}
+
+\question[10]
+Describe two key points that you learned from this paper that you can use in your conservation plan. Explain how you may be able to use this information in your plan.
+
+\AnswerBox{4\baselineskip}{%
+Whatever. Judge accordingly.
+}
+
+\question[5]
+Write one question that you have based on their results or discussion. Do not simply ask, ``What do they mean by\dots?'' without also attempting to answer your question.  Ask this question during the class discussion.
+
+\AnswerBox{4\baselineskip}{%
+Whatever. Judge accordingly.
+}
+
+\end{questions}
+
+\ifprintanswers
+
+\newpage
+
+\subsubsection*{Other questions to ask:}
+
+\begin{enumerate}[label=\alph*.]
+
+	\item They assumed 100\% passive transport and a \textasciitilde22–23 day larval period (15 mm settlement). Is that a safe assumption? What do you know about larvae that may affect their results?
+	
+	\item Go through the middle two columns of Figure 2. Have them relate the results to the model. Larval Growth column is temperature dependent for growth but temp independent for spawning releases. The first three rows show negative relationship. Quicker growth means they don't disperse as far, reducing connectivity and thus seeded areas. Because they settle quicker, retention is higher. Have them explain for the spawning column. 
+
+	\item Their study is a computer simulation. What could you do to check their results? (Bring up slide of Maggio results showing population genetic structure.)
+	
+\end{enumerate}
+
+\fi
+
+\end{document}  
