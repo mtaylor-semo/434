@@ -1,19 +1,14 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-%\documentclass[t]{beamer}
+\documentclass[t]{beamer}
 
 %%%% HANDOUTS For online Uncomment the following four lines for handout
-\documentclass[t,handout]{beamer}  %Use this for handouts.
-\usepackage{handoutWithNotes}
-\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
-%	\setbeamercolor{background canvas}{bg=black!5}
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
 
-
-%%% Including only some slides for students.
-%%% Uncomment the following line. For the slides,
-%%% use the labels shown below the command.
-\includeonlylecture{student}
+%\includeonlylecture{student}
 
 %% For students, use \lecture{student}{student}
 %% For mine, use \lecture{instructor}{instructor}
@@ -52,7 +47,7 @@
 {
   \usetheme{Lecture}
   \setbeamercovered{invisible}
-  \setbeamertemplate{items}[square]
+  \setbeamertemplate{items}[default]
 }
 
 %\usepackage{calc}
@@ -70,13 +65,13 @@
 \lecture{student}{student}
 
 {
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{mar_eco_cons_intro}}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{01_mar_eco_cons_intro}}
 \begin{frame}[t]
 \end{frame}
 }
 
 {
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{LV_diving}}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{01_LV_diving}}
 \begin{frame}[t,plain]
 \large
 \vspace{5ex}
@@ -84,8 +79,6 @@
 \hangpara Mike Taylor
 
 \hangpara RH 217
-
-\hangpara T\,W\,R 9:00--10:00 am
 
 \hangpara mtaylor@semo.edu
 
@@ -107,30 +100,30 @@
 
 \begin{frame}[t]{You \highlight{earn} your grade with}
 	\begin{center}\large\begin{tabular}{@{}lll@{}}
-	UG		&	Three 75-point exams 			& 	50\% \\
-			&	Critical analysis and homework 	& 	25\% \\
-			&	Conservation plan 				& 	25\% \\
-			&								&	\\
+	UG		&	Three 75-point exams 				& 	50\% \\
+			&	Assignments 						& 	25\% \\
+			&	Conservation plan 					& 	25\% \\
+			&										&	\\
 	G / HC	&	Three $\geq$ 75-point exams 		& 	40\% \\
-			&	Critical analysis and homework 	& 	15\% \\
+			&	Assignments 						& 	15\% \\
 			&	Conservation plan and leadership 	&	25\% \\
-			&	Conservation plan presentation 	&	20\% \\
+			&	Conservation plan presentation 		&	20\% \\
 	\end{tabular}
 	\end{center}
 \end{frame}
 
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{critical_analyses}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{01_critical_analyses}}
 \begin{frame}
 \end{frame}
 }
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{conservation_plan}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{01_conservation_plan}}
 \begin{frame}
 \end{frame}
 }
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{textbook}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{01_textbook}}
 \begin{frame}
 \end{frame}
 }
@@ -147,9 +140,8 @@
 
 \end{frame}
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{barrier_island}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{01_barrier_island}}
 \begin{frame}[b]{What are ecosystem services? Why do they matter?}
-
 	
 \tiny\hfill\textcolor{white}{Gulf Restoration Network / Southwings, Flickr Creative Commons.}
 
@@ -162,7 +154,7 @@
 	
 	“Ecosystem services are the direct or indirect contributions that ecosystems make to the well-being of human populations.” — U.S. EPA, 2009 \vspace*{\baselineskip}
 	
-	\includegraphics[width=\textwidth]{clam_diggers}
+	\includegraphics[width=\textwidth]{01_clam_diggers}
 	
 	A 2016 algal bloom in Washington state caused \textgreater \$93 million of economic loss for clam and crab fisheries. --- NOAA / National Ocean Service
 	
@@ -175,7 +167,7 @@
 \lecture{student}{student}
 
 \begin{frame}[t]{Ecosystem services provide \highlight{value} that influence human activity.}
-	\includegraphics[width=\textwidth]{ecoservices_quantifying_valuation}
+	\includegraphics[width=\textwidth]{01_ecoservices_quantifying_valuation}
 \end{frame}
 
 \begin{frame}[t]{The U.S. EPA (2009) identified two characteristics of ecosystem services.}
@@ -196,7 +188,7 @@
 
 \lecture{instructor}{instructor}
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{caribbean_sea}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{01_caribbean_sea}}
 \begin{frame}[b]{\textcolor{white}{Can you find Bonaire?}}
 
 \hfill\tiny\textcolor{white}{kmusser, Wikimedia Commons.}
@@ -205,7 +197,7 @@
 
 \lecture{student}{student}
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{bonaire_ecosystem_services}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{01_bonaire_ecosystem_services}}
 \begin{frame}[b]
 
 \hfill\tiny\textcolor{white}{Rebe Leubert, Flickr Creative Commons.}
