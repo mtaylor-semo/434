@@ -1,0 +1,144 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{/Users/goby/Documents/teach/434/lectures/}} % set of paths to search for images
+
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{{\scshape bi} 434 Study Guides 01 and 02}
+
+\date{} % without \date command, current date is supplied
+
+\newcommand\lecturefileA{434_lecture01_instructor}
+\newcommand\lecturefileB{434_lecture02_instructor}
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Marine Ecosystem Services}
+
+We\marginnote{\textbf{Read:} Chapter 18. The figures and tables from the text that I use for lecture are given in the slides. You should at least read the text associated with those figures and tables.} covered how dispersal of planktonic larvae can affect connectivity among marine populations.
+
+\section*{Vocabulary}
+
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+ecosystem service \\
+ecosystem structure \\
+ecosystem function \\
+trend \\
+pressure \\
+resilience
+\end{multicols}
+
+\section*{Concepts}
+
+\begin{enumerate}
+
+	\item What are ecosystem services?%
+	\marginnote{Read the four detailed examples on pages 411--417.}
+	List a variety (at least 5–6) of services 
+	provided by different ecosystems. Challenge your friend so see who can come 
+	with more ecosystem services for a given ecosystem (e.g., coral reefs, sea
+	grass beds, salt marshes, etc.)
+	
+	\item What is ecosystem structure? What is ecosystem function?
+	
+	\item Explain the difference between ecosystem function and ecosystem service.
+	What does it mean to say that ecosystem functions are the source of 
+	ecosystem services but that they are not the same thing?
+	
+	\item Explain%
+	\marginnote{Fig. 18.1}
+	how humans placing a value on a marine ecosystem can improve how 
+	humans perceive that ecosystem and can improve the services provided by that
+	ecosystem.
+	
+	\item Look at the examples in Table~18.1 (page~405). Consider each example
+	in terms of the valuation loop shown in Figure~18.1. For example, how
+	can the ecosystem function of barrier islands (first entry in the table)
+	alter human drivers to increase the service of coastal protection. Try this
+	for several or all of the entries in Table~18.1.
+	
+	\item In terms of ecosystem services, what are trade-offs? Why must trade-offs 
+	be assessed when trying to quantify services provided by a marine ecosystem?
+	
+	\item Why%
+	\marginnote{Fig.~18.4}
+	should the cumulative effects of positive and negative impacts be
+	estimated when trying to quantify ecosystem services?
+	
+	\item Explain%
+	\marginnote{Fig.~18.5; the image below is the original version.}
+	the conceptual framework for calculating the Ocean Health Index. You do not
+	have to be able to calculate an index but you must understand what goes in
+	to calculating it.
+
+	\begin{marginfigure}
+	\includegraphics[page=14]{\lecturefileB}
+	\end{marginfigure}
+	
+	\item For the Ocean Health Index, explain the difference between Pressure and
+	Resilience and how each can affect the present state of the ecosystem.
+	
+	\item How can a measure like the Ocean Health Index (\textsc{ohi}) help 
+	conservation managers establish and measure
+	the effectiveness of ecosystem management? Do not just state the obvious that 
+	the goal should be to increase the value of the \textsc{ohi}. How would
+	you set about increasing the index value? \textsc{Hint:}~What are the goals
+	that make up the \textsc{ohi}? Will each of these goals be the same for
+	a given ecosystem or the same for different countries? Which goals should
+	you try to improve first? Explain.
+	
+	\item Name and explain some of the land-based drivers that should be considered
+	when planning for or addressing threats to marine ecosystems.
+	
+\end{enumerate}
+
+\end{document}
