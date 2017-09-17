@@ -1,0 +1,116 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{%
+  {/Users/goby/Documents/teach/434/lectures/}%
+  {/Users/goby/Pictures/teach/434/lectures/}%
+  } % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\newcommand\lecturefile{434_lecture05_instructor}
+
+\title{{\scshape bi} 434/634 Study Guide 05}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Biodiversity and Ecosystem Function}
+
+We\marginnote{\textbf{Read:} Chapter 6. Any figures and tables from the text that I use for lecture are numbered in the slides. You should at least read the text associated with those figures and tables.} covered ways of thinking about biodiversity from a functional perspective, and how functional diversity can increase both ecosystem function and ecosystem services.
+
+\section*{Vocabulary}
+
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+diversity \\
+richness \\
+evenness \\
+Shannon-diversity index \\
+functional diversity \\
+functional redundancy \\
+high redundancy model \\
+complementarity \\
+insurance hypothesis \\
+portfolio effect 
+\end{multicols}
+
+\section*{Concepts}
+
+\begin{enumerate}
+
+	\item Explain\marginnote{A review never hurts.} the difference between richness and evenness. Explain how each relates to typical measures of species diversity (e.g., as measured by the Shannon diversity index).
+	
+	\item Explain why functional diversity is better than typical measures of species diversity when considering biodiversity and ecosystem function (\textsc{bef}).
+	
+	\item Using\marginnote[-0.25cm]{See \url{https://jonlefcheck.net/2014/10/20/what-is-functional-diversity-and-why-do-we-care-2/}.} the example in the lecture slides as a guide, explain why two communities with the same species diversity might have different functional diversity. Be clear in your explanation, including specific examples of functional differences.
+	
+	\begin{marginfigure}
+		\includegraphics{05_functional_diversity_communities}
+	\end{marginfigure}
+
+	\item Explain the high-redundancy model of functional diversity. How does complementarity arise from high redundancy? 
+	
+	\item Compare\marginnote{These are not mutually exclusive ideas.} and contrast the insurance hypothesis and the portfolio effect. Relate each of these to complementarity.
+	
+	\item Explain how strong versus weak trophic cascades affects maintenance of ecosystem function in the presence of a top-level species extinction.
+	
+	\item \textbf{More to come. I need to access some files on campus first.}\
+	
+	\item Explain how bioturbation, pelletization, predation, and shell formation affect carbon sequestration, and how sequestion in turn improves different ecosystem services.
+	
+	\begin{marginfigure}
+		\includegraphics[page=25]{\lecturefile}
+	\end{marginfigure}
+		
+	
+\end{enumerate}
+
+\end{document}

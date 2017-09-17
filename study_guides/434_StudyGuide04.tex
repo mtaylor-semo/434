@@ -1,0 +1,106 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{/Users/goby/Documents/teach/434/lectures/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\newcommand\lecturefile{434_lecture04_instructor}
+
+\title{{\scshape bi} 434/634 Study Guide 04}
+
+\date{} % without \date command, current date is supplied
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Marine Restoration Ecology}
+
+We\marginnote{\textbf{Read:} Chapter 22. Any figures and tables from the text that I use for lecture are numbered in the slides. You should at least read the text associated with those figures and tables.} covered the requirements and considerations for marine restoration ecology.
+
+\section*{Vocabulary}
+
+\vspace{-1\baselineskip}
+\begin{multicols}{2}
+restoration ecology \\
+ecosystem structure \\
+ecosystem function \\
+population-level approach \\
+habitat-level approach \\
+landscape-level approach \\
+ecosystem-level approach \\
+\end{multicols}
+
+\section*{Concepts}
+
+\begin{enumerate}
+
+	\item Explain the relationship between ecosystem structure and ecosystem function.
+	
+	\item Explain the differences and relationships between ecosystem services and ecosystem structure and function.
+	
+	\item Explain what is restoration ecology. 
+	
+	\item Does restoration ecology focus on ecosystem services, ecosystem structure and function, or both? Explain.
+	
+	\item Compare and contrast the four possible approaches for restoration of troubled or threatened marine resources.
+	
+	\item Why\marginnote{See Fig.~22.1} is it important to compare historical and current biological knowledge and also historical and current bottlenecks? 
+	
+	\item Why should restoration begin first at a small scale?
+	
+	\item Why\marginnote{See Fig.~22.2} should facilitation of foundation species be considered for restoration?
+	
+%	\begin{marginfigure}
+%		\includegraphics[page=5]{\lecturefile}
+%	\end{marginfigure}
+		
+	
+\end{enumerate}
+
+\end{document}
