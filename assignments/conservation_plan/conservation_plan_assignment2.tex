@@ -15,11 +15,19 @@
 	\everymath{\displaystyle}
 
 \usepackage{fontspec}
-\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setmainfont[Contextuals={Swash, Alternate}, Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
 \setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
 \setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
 \usepackage{microtype}
 
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
 
 % To define fonts for particular uses within a document. For example, 
 % This sets the Libertine font to use tabular number format for tables.
@@ -53,11 +61,16 @@
 	\setlength{\leftmargin}{-\leftskip}%
 }
 
+
 %Change \half command from 1/2 to .5
 \renewcommand*\half{.5}
 
+%\firstpageheader{\textsc{bi}\,434/634 Marine Ecology and Conservation}{}{}
+
+%\char"E050{}
+
 \pagestyle{headandfoot}
-\firstpageheader{\textsc{bi}\,434 MarEvoEco}{}{Conservation Plan Assignment 2}
+\firstpageheader{\textsc{bi}\,434/634 Marine Ecology \amper Conservation}{}{Conservation Plan Assignment 2}
 \runningheader{}{}{\footnotesize{pg. \thepage}}
 \footer{}{}{}
 \runningheadrule

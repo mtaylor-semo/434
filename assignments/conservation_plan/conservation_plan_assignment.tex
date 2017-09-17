@@ -20,6 +20,14 @@
 \setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
 \usepackage{microtype}
 
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
 
 % To define fonts for particular uses within a document. For example, 
 % This sets the Libertine font to use tabular number format for tables.
@@ -57,7 +65,7 @@
 \renewcommand*\half{.5}
 
 \pagestyle{headandfoot}
-\firstpageheader{\textsc{bi}\,434 MarEvoEco}{}{\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\firstpageheader{\textsc{bi}\,434/634 Marine Ecology \amper Conservation}{}{}
 \runningheader{}{}{\footnotesize{pg. \thepage}}
 \footer{}{}{}
 \runningheadrule
