@@ -2,36 +2,24 @@
 %!TEX encoding = UTF-8 Unicode
 
 \documentclass[12pt, addpoints]{exam}
-%\usepackage{graphicx}
-%	\graphicspath{{/Users/goby/Pictures/teach/434/}
-%	{img/}} % set of paths to search for images
 
-\usepackage{geometry}
-\geometry{letterpaper, bottom=1in}                   
-%\geometry{landscape}                % Activate for for rotated page geometry
-\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
-%\usepackage{amssymb, amsmath}
-%\usepackage{mathtools}
-%	\everymath{\displaystyle}
+%\printanswers
 
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
 \setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
-%\setmonofont[Scale=MatchLowercase]{Inconsolata}
 \usepackage{microtype}
 
-\usepackage{unicode-math}
-\setmathfont[Scale=MatchLowercase]{Asana Math}
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+\usepackage[parfill]{parskip} 
 
 \newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
 \newfontfamily{\libertinedisplay}{Linux Libertine Display O}
 
 \usepackage{hanging}
 
-%\usepackage{booktabs}
-%\usepackage{tabularx}
-%\usepackage{longtable}
-%\usepackage{siunitx}
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
@@ -43,11 +31,6 @@
 \setlist[enumerate]{label=\textsc{\alph*}.}
 \setlist[itemize]{label=\color{gray}\textbullet}
 
-%\usepackage{titling}
-%\setlength{\droptitle}{-60pt}
-%\posttitle{\par\end{center}}
-%\predate{}\postdate{}
-
 \renewcommand{\questionshook}{%
 	\setlength{\leftmargin}{-\leftskip}%
 }
@@ -57,7 +40,7 @@
 \SolutionEmphasis{\bfseries}
 
 \pagestyle{headandfoot}
-\firstpageheader{\textsc{bi} 434: Marine Evolutionary Ecology}{}{\ifprintanswers\textbf{KEY}\else Critical Analysis 1.\fi\ \numpoints\ points }
+\firstpageheader{\textsc{bi} 434: Marine Evolutionary Ecology}{}{\ifprintanswers\textbf{KEY}\else Critical Analysis 2.\fi\ \numpoints\ points }
 \runningheader{}{}{\footnotesize{pg. \thepage}}
 \footer{}{}{}
 \runningheadrule
@@ -76,8 +59,6 @@
 
 \newlength{\basespace}
 \setlength{\basespace}{5\baselineskip}
-
-\printanswers
 
 \begin{document}
 
@@ -103,15 +84,15 @@ Andrello, M., D. Mouillot, S. Somot, W. Thuiller, and S. Manel. 2014. Additive e
 
 \begin{questions}
 
-\question[5]
+\question[3]
 Describe the purpose of Andrello et al.'s research. Why do they feel it is important?
 
 
 \AnswerBox{4\baselineskip}{%
 Climate change can affect larval dispersal and growth rates due to biology or altered oceanic conditions. They wanted to whether climate change would affect the timing of reproduction, the growth rates of larvae, and change in current velocities.
 }
-\question[5]
 
+\question[3]
 In lecture 4, we covered four types of approaches that can be used for restoration ecology. Although their study was not restoration-oriented, what kind of management approach would this study fit under? Explain.
 
 \AnswerBox{4\baselineskip}{%
@@ -141,28 +122,28 @@ Identify at least one oceanographic variable related to climate change that you 
 Did the simulation look at changes in current \textit{patterns?} On page 3, they say they used three dimensional current velocities simulated through 2099 but it was not clear whether current patterns would change. I also wonder whether stratification would be an issue.
 }
 
-\question[2]
-About how long did their total simulation take?
+%\question[2]
+%About how long did their total simulation take?
+%
+%\AnswerBox{\baselineskip}{%
+%3.5 years. 
+%}
 
-\AnswerBox{\baselineskip}{%
-3.5 years. 
-}
-
-\question[5]
+\question[3]
 Based on your study of Figure 3, would the population of \textit{Epinephelus marginatus} act as a single panmictic population across the Mediterranean? If so, tell why you think so. If not, identify the number of populations and tell why you think so.
 
 \AnswerBox{4\baselineskip}{%
 2--3 populations, perhaps 4. Results suggest no gene flow from western Med (Aegean and Levantine Seas) to central (Adriatic Sea) and eastern Med. Barely any connectivity between Aegean and Levantine seas.
 }
 
-\question[10]
+\question[5]
 Describe two key points that you learned from this paper that you can use in your conservation plan. Explain how you may be able to use this information in your plan.
 
 \AnswerBox{4\baselineskip}{%
 Whatever. Judge accordingly.
 }
 
-\question[5]
+\question[3]
 Write one question that you have based on their results or discussion. Do not simply ask, ``What do they mean by\dots?'' without also attempting to answer your question.  Ask this question during the class discussion.
 
 \AnswerBox{4\baselineskip}{%
