@@ -20,6 +20,8 @@
 
 \usepackage{hanging}
 
+\usepackage[sc]{titlesec}
+
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
@@ -40,7 +42,7 @@
 \SolutionEmphasis{\bfseries}
 
 \pagestyle{headandfoot}
-\firstpageheader{\textsc{bi} 434: Marine Evolutionary Ecology}{}{\ifprintanswers\textbf{KEY}\else Critical Analysis 2.\fi\ \numpoints\ points }
+\firstpageheader{\textsc{bi} 434: Marine Evolutionary Ecology}{}{\ifprintanswers\textbf{KEY}\else Critical Analysis\fi}
 \runningheader{}{}{\footnotesize{pg. \thepage}}
 \footer{}{}{}
 \runningheadrule
@@ -61,6 +63,8 @@
 \setlength{\basespace}{5\baselineskip}
 
 \begin{document}
+
+\subsection*{Climate change and larval dispersal (\numpoints\ points)}
 
 Read carefully the paper listed below and then type your answers to the following questions.
 Type the question number and then your answer. You do not need to retype the question. Hand-written
