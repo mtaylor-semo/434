@@ -5,11 +5,10 @@
 
 %%%% HANDOUTS For online Uncomment the following four lines for handout
 %\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
 %\usepackage{handoutWithNotes}
 %\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
-%	\setbeamercolor{background canvas}{bg=black!5}
 
-%\includeonlylecture{student}
 
 %%% Including only some slides for students.
 %%% Uncomment the following line. For the slides,
@@ -52,6 +51,7 @@
 \usepackage[version=4]{mhchem}
 \usepackage{tikz}
 	\tikzstyle{every picture}+=[remember picture,overlay]
+\usetikzlibrary{shapes}
 
 \mode<presentation>
 {
@@ -68,36 +68,6 @@
 	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
 }
 
-%%% Creative Commons Licenses. Establish, then add to Beamer template.
-%\newcommand{\ccbysa}[1][4]{\textsc{cc by-sa #1.0}} % Use version 4.0 as default.
-\newcommand{\ccby}[1]{%
-	\ifx&#1&
-	{\textsc{cc by}}%
-\else
-	{\textsc{cc by #1.0}}
-\fi}
-
-
-\newcommand{\ccbysa}[1]{%
-	\ifx&#1&
-	{\textsc{cc by-sa}}%
-\else
-	{\textsc{cc by-sa #1.0}} 
-\fi}
-
-\newcommand{\ccbyncsa}[1]{%
-	\ifx&#1&
-	{\textsc{cc by-nc-sa}}%
-\else
-	{\textsc{cc by-nc-sa #1.0}}
-\fi}
-
-\newcommand{\ccbync}[1]{%
-	\ifx&#1&
-	{\textsc{cc by-nc}}%
-\else
-	{\textsc{cc by-nc #1.0}}
-\fi}
 
 % Use the to temporarily set a background grid for positioning.
 %\setbeamertemplate{background}[grid][step=1cm]
@@ -259,9 +229,26 @@
 %
 {
 \usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_alternate_states_gulf_maine}}
-\begin{frame}[b]{Does the pattern hold at larger scales in the Gulf?}
+\begin{frame}[t]{Does the pattern hold at larger scales in the Gulf?}
 
-	\tiny Bryson et al. 2014. Ecological Monographs 84: 579.
+	\begin{tikzpicture}
+		
+		\draw [fill=blue] (9.5, -0.5) -- (9.7,-0.5) -- (9.6,-0.3) -- cycle node[right, xshift=2mm, yshift=0.5mm] {\footnotesize North region};
+
+		\draw [fill=black] (9.6,-1) circle (0.1cm) node [right, xshift=1mm] {\footnotesize Penobscot};
+		
+		\draw [fill=red] (9.5,-1.4) rectangle (9.7,-1.6) node [right, yshift=0.5mm] {\footnotesize South region}; 
+		
+		\node [right] at (9.5, -2.5) {\footnotesize Filled: Exposed};
+		
+		\node [right] at (9.5, -3) {\footnotesize Open: Sheltered};
+		
+		
+	\end{tikzpicture}
+
+	\vfilll
+	
+	\hfill \tiny Bryson et al. 2014. Ecological Monographs 84: 579.
 \end{frame}
 }
 %
@@ -269,7 +256,7 @@
 \usebackgroundtemplate{\includegraphics[width=\paperwidth]{08_alternate_states_gulf_maine_nmds}}
 \begin{frame}[b]{Northern Gulf of Maine is consistently algal-dominated.}
 
-	\tiny Bryson et al. 2014. Ecological Monographs 84: 579.
+	\hfill \tiny Bryson et al. 2014. Ecological Monographs 84: 579.
 \end{frame}
 }
 %
