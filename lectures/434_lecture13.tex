@@ -1,14 +1,14 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[t]{beamer}
+%\documentclass[t]{beamer}
 
 %%%% HANDOUTS For online Uncomment the following four lines for handout
-%\documentclass[t,handout]{beamer}  %Use this for handouts.
-%\usepackage{handoutWithNotes}
-%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+\documentclass[t,handout]{beamer}  %Use this for handouts.
+\includeonlylecture{student}
+\usepackage{handoutWithNotes}
+\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
 
-%\includeonlylecture{student}
 
 %%% Including only some slides for students.
 %%% Uncomment the following line. For the slides,
@@ -285,6 +285,52 @@
 \end{frame}
 }
 %
+{
+	\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_kelly_fig1}}
+	\begin{frame}[b]{What trends can you identify?}
+	
+	\hfill \tiny Kelly et al.~2016.~Oecologia. % doi:10.1007/s00442-016-3724-0.
+	
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_kelly_fig5}}
+\begin{frame}[b]{Herbivores tended to partition algal resources.}
+	
+	\hfill \tiny Kelly et al.~2016.~Oecologia. % doi:10.1007/s00442-016-3724-0.
+	
+\end{frame}
+}
+%
+\begin{frame}[b]{Herbivores fall into distinct functional groups (feeding guides).}
+
+{\centering
+	\includegraphics[height=0.8\textheight]{13_kelly_fig2}\par
+}
+
+\hfill \tiny Kelly et al.~2016.~Oecologia. % doi:10.1007/s00442-016-3724-0.
+
+\end{frame}
+%
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_heenan_fig1}}
+	\begin{frame}[b]
+	
+	\hfill \tiny Heenan et al.~2016.~Proc~R Soc B 283:20161716. % doi:10.1007/s00442-016-3724-0.
+	
+\end{frame}
+}
+%
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{13_edwards_fig4}}
+\begin{frame}[b]{Non-fished areas have higher functional diversity of herbivorous fishes.}
+	
+	\hfill \tiny Edwards et al.~2013.~Proc R Soc B 283:20131835
+	
+\end{frame}
+}
+%
 
 %
 %\begin{frame}[t]
@@ -385,16 +431,16 @@
 \end{frame}
 }
 %
-\begin{frame}[t]{Cleaning species may also increase reef diversity.}
-
-	\includegraphics[width=\textwidth]{13_keystone_cleaners}
-	
-	\vfilll
-	
-	\hfill \tiny Fig.~13.5~\copyright\,Sinauer Associates, Inc.
-	
-
-\end{frame}
+%\begin{frame}[t]{Cleaning species may also increase reef diversity.}
+%
+%	\includegraphics[width=\textwidth]{13_keystone_cleaners}
+%	
+%	\vfilll
+%	
+%	\hfill \tiny Fig.~13.5~\copyright\,Sinauer Associates, Inc.
+%	
+%
+%\end{frame}
 %
 
 \end{document}
