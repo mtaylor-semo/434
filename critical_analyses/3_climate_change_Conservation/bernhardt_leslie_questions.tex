@@ -1,0 +1,158 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
+\usepackage{microtype}
+
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+\usepackage[parfill]{parskip} 
+
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\setlist[enumerate]{label=\textsc{\alph*}.}
+\setlist[itemize]{label=\color{gray}\textbullet}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi} 434: Marine Evolutionary Ecology}{}{\ifprintanswers\textbf{KEY}\else Critical Analysis\fi}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\begin{document}
+
+\subsection*{Climate change and larval dispersal (\numpoints\ points)}
+
+Read carefully the paper listed below and then type your answers to the following questions.
+Type the question number and then your answer. You do not need to retype the question. Hand-written
+assignments will not be accepted. You must have your completed answers
+with you in class or your assignment will be considered late. Assignments e-mailed to me after the \emph{start} of class will be
+considered late. Be prepared to discuss your answers in small groups and as a class. Failure
+to discuss these questions may result in a pop quiz with a point value
+equal to this assignment.
+
+\emph{Interpret} what you read. Do not copy answers directly from the text (that would
+be plagiarism). Show me you understand the paper.
+
+\textbf{Failure to attend} \textbf{class} \textbf{on the due date} will
+result in an automatic 50\% deduction.
+
+\begin{hangparas}{1.5em}{1}
+Bernhardt, J.\,R.~and H.\,M.~Leslie.~2013. Resilience to climate change in 
+coastal marine ecosystems. Annual Review of Marine Science 2013: 371--392.
+
+\end{hangparas}
+
+
+\begin{questions}
+
+\question[5]
+The authors discuss response diversity. Based on their explanation, how might 
+high genetic diversity affect the degree of hysteresis between two alternate 
+stable states?
+
+
+\AnswerBox{4\baselineskip}{%
+Answer.
+}
+
+\question[5]
+In class, we saw data that showed how climate change, specifically warming 
+temperatures, might affect larval dispersal. Describe how larval dispersal 
+might be affected,and then how this could affect population response diversity 
+and recovery?
+
+
+\AnswerBox{4\baselineskip}{%
+	LArval dispersal decreased, increasing isolation of populations. This would
+	reduce genetic diversity in the population, reducing the diversity of response (
+	ability to respond to wide-ranging environmental conditions, and reduce ability
+	to recover.)
+}
+
+\question[5]
+Question?
+
+
+\AnswerBox{4\baselineskip}{%
+	Answer.
+}
+
+
+\question[5]
+Question?
+
+
+\AnswerBox{4\baselineskip}{%
+	Answer.
+}
+
+\question[5]
+Question?
+
+
+\AnswerBox{4\baselineskip}{%
+	Answer.
+}
+
+
+\end{questions}
+
+\ifprintanswers
+
+\newpage
+
+\subsubsection*{Other questions to ask:}
+
+\begin{enumerate}[label=\alph*.]
+
+	\item Anything?
+	
+\end{enumerate}
+
+\fi
+
+\end{document}  
