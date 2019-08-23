@@ -17,10 +17,19 @@
 %\pagenumbering{gobble}
 
 \usepackage{fontspec}
-\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
 \setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
 %\setmonofont[Scale=MatchLowercase]{Inconsolata}
 \usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
 
 \usepackage{unicode-math}
 \setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
@@ -73,7 +82,7 @@
 
 \fancypagestyle{plain}{%
 	\fancyhf{}
-	\lhead{\textsc{bi} 434: Marine Evolutionary Ecology}
+	\lhead{\textsc{bi} 434: Marine Ecology \amper Conservation}
 	\rhead{Annotated Bibliography}
 	\renewcommand{\headrulewidth}{0pt}
 }
@@ -82,7 +91,7 @@
 %\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
 
 \title{Annotated Bibliography Assignment}
-\author{Marine Evolutionary Ecology}
+\author{Marine Ecology \amper Conservation}
 \date{}                                           % Activate to display a given date or no date
 
 \begin{document}
@@ -116,9 +125,9 @@ Andrello, M, D. Mouillot, S. Somot, W. Thuiller, and S. Manel. 2014. Additive ef
 
 \subsubsection*{Other information}
 
-Your summary should focus on the results and discussion as they relate to your plan. Do not simply paraphrase or summarize the abstract. I will grade harshly if I suspect this is the case. Be professional. Read the paper thoroughly and summarize it appropriately. If you wish, during the first week of the assignment, you may send me one paper with your summary and intent. I will let you know if you are on the right track. You must do this early. I will not do this after Monday, 20 November, 5pm.
+Your summary should focus on the results and discussion as they relate to your plan. Do not simply paraphrase or summarize the abstract. I will grade harshly if I suspect this is the case. Be professional. Read the paper thoroughly and summarize it appropriately. If you wish, during the first week of the assignment, you may send me one paper with your summary and intent. I will let you know if you are on the right track. You must do this early. I will not do this after Wednesday, 10 October, 5pm.
 
-\textsc{Due date:} Friday, 8 December, 5:00 pm. Upload your completed assignments and the \textsc{pdf} files to the drop box available on the course website. See the syllabus for information on late assignments.
+\textsc{Due date:} Wednesday, 31 October, 5:00 pm. Upload your completed assignments and the \textsc{pdf} files to the drop box available on the course website. See the syllabus for information on late assignments.
 
 \vspace*{\baselineskip}
 
