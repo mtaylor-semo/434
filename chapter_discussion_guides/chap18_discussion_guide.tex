@@ -1,0 +1,157 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{/Users/goby/Documents/teach/434/lectures/}} % set of paths to search for images
+
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{Chapter 18 discussion guide}
+
+\date{} % without \date command, current date is supplied
+
+\newcommand\lecturefileA{434_lecture01_instructor}
+\newcommand\lecturefileB{434_lecture02_instructor}
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Services of marine ecosystems}
+
+\begin{enumerate}
+
+	\item Who are the authors of this chapter? Why would I ask this question?%
+	\marginnote{Edward Barbier, Heather Leslie, Fiorenza Micheli.}
+	
+	\item What are the main points\marginnote{pg.~421 Conclusions} the authors would like you to take from their chapter? 
+	
+	\textit{Effective marine management depends increasingly on identifying ecosystem functions and deciding how to quantify and value the services obtained from those function. }
+	
+	\item What is ecosystem structure?\marginnote{pg.~404, items 1 \& 2} What is ecosystem function?
+	
+	\textit{Structure = living and non-living components. Functions = biophysical relationships.}
+	
+	\item Explain the difference between ecosystem function and ecosystem service.
+	What do the authors mean that ecosystem functions are the source of 
+	ecosystem services but that they are not the same thing?
+	
+	\item Explain%
+	\marginnote{Fig.~18.1}
+	how humans placing a value on a marine ecosystem can improve how 
+	humans perceive that ecosystem and can improve the services provided by that
+	ecosystem. How do negative drivers affect values? What about positive drivers?
+	
+	\item Look at the examples in Table~18.1 (page~405). Consider each example
+	in terms of the valuation loop shown in Figure~18.1. For example, how
+	can the ecosystem function of barrier islands (first entry in the table)
+	alter human drivers to increase the service of coastal protection. Try this
+	for several or all of the entries in Table~18.1.
+	
+	\item Table~18.1\marginnote{Tie to acidification and warming} does not have valuation examples for the services provided by climate regulation (function). What are some services from climate regulation functions we might try to put value one? 
+
+	\item The authors note that few ecosystem services\marginnote{pgs.~405–406. Sets stage for deep sea assignment.} are marketed; they also note that many services do not lead to observable marketed outputs. Why does this matter?
+	
+	
+	\item How should we interpret both panels of Figure 18.2 together?\marginnote{pg.~406–407} How does this tie into to the main point the authors make with Fig.~18.3?
+	
+	\textit{Up to 100 m or so of mangroves provides as much as a 40\% reduction in wave height.  However, most of the fish density is along the seaward margin of the mangroves. So increasing overall distance for protection does not necessarily fish density. }
+		
+	\textit{Fig.~18.3 shows that the first 100 m or so of mangrove shoreline provides greater value than shrimp farming. Beyond that, no gain, so this is a potential \textbf{trade-off.}}
+	
+	\item What is the importance of “connectivity”\marginnote{pg 408, 2nd column} between mangrove forests and coral reefs? 
+	
+	\textit{Approaches from a landscape perspective: connectivity among different ecosystems. The nursery effect from the mangrove can offset the effects of overfishing on the coral reef.}
+	
+	\item In terms of ecosystem services, what are trade-offs? Why must trade-offs 
+	be assessed when trying to quantify services provided by a marine ecosystem?
+	
+	\textit{Different sectors have different and sometimes conflicting needs.}
+	
+%	\item Why%
+%	\marginnote{Fig.~18.4}
+%	should the cumulative effects of positive and negative impacts be
+%	estimated when trying to quantify ecosystem services?
+	
+%	\item Explain%
+%	\marginnote{Fig.~18.5; the image below is the original version.}
+%	the conceptual framework for calculating the Ocean Health Index. You do not
+%	have to be able to calculate an index but you must understand what goes in
+%	to calculating it.
+
+	\begin{marginfigure}
+	\includegraphics[page=14]{\lecturefileB}
+	\end{marginfigure}
+	
+	\item For the Ocean Health Index, explain the difference between Pressure and
+	Resilience and how each can affect the present state of the ecosystem.
+	
+	\textit{Pressure represents the human impacts on the ecosystem. Fishing and pollution are two types of pressure. Resilience is the ability of an ecosystem to absorb a disturbance, or negative affect of human use, while maintaining function (pg.~419).}
+	
+	\item How can a measure like the Ocean Health Index (\textsc{ohi}) help 
+	conservation managers establish and measure
+	the effectiveness of ecosystem management? Do not just state the obvious that 
+	the goal should be to increase the value of the \textsc{ohi}. How would
+	you set about increasing the index value? \textsc{Hint:}~What are the goals
+	that make up the \textsc{ohi}? Will each of these goals be the same for
+	a given ecosystem or the same for different countries? Which goals should
+	you try to improve first? Explain.
+	
+	\item Name and explain some of the land-based drivers that should be considered
+	when planning for or addressing threats to marine ecosystems.
+	
+	\item One of the future challenges\marginnote{pgs.~417-418} was quantifying the role of biodiversity in supporting services. First, what is biodiversity and how do you predict changing biodiversity would change ecosystem function?
+	
+	\textit{Biodiversity is the range of variation in living organisms and their environment. Typically, a more varied environment leads to greater variety of species due to more and different niches. More diversity can increase function, up to a point (redundancy), and resilience.}
+	
+	\item The authors state,\marginnote{pg. 417, first \P{} under quantifying biodiversity heading} “In particular, the extent of diversity loss that can occur before functions and services are lost is unknown for most marine systems.” What do you think they mean by this?
+	
+	\textit{This introduces the concept of \textbf{redundancy} that we will discuss in depth later. Redundancy refers to multiple species that contribute in the same way to ecosystem function, e.g., primary producers. With high redundancy, you can lose some species without losing much function.}
+	
+\end{enumerate}
+
+\end{document}
