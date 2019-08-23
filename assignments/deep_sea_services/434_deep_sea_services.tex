@@ -1,0 +1,121 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in, left=1.5in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+%\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+%\usepackage{booktabs}
+%\usepackage{multicol}
+%\usepackage{tabularx}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+%\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+\usepackage{hanging}
+%\usepackage{color}
+%\usepackage{calc}
+
+%\usepackage{titling}
+%\setlength{\droptitle}{-60pt}
+%\posttitle{\par\end{center}}
+%\predate{}\postdate{}
+
+\usepackage[sc]{titlesec}
+
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg. \thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{bi} 434: Marine Ecology \amper Conservation}
+	\rhead{Deep Sea Ecosystem Services}
+	\renewcommand{\headrulewidth}{0pt}
+}
+	
+%\newcommand{\VSpace}{\vspace{0.5\baselineskip}}
+%\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+%\title{Deep Sea Ecosystem Services}
+%\author{Marine Ecology \amper Conservation}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+%\maketitle
+\thispagestyle{plain}
+
+\subsubsection*{Deep sea ecosystem functions and services (20~pts.)}
+
+
+Download and read through the scientific publication by A.\,R.\,Thurber~et~al.~2014 posted on the course Moodle page. Answer the following questions. Be sure to use your own words. Do not copy or quote directly from the paper or other source. Each question is worth 5 points.
+
+\begin{enumerate}[leftmargin=*]
+
+
+\item Thurber~et~al. discuss “supporting and regulatory” functions and services, and “provisioning” functions and services. Explain what you think is the difference between these two types of functions and services.
+
+\item Describe and summarize one supporting and regulatory function and service. Be sure your summary explains the ecosystem function \emph{and} the service that humans derive from the function. Remember they are two different things.
+
+\item Describe and summarize one provisioning function and service. Be sure your summary explains the ecosystem function \emph{and} the service that humans derive from the function. 
+
+\item For each service, explain how you would try to get the general public to understand the importance of each. Be creative. Be specific.
+
+\end{enumerate}
+
+Upload to the drop box by the start of next class meeting.
+
+\end{document}  
