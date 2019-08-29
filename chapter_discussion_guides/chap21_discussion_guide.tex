@@ -1,0 +1,118 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmainfont[SmallCapsFeatures={LetterSpace=0}]{Linux Libertine O}
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{/Users/goby/Documents/teach/434/lectures/}} % set of paths to search for images
+
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+% See https://tex.stackexchange.com/questions/18947/letterspacing-minion-pro-and-tufte-latex-problem-with-running-header
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=5}#1}}
+
+\title{Chapter 21 discussion guide}
+
+\date{} % without \date command, current date is supplied
+
+\newcommand\lecturefile{434_lecture03_instructor}
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Ecosystem-based conservation and management}
+
+\begin{enumerate}
+
+	\item Who are the authors of this chapter? Did you check this time?%
+	\marginnote{Halpern and Agardy.}
+	
+	\item What do Halpern and Agardy mean by "ecosystem-based approach to conservation and management?"
+	
+	\item In the study guide, I reworded the five principles of an ecosystem-based management \smallcaps{(emb)} outlined by Halpern and Agardy. What does each of these mean and why is each important for \smallcaps{ebm}:\marginnote{My slide:}
+	
+	\begin{enumerate}
+		\item goals encompass all ecosystem services,\label{item:all_services}
+		
+		\textit{Must identify as many services as possible. Unrecognized or hidden services may get overlooked and thus the~\smallcaps{emb}~may not be effective, or less so.}
+		
+		\item the spatial scale is based on natural boundaries across multiple ecosystems, \label{item:spatial_scale}
+		
+		\textit{Emphasizes landscape approach to ecosystems. Might protect coast but depend on freshwater or offshort inputs. Loss of a connected ecosystem may still lead to loss of protected ecosystem.}
+
+	\begin{marginfigure}
+		\includegraphics[page=5]{\lecturefile}
+	\end{marginfigure}
+		
+		\item all sectors of human use are integrated,\label{item:all_sectors}
+		
+		\textit{Most ecosystems are affected, positively or negatively, by multiple different sectors, including myriad commercial and recreational sectors, from recreational fishing to commercial gas and oil (e.g.). Failure to account for one or more of these could lead to an incomplete or defective management plan.}
+		
+		\item cumulative effects across sectors are estimated\label{item:cumulative_effects}, and
+		
+		\textit{Any one sector may have minimal to moderate negative effects on a the target or supporting ecosystem. The more sectors that use the ecosystem, the greater will be the cumulative negative effect. }
+
+		\item strategies adapt over time to account for uncertainty.
+		
+		\textit{Communities, technologies, and sector uses change but such change is not always easy to predict. Some technologies, for example, might become more efficient, decreasing the negative effects. Other technologies might allow a resource to be exploted that could not be exploited previously. Management plans must not be so rigid that they cannot adapt as requirements change.} 
+	\end{enumerate}
+	
+	\item The authors state,\marginnote{page 479, last~\P} “\smallcaps{Mpa}s are often expected to serve regional\dots conservation goals and fisheries objectives\dots which require \smallcaps{mpa}s to be connected to one another, and to the surrounding areas where fishing occurs, via larval dispersal and fish movement.” What do Halpern and Agardy mean by this?
+	
+	\textit{Larvae and adults are not restricted to the \smallcaps{mpa}s. Larvae and adults can connect neighboring \smallcaps{mpa}s by dispersal, thus sustaining weak populations in some areas. In addition, fishing outside of the areas\marginnote{e.g., Cape Canaveral} is also enhanced, with more, larger adults.}
+
+
+	\item What are the similarities and differences\marginnote{\smallcaps{Mpa}s start page 478;\newline \noindent \smallcaps{msp}s start page 483.} in terms of goals, management approaches, and decision making between marine protected areas \smallcaps{mpa} and marine spatial planning \smallcaps{msp} for an area.
+	
+	\textit{Marine protected areas are often created to manage a particular resource, such as fishing. Application might be to restrict fishing to recreational-only, or even no-take. They have a specific focus and are not necessarily ecosystem-based, although they can be.}
+	
+	\textit{\smallcaps{msp} is more concerned with use-planning for an area, which can include \smallcaps{mpa}s. “Zoning of the ocean”\marginnote{e.g., whale watching, commercial fishing, and wind farms.} is the goal, with the idea that different sectors or combinations of sectors are zoned into different areas to reduce the cumulative impacts of any given use while providing for each sector.}
+	
+	\item What is cumulative impact mapping?\marginnote{Page 485.} It's relationship to principle~\ref{item:cumulative_effects} is obvious. How does it relate to principles~\ref{item:all_services} (accounting for all services), \ref{item:all_sectors} (accounting for all sectors), and \ref{item:spatial_scale} (spatial scale)?
+	
+	\textit{More services used by more sectors increases the likelihood of negative impacts, including more unforeseen interactions. Zoning will probably increase the spatial scale, plus it accounts for interactions among supporting ecosystems, and perhaps spreads out the affects from the sectors.}
+\end{enumerate}
+
+\end{document}
