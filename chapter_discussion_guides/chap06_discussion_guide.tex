@@ -1,0 +1,117 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmainfont[SmallCapsFeatures={LetterSpace=0}]{Linux Libertine O}
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{/Users/goby/Documents/teach/434/lectures/}} % set of paths to search for images
+
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+%\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+% See https://tex.stackexchange.com/questions/18947/letterspacing-minion-pro-and-tufte-latex-problem-with-running-header
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+
+
+\title{Chapter 06 discussion guide}
+
+\date{} % without \date command, current date is supplied
+
+\newcommand\lecturefile{434_lecture05_instructor}
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Biodiversity and ecosystem function}
+
+\begin{enumerate}
+
+	\item Who are the authors of this chapter? Did you check this time?%
+	\marginnote{O'Connor and Byrnes.}
+	
+	\item Explain\marginnote{A review never hurts.} the difference between richness and evenness. Explain how each relates to typical measures of species diversity (e.g., as measured by the Shannon diversity index).
+	
+	\item What do O'Connor and Byrnes mean by "diversity and ecosystem function?" What is their specific meaning for "biodiversity?"
+		
+	\item What is the Michaelis-Menten\marginnote{Enzyme kinematics, species area curve, more. See T.~Rao, \textit{A Curve for all Reasons.}} function known for outside of the example in Figure~6.1?
+	
+	\item According to O'Connor and Byrnes, why is functional diversity better than typical measures of species diversity when considering the\,\textsc{bef} model.
+	
+	\item Why might two communities with the same species diversity  have different functional diversity?
+	
+%	\begin{marginfigure}[-1cm]
+%		\includegraphics{05_functional_diversity_communities}
+%	\end{marginfigure}
+
+	\item What is complementarity? What is redundancy?
+
+	\item Explain\marginnote{Compare See Fig.~6.1, page 110, to the models of diversity and ecosystem function shown in lecture.} the high-redundancy model of functional diversity. How does complementarity arise from high redundancy? 
+	
+	\begin{marginfigure}
+		\includegraphics[page=15]{\lecturefile}
+	\end{marginfigure}
+
+	\item Compare and contrast the insurance hypothesis and the portfolio effect. Relate each of these to complementarity.
+	
+	\item Why should ecosystem function increase in space and time as species respond to variable environments? Relate this to complementarity.
+
+	\item Explain how strong versus weak trophic cascades affects maintenance of ecosystem function in the presence of a top-level species extinction.
+	
+	\item Explain\marginnote{Read about sampling and selection effects on page 112.} why niche partitioning and competitive dominance in those partitioned niches should increase ecosystem function.
+	
+	\item Describe ways that increased ecosystem function can increase ecosystem services. Think of ways for many different types of ecosystems.
+	
+	\item Explain how bioturbation, pelletization, predation, and shell formation affect carbon sequestration, and how sequestion in turn improves different ecosystem services.
+	
+	\item The focus of marine restoration ecology (previous lecture) is restoration of ecosystem structure and function, not ecosystem services. Based on what you have learned, does restoration ecology exclude improvement of ecosystem services?  Explain.
+	
+	\begin{marginfigure}
+		\includegraphics[page=25]{\lecturefile}
+	\end{marginfigure}
+		
+	\marginnote{See Snelgrove et al. 2015 available online.}
+\end{enumerate}
+
+\end{document}
