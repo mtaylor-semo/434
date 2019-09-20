@@ -1,0 +1,119 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{tufte-handout}
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}]{Linux Biolinum O} 
+\setmonofont{Linux Libertine O}
+\usepackage{microtype}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{/Users/goby/Documents/teach/434/lectures/}} % set of paths to search for images
+
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+%\usepackage{fancyvrb} % extended verbatim environments
+%  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+\usepackage{enumitem}
+\usepackage{mhchem}
+
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pt}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% Set up the spacing using fontspec features
+   \renewcommand\allcapsspacing[1]{{\addfontfeatures{LetterSpace=15}#1}}
+   \renewcommand\smallcapsspacing[1]{{\addfontfeatures{LetterSpace=10}#1}}
+
+\title{Chapter 04 discussion guide}
+
+\date{} % without \date command, current date is supplied
+
+\newcommand\lecturefileA{434_lecture06_instructor}
+
+\begin{document}
+
+\maketitle	% this prints the handout title, author, and date
+
+%\printclassoptions
+\section*{Larval dispersal and population connectivity}
+
+\begin{enumerate}
+
+
+	\item How do these potentially affect population connectivity?
+	
+	\textit{Potentially, the longer the dispersal stage, the greater the connectivity.}
+	
+	\item What is panmixis? Explain how planktonic larvae, at least conceivably, relates to panmixis of populations.
+	
+	\textit{Panmixis refers to complete gene flow among all 
+	populations. Highly dispersive larvae or a small geographic 
+	range can be connect potentially by dispersal.}
+	
+	\item What do $F_\mathrm{ST}$ \marginnote[-3\baselineskip]{$F_\mathrm{ST} = \frac{H_\mathrm{T}-H_\mathrm{S}}{H_\mathrm{T}}$, where $H_\mathrm{S}$ is the mean heterozygosity among subpopulations and $H_\mathrm{T}$ is the total heterozygosity across all populations. Also, $F_\mathrm{ST} = \frac{1}{4Nm + 1}$ where \textit{N} is population size and \textit{m} is the migration rate.} and similar measures like $\Phi_{\mathrm{ST}}$ measure? 
+	
+	\item Relate the three types\marginnote{page 74.} of population connectivity from Table~4.1 to Fig.~4.8. Which points in the figure would most likely correspond to a “Type 1” marine population from the table? Which to “Type 2” and ”Type 3”?
+	
+	%	\begin{marginfigure}
+	%	\includegraphics[page=14]{\lecturefileB}
+	%	\end{marginfigure}
+	
+	\textit{\textbf{Type 1} has $F_{ST} = 0$ so are effectively panmictic. These would correspond to the points on or near zero in the figure.}
+	
+	\textit{\textbf{Type 2} has $F_{ST} \le 0.20$ so are evolutionarily connected but ecologically disconnected. These are in the Waples zone. I chose 0.2 as a somewhat arbitrary value because this corresponds to 1 migrant per generation, independent of population size. These are connected by gene flow enough that they are less likely to speciation but local adaptation can occur.}
+	
+	\textit{\textbf{Type 3} have high $F_{ST}$ values so are evolutionarily and ecologically independent. There is strong population structure with high potential for speciation.}
+	
+	\item Explain each\marginnote{Pages 68–72} of the ``key determinants'' discussed and relate them to the diagram in Figure 4.11.\marginnote{Page 78.} 
+	
+	\textbf{Pelagic duration:} good place to discuss duration\marginnote{Durations of 14-180 days are typical of marine spp.} and connectivity.
+	
+	\textbf{Larval feeding:} Good place to discuss non-pelagic, lecithotrophic, and planktotrophic larvae and connectivity among populations.
+	
+	\textbf{Larval behavior}
+	
+	\textbf{Adult spawning behavior:} currents and other oceanographic conditions can affect larval dispersal. Thus, the timing of spawning relative to the conditions will affect dispersal.
+	
+	\textbf{Temporal variation in oceanographic conditions:} can be related to adult spawning behavior.
+	
+	\textbf{Habitat patchiness}
+	
+	\textbf{Retention vs immigration}
+	
+	\textbf{Selection for or against immigrants:} Evolutionarily connected, ecological isolated
+	
+	\textbf{Influence of population size.}
+
+	\item Your group should think\marginnote{See pages 75–78. See also pages 58–61.} about the importance and assumptions of larval dispersal and how they will inform your management plan.
+	
+
+	
+	
+\end{enumerate}
+
+\end{document}
