@@ -1,0 +1,173 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Numbers=OldStyle]{Linux Biolinum O}
+\usepackage{microtype}
+
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+\usepackage[parfill]{parskip} 
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+\setlist[enumerate]{label=\textsc{\alph*}.}
+\setlist[itemize]{label=\color{gray}\textbullet}
+\usepackage{hyperref}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi} 434: Marine Ecology \amper Conservation}{}{\ifprintanswers\textbf{KEY}\else Critical Analysis\fi}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+%    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\begin{document}
+
+\subsection*{Sea-Level Rise (\numpoints\ points)}
+
+Read carefully the paper listed below and then type your answers to the 
+following questions. Type the question number and then your answer. You 
+do not need to retype the question. You must submit your answers before 
+class starts or your assignment will be considered late. 
+
+These questions focus on the components of sea-level rise. You should at
+least skim the rest of the paper but read it at some point to be a 
+better informed scientist and global citizen.
+
+\textbf{Failure to attend} \textbf{class} \textbf{on the due date} will
+result in an automatic 50\% deduction.
+
+\begin{hangparas}{1.5em}{1}
+Durand, G., M.\,R.\ van den Broeke, G.\ Le Cozannet, T.\,L.\ Edwards, P.\,R.\ Holland, N.\,C.\ Jourdain, B.\ Marzeion, R.\ Mottram, R.\,J.\ Nicholls, F.\ Pattyn, F.\ Paul, A.\,B.\,A.\ Slangen, R.\ Winkelmann, C.\ Burgard, C.\,J.\ van Calcar, J.-B.\ Barré, A.\ Bataille, and A.\ Chapuis.
+2022. Sea-level rise: from global perspectives to local services. Frontiers in Marine Science 8, Article 709595. doi: 10.3389/fmars.2021.709595 
+\end{hangparas}
+
+
+\begin{questions}
+\question[5]
+Explain what is thermal expansion and how it contributes to sea level 
+rise. What would be the \emph{average} projected sea level rise by 2100 
+due to thermal expansion? Use the best and worst case \textsc{ssp} 
+scenarios to make your calculation.
+
+
+\ifprintanswers\textbf{%
+As water warms, it's volume increases or expands. This causes sea level 
+to rise farther inshore. Best case scenario is 0.12 m and worst case
+scenario is 0.3 m, so average is 0.21 m.
+}\fi
+
+\question[10]
+Describe marine ice sheet instability in your own words. What is the 
+importance of the grounding line? How is \textsc{misi} contributing
+to acceleration of glaciers in Amundsen Sea Embayment? \textsc{Side bar:}
+Two important glaciers in Amundsen Sea contributing to sea-level rise
+are Pine Island and Thwaites. Thwaites Glacier alone is estimated to
+contain about 65 cm (2 feet) of sea level rise that could happen in
+within a couple decades. If Thwaites collapses entirely, that could
+unleash 10 feet or more of sea level rise over 1–2 centuries. For this
+reason, Thwaites is sometimes called the Doomsday Glacier (cue dramatic 
+music). Wikipedia has a brief, helpful video on 
+
+
+\ifprintanswers\textbf{%
+As the glacier leaves land, it becomes a floating ice sheet. The 
+grounding line is where the glacier makes contact with land. It is
+the weight of the ice that keeps it in contact with the ground. As the 
+glacier thins, the weight is insufficient to keep the glacier in contact 
+with the ground. More water gets underneath, thinning the sheet further,
+creating a feedback loop. In Amundsen, the grounding line is on a 
+negative slope (gets farther below sea level as you go inland) so more 
+water can get underneath, and floating the thicker ice sheet. This 
+speeds up the rate of advance.
+}\fi
+
+\question[5]
+Ice mass balance is the difference between ice gain through snowfall and 
+ice loss through melting and calving of glaciers to form icebergs. 
+Describe how Greenland's ice mass balance is changing due to 
+melt-elevation feedback and melt-albedo feedback. Be sure to explain
+the meaning of these two terms.
+
+\ifprintanswers\textbf{%
+Lower elevations are warmer, so as the glacier melts and becomes 
+thinner, the surface is at lower, warmer elevation, thus melting even
+more. The melting ice surface also becomes darker, so it absorbs more
+heat instead of reflecting it (melt-albedo). Thus, a positive feedback
+loop is created. As glaciers melt, they get warmer, and thus melt more, 
+etc.
+}\fi
+
+
+\question[5]
+Cold, dense surface water of the Atlantic Meridional Overturning 
+Circulation system (\textsc{amoc, aka} Great Ocean Conveyor) sinks at 
+two locations east and west of southern Greenland, and at a third 
+location in the Weddell Sea of Antarctica. Predict how melting runoff 
+from Greenland and Antarctica might affect the rate of circulation of 
+the \textsc{amoc.}
+ 
+\ifprintanswers\textbf{%
+Freshwater input will decrease salinity of the surface water, decreasing
+density and thus making it harder for the surface water to sink. This
+should slow the rate of circulation.
+}\fi
+
+\ifprintanswers
+Interactive sea level rise viewer.
+
+\url{https://coast.noaa.gov/slr/}
+\fi
+\end{questions}
+
+
+\end{document}  
