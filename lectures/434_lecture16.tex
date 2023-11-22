@@ -1,0 +1,377 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+%\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Scale=MatchLowercase, Numbers={OldStyle}, ItalicFont={* Italic}, Ligatures={Common, TeX}]{\mainfont} 
+%\newfontface\liningnums[Numbers=Lining, Scale=MatchLowercase]{\mainfont}
+
+%\usepackage{microtype}
+
+
+%\addfontfeatures{Numbers=SlashedZero}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/mtaylor/Pictures/teach/434/lectures/}%
+	{/Users/mtaylor/Pictures/teach/348/lectures/}%
+%	{/Users/mtaylor/Pictures/teach/434/handouts/}%
+%	{/Users/mtaylor/Pictures/teach/common/}%}%
+	{img/}} % set of paths to search for images
+
+\usepackage{xcolor}
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\mhchemoptions{textfontcommand=\liningnums}
+
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture,overlay]
+	\usetikzlibrary{arrows,calc}
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[default]
+}
+
+\usepackage{hyperref}
+
+
+\usepackage{calc} % Necessary for hidden word function.
+\newcommand\HiddenWord[1]{%
+	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+}
+
+% Use the to temporarily set a background grid for positioning.
+%\setbeamertemplate{background}[grid][step=1em]
+
+
+\begin{document}
+
+%\lecture{instructor}{instructor}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_what_lies_under}}
+\begin{frame}[b]{Plastics: A Devil's Bargain}
+
+	\tinynofill \href{https://ferdi-rizkiyanto.blogspot.com/2011/06/what-lies-under.html}{\textit{What Lies Under} by Ferdi Rizkiyanto}, \ccbync{} 
+\end{frame}
+}
+%
+%\lecture{student}{student}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_petrochemicals}}
+\begin{frame}
+
+\tinyfill \textcolor{white}{British Plastics Federation}
+\end{frame}
+}
+%
+\begin{frame}{Marine plastic pollution is divided into several categories.}
+\vspace{-\baselineskip}
+
+\begin{multicols}{2}
+
+\quad \highlight{Size}
+
+\hangpara Macroplastics > 5 mm
+
+\hangpara Microplastics 1–5 mm
+
+\hangpara Nanoplastics < 1 mm
+
+\columnbreak
+
+\highlight{Composition}
+
+\hangpara H: hard plastic, plastic sheet or film,
+
+\hangpara N: plastic lines, ropes, and fishing nets,
+
+\hangpara P: pre-production plastic pellets (cylinder, disk or sphere), and
+
+\hangpara F: foamed material
+
+\end{multicols}
+
+\vfilll
+
+\tiny Mariano et al.~2021. Front.~Toxicol.~3:636640. \textsc{doi}: 10.3389/ftox.2021.636640 \\ Lebreton et al.~2018. Sci.\ Rep.\ 8:4666. \textsc{doi}:10.1038/s41598-018-22939-w
+\end{frame}
+%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_plastic_generation}}
+\begin{frame}
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_plastic_emissions}}
+\begin{frame}
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_decomposition_rates}}
+\begin{frame}
+
+\end{frame}
+}
+%
+
+\begin{frame}{Garbage patches accumulate in the ocean gyres.}
+
+		\includegraphics[width=\textwidth]{16_garbage_gyres}
+	
+	\tinyfill Leal Filho, et al.~2021. J.~Mar.~Sci.~Eng., 9, 1289.  
+
+\end{frame}
+%
+
+\begin{frame}{The Great Pacific Garbage Patch is the largest patch.}
+
+	\onslide*<1>{
+		\includegraphics[width=\textwidth]{16_gpgp}}
+
+	\onslide*<2>{
+		\includegraphics[width=\textwidth]{16_gpgp_enhanced}}
+	
+	\vfilll
+	
+	\tiny \onslide*<1-2>{Egger et al.~2020. Sci.\ Rep.\ 10:7495 \textsc{doi:} 10.1038/s41598-020-64465-8} \onslide*<2>{\hfill Lebreton et al.~2018. Sci.\ Rep.\ 8:4666. \textsc{doi}:10.1038/s41598-018-22939-w}
+
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_surface_plastic_mass}}
+\begin{frame}
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_surface_plastic_particles}}
+\begin{frame}
+
+\end{frame}
+}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_plastics_collected}}
+\begin{frame}
+
+\end{frame}
+}
+%
+\begin{frame}[b]{Plastic density and mass were sampled from HI to CA.}
+
+\includegraphics[width=\textwidth]{16_egger_stations}
+
+\tinyfill Egger et al.~2020. Sci.\ Rep.\ 10:7495
+
+\end{frame}
+%
+\begin{frame}[b]{Density of plastics was sampled from surface to 2000 m.}
+
+\includegraphics[width=\textwidth]{16_sampled_plastics_depth}
+
+\hangpara Mass is similar.
+
+\tinyfill Egger et al.~2020. Sci.\ Rep.\ 10:7495
+
+\end{frame}
+%
+
+\begin{frame}[b]{Plastics extend at low density into the bathypelagic\dots}
+
+\includegraphics[width=\textwidth]{16_egger_depth}
+
+\hangpara Mass is similar.
+
+\tinyfill Egger et al.~2020. Sci.\ Rep.\ 10:7495
+
+\end{frame}
+%
+
+\begin{frame}{\dots but do they extend deeper?}
+\includegraphics[width=\textwidth]{16_marianas_stations}
+
+\tinyfill Peng et al.\ 2018. Geochem.\ Persp.\ Let.\ 9, 1-5, \textsc{doi:} 10.7185/geochemlet.1829
+\end{frame}
+%
+\begin{frame}{Microplastics ranged from 2.06 to 13.51 pieces/liter in the bottom water\dots}
+\includegraphics[width=\textwidth]{16_marianas_ab}
+
+\tinyfill Peng et al.\ 2018. Geochem.\ Persp.\ Let.\ 9, 1-5, \textsc{doi:} 10.7185/geochemlet.1829
+\end{frame}
+%
+\begin{frame}{\dots and from 200 to 2200 pieces/liter in the sediments. \phantom{Just some long words to keep spacing consistent}}
+\includegraphics[width=\textwidth]{16_marianas_cd}
+
+\hangpara \highlight{The deep sea floor is likely one of the largest sinks for microplastics.}
+
+\tinyfill Peng et al.\ 2018. Geochem.\ Persp.\ Let.\ 9, 1-5, \textsc{doi:} 10.7185/geochemlet.1829
+\end{frame}
+%
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_plastic_effects}}
+\begin{frame}
+
+\tinyfill \textcolor{white}{Ocean Conservancy}
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_scarred_grunt}}
+\begin{frame}
+
+
+%\vfilll
+
+\tinyfill \textcolor{yellow}{\href{https://www.pewtrusts.org/en/research-and-analysis/articles/2018/09/24/plastic-pollution-affects-sea-life-throughout-the-ocean}{\textcopyright\ Karen Doody/Stocktrek Images via \textsc{p}ew}} \end{frame}
+}
+% 
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_bird_ingestion}}
+\begin{frame}
+
+
+\vfilll
+
+\tinynofill \textcolor{white}{\href{http://chrisjordan.com/gallery/midway/}{\textcopyright\ Chris Jordan Photographic Arts}} \end{frame}
+}
+%
+ 
+\begin{frame}{Marine families have greatest risk of ingestion.}
+
+\includegraphics[width=\textwidth]{16_family_ingestion}
+
+\tinyfill Santos et al.\ 2021. Science 373: 56.
+\end{frame}
+%
+ 
+\begin{frame}{Plastics can magnify up food webs.}
+
+\centering
+\includegraphics[height=0.8\textheight]{16_magnification}
+
+\vfilll
+
+\tiny Teal: Documented plastic ingestion. \hfill Santos et al.\ 2021. Science 373: 56.
+\end{frame}
+
+\begin{frame}{Microplastics ingested by and adhered to zooplankton.}
+\centering
+\includegraphics[height=0.85\textheight]{16_ingestion_adhesion}
+
+\tinyfill Cole et al.\ 2013. Environ.\ Sci.\ Technol.\ 47: 6646.
+
+\end{frame}
+
+%
+
+\begin{frame}{Some copepod species take up smaller nanoplastics.}
+
+\includegraphics[width=\textwidth]{16_copepod_uptake}
+
+\hangpara Numbers below bars are particle sizes in µm. Asterisks indicates
+significant difference of uptake relative to 7.3µm size class.
+
+\tinyfill Cole et al.\ 2013. Environ.\ Sci.\ Technol.\ 47: 6646.
+
+\end{frame}
+
+%
+
+\begin{frame}{Plastics slow sinking rate of copepod faecal pellets.}
+
+\centering
+\includegraphics[height=0.82\textheight]{16_sinking_rates}
+
+\tinyfill Cole et al.\ 2016. Environ.\ Sci.\ Technol.\ 50: 3239.
+
+\end{frame}
+
+%
+
+\begin{frame}{Models suggest plastic export to deep sea is high.}
+\includegraphics[width=\textwidth]{16_plastic_export}
+
+\tinyfill Kvale et al.\ 2020. Sci.\ Rep.\ 10:16670.
+
+\end{frame}
+%
+
+\begin{frame}{Models suggest plastics decrease oxygen availability.}
+\centering
+\includegraphics[height=0.82\textheight]{16_oxygen_consumption}
+
+\tinyfill Kvale et al.\ 2021. Nature Comm.\  12:2358.
+
+\end{frame}
+%
+
+
+\begin{frame}{Plastics do most harm at the surface and the sea floor.}
+\centering
+\includegraphics[height=0.82\textheight]{16_plastics_water_column}
+
+\tinyfill Stubbins et al.\ 2021. Science 373: 51.
+
+\end{frame}
+%
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{16_great_pacific_closing}}
+\begin{frame}
+
+	\vfilll
+	
+	\tiny \textcolor{green}{10 Rivers 1 Ocean}
+\end{frame}
+}
+
+\end{document}
+
